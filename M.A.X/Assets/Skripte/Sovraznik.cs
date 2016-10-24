@@ -12,4 +12,9 @@ public class Sovraznik : Subjekt {
 	void Update () {
 	
 	}
+
+    public override void Smrt()
+    {
+        base.Smrt();
+    }
 }
