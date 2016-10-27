@@ -624,6 +624,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   zacetnaZivljenja: 100
+  health:
+    bar: {fileID: 2076918003}
+    maxVal: 100
+    currentVal: 100
 --- !u!114 &1690260547
 MonoBehaviour:
   m_ObjectHideFlags: 0
