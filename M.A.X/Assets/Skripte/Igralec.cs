@@ -2,44 +2,49 @@
 using System.Collections;
 
 [RequireComponent(typeof(IgralecKontroler))]
-public class Igralec : Subjekt {
+public class Igralec : MonoBehaviour {
 
-    public int[] poljeIntov;
-    public string[] poljeStringov;
+    public float trenutnaZivljenja { get; set; }
+    protected bool mrtev = false;
 
-	void Start ()
+    public float zacetnaZivljenja;
+    public event System.Action ObSmrti;
+
+    void Start ()
     {
-        poljeIntov = new int[10];
-        poljeStringov = new string[5];
-
-        for(int i = 0; i < poljeIntov.Length; i++)
-        {
-            poljeIntov[i] = Mathf.RoundToInt(Random.Range(1, 100));
-        }
-
-        for (int i = 0; i < poljeIntov.Length; i++)
-        {
-            Debug.Log(poljeIntov[i]);
-        }
-
-        Debug.Log("-----------------");
-
-        Utility.Uredi(poljeIntov, false);
-
-        for (int i = 0; i < poljeIntov.Length; i++)
-        {
-            Debug.Log(poljeIntov[i]);
-        }
+        trenutnaZivljenja = zacetnaZivljenja;
+        Debug.Log(trenutnaZivljenja);
     }
 	
 	void Update ()
     {
-	
-	}
+        if (Input.GetKeyDown(KeyCode.D))
+        {
+            trenutnaZivljenja -= 1000;
+            Debug.Log(trenutnaZivljenja);
+        }
 
-    public override void Smrt()
+        if (trenutnaZivljenja <= 0 && !mrtev)
+        {
+            Smrt();
+        }
+
+    }
+
+    public void PrejmiSkodo(float skoda)
     {
-        base.Smrt();
+        trenutnaZivljenja -= skoda;
+    }
+
+    public void Smrt()
+    {
+        mrtev = true;
+        Debug.Log("Smrt");
+        if (ObSmrti != null)
+        {
+            ObSmrti();
+        }
+        Destroy(gameObject);
     }
 
 }

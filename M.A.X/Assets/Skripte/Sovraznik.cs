@@ -1,20 +1,35 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Sovraznik : Subjekt {
+public class Sovraznik : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+    public float zacetnaZivljenja;
+    public float trenutnaZivljenja;
+    protected bool mrtev = false;
 
-    public override void Smrt()
+    public event System.Action ObSmrti;
+
+    void Start()
     {
-        base.Smrt();
+        trenutnaZivljenja = zacetnaZivljenja;
+    }
+
+    public void PrejmiSkodo(float skoda)
+    {
+        trenutnaZivljenja -= skoda;
+        if (trenutnaZivljenja <= 0 && !mrtev)
+        {
+            Smrt();
+        }
+    }
+
+    public virtual void Smrt()
+    {
+        mrtev = true;
+        if (ObSmrti != null)
+        {
+            ObSmrti();
+        }
+        Destroy(gameObject);
     }
 }

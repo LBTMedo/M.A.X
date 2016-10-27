@@ -22,14 +22,14 @@ public class Utility : MonoBehaviour {
                 {
                     if(polje[j].CompareTo(polje[j+1]) > 0)
                     {
-                        Swap<T>(ref polje[j], ref polje[j + 1]);
+                        Swap(ref polje[j], ref polje[j + 1]);
                     }
                 }
                 else if (!narascajoce)
                 {
                     if (polje[j].CompareTo(polje[j + 1]) < 0)
                     {
-                        Swap<T>(ref polje[j], ref polje[j + 1]);
+                        Swap(ref polje[j], ref polje[j + 1]);
                     }
                 }
             }
