@@ -34,6 +34,7 @@ public class Igralec : MonoBehaviour {
     public void PrejmiSkodo(float skoda)
     {
         trenutnaZivljenja -= skoda;
+        Debug.Log(trenutnaZivljenja);
     }
 
     public void Smrt()
