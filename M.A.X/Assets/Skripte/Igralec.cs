@@ -23,7 +23,8 @@ public class Igralec : MonoBehaviour {
     {
         if (Input.GetKeyDown(KeyCode.D))
         {
-            trenutnaZivljenja -= 1000;
+            trenutnaZivljenja -= 100;
+            health.CurrentVal -= 100;
             Debug.Log(trenutnaZivljenja);
         }
 
@@ -32,7 +33,7 @@ public class Igralec : MonoBehaviour {
             Smrt();
         }
 
-       /* if (Input.GetKeyDown(KeyCode.Q))    SAMO ZA TESTIRANJE HEALTH BARA
+       /* if (Input.GetKeyDown(KeyCode.Q))    
         {
             health.CurrentVal -= 10;
         }
