@@ -10,6 +10,9 @@ public class Igralec : MonoBehaviour {
     public float zacetnaZivljenja;
     public event System.Action ObSmrti;
 
+    [SerializeField]
+    private IgralecStat health;
+
     void Start ()
     {
         trenutnaZivljenja = zacetnaZivljenja;
@@ -20,7 +23,8 @@ public class Igralec : MonoBehaviour {
     {
         if (Input.GetKeyDown(KeyCode.D))
         {
-            trenutnaZivljenja -= 1000;
+            trenutnaZivljenja -= 100;
+            health.CurrentVal -= 100;
             Debug.Log(trenutnaZivljenja);
         }
 
@@ -29,11 +33,27 @@ public class Igralec : MonoBehaviour {
             Smrt();
         }
 
+       /* if (Input.GetKeyDown(KeyCode.Q))    
+        {
+            health.CurrentVal -= 10;
+        }
+
+        if (Input.GetKeyDown(KeyCode.W))
+        {
+            health.CurrentVal += 100;
+        }*/
+
+    }
+
+    private void Awake()
+    {
+        health.Initialize();
     }
 
     public void PrejmiSkodo(float skoda)
     {
         trenutnaZivljenja -= skoda;
+        health.CurrentVal -= skoda;
     }
 
     public void Smrt()
