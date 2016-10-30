@@ -4,11 +4,16 @@ using UnityEngine.UI;
 
 public class HealthBar : MonoBehaviour {
 
-    [SerializeField]
     private float fillAmount;
 
     [SerializeField]
+    private float lerpSpeed;
+
+    [SerializeField]
     private Image fill;
+
+    [SerializeField]
+    private Text healthValue;
 
     public float MaxValue { get; set; }
 
@@ -16,6 +21,8 @@ public class HealthBar : MonoBehaviour {
     {
         set
         {
+            string[] tmp = healthValue.text.Split(':');
+            healthValue.text = tmp[0] + ": " + value;
             fillAmount = ConvertHealth(value, 0, MaxValue, 0, 1);
         }
     }
@@ -29,7 +36,7 @@ public class HealthBar : MonoBehaviour {
     {
         if (fillAmount != fill.fillAmount)
         {
-            fill.fillAmount = fillAmount;
+            fill.fillAmount = Mathf.Lerp(fill.fillAmount,fillAmount,Time.deltaTime * lerpSpeed);
         }
     }
 
