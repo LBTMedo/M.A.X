@@ -23,7 +23,7 @@ public class IgralecStat{
 
         set
         {
-            currentVal = value;
+            currentVal = Mathf.Clamp(value,0,MaxVal);
             bar.Value = currentVal;
         }
     }

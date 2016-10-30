@@ -33,7 +33,7 @@ public class Igralec : MonoBehaviour {
             Smrt();
         }
 
-       /* if (Input.GetKeyDown(KeyCode.Q))    
+        if (Input.GetKeyDown(KeyCode.Q))    
         {
             health.CurrentVal -= 10;
         }
@@ -41,7 +41,7 @@ public class Igralec : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.W))
         {
             health.CurrentVal += 100;
-        }*/
+        }
 
     }
 
