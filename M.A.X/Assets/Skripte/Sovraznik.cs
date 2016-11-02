@@ -10,6 +10,8 @@ public class Sovraznik : MonoBehaviour
     public float trenutnaZivljenja;
     public float rayLength = 15;
 
+    public GameObject grafika;
+
     public Transform pogledKonec;
     public Transform pogledTla;
 
@@ -17,6 +19,8 @@ public class Sovraznik : MonoBehaviour
 
     [SerializeField]
     private bool left = false;
+    [SerializeField]
+    private bool sePremika = false;
     [SerializeField]
     private bool spotted = false;
     [SerializeField]
@@ -75,6 +79,14 @@ public class Sovraznik : MonoBehaviour
     void Update()
     {
         Raycasting();
+        if (sePremika)
+        {
+            grafika.GetComponent<Animator>().SetBool("isMoving", true);
+        }
+        else
+        {
+            grafika.GetComponent<Animator>().SetBool("isMoving", false);
+        }
     }
 
     void Raycasting()
@@ -85,6 +97,7 @@ public class Sovraznik : MonoBehaviour
         if (Physics2D.Linecast(transform.position, pogledKonec.position, 1 << LayerMask.NameToLayer("Igralec")))
         {
             state = State.attacking;
+            sePremika = false; 
             spotted = true;
             rb2d.velocity = Vector3.zero;
         }
@@ -131,6 +144,7 @@ public class Sovraznik : MonoBehaviour
     void Move()
     {
         Vector3 dir;
+        sePremika = true;
 
         if (left)
         {
