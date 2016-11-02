@@ -13,8 +13,11 @@ public class Igralec : MonoBehaviour {
     [SerializeField]
     private IgralecStat health;
 
+    HitIndicator indikator;
+
     void Start ()
     {
+        indikator = GetComponent<HitIndicator>();
         trenutnaZivljenja = zacetnaZivljenja;
         Debug.Log(trenutnaZivljenja);
     }
@@ -36,6 +39,11 @@ public class Igralec : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.Q))    
         {
             health.CurrentVal -= 10;
+            indikator.damaged = true;
+            if(indikator.sceneLoad == true)
+            {
+                indikator.sceneLoad = false;
+            }
         }
 
         if (Input.GetKeyDown(KeyCode.W))
