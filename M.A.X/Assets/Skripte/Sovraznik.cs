@@ -9,6 +9,7 @@ public class Sovraznik : MonoBehaviour
     public float zacetnaZivljenja;
     public float trenutnaZivljenja;
     public float rayLength = 15;
+    public float verjetnostObrata = 10f;
 
     public GameObject grafika;
 
@@ -29,6 +30,8 @@ public class Sovraznik : MonoBehaviour
     private bool zeNapada = false;
     [SerializeField]
     private float speed = 10;
+
+    private float casPredBrisanjem = 3f;
 
     Vector3 levo;
     Vector3 desno;
@@ -54,11 +57,13 @@ public class Sovraznik : MonoBehaviour
 
         player = FindObjectOfType<Igralec>();
 
+        InvokeRepeating("NakljucniObrat", 0f, 1f);
+
     }
 
     void FixedUpdate()
     {
-        if (!spotted)
+        if (!spotted && !mrtev)
         {
             Move();
             ChangeDirection();
@@ -86,6 +91,10 @@ public class Sovraznik : MonoBehaviour
         else
         {
             grafika.GetComponent<Animator>().SetBool("isMoving", false);
+        }
+        if (Input.GetKeyDown(KeyCode.K))
+        {
+            PrejmiSkodo(50);
         }
     }
 
@@ -167,6 +176,23 @@ public class Sovraznik : MonoBehaviour
         }
     }
 
+    void NakljucniObrat()
+    {
+        int st1 = Mathf.RoundToInt(Random.Range(0, (1000 / verjetnostObrata)));
+        int st2 = Mathf.RoundToInt(Random.Range(0, (1000 / verjetnostObrata)));
+
+        if(st1 == st2)
+        {
+            ChangeDirectionSimple();
+            return;
+        }
+        else
+        {
+            return;
+        }
+    }
+
+
     public virtual void Smrt()
     {
         mrtev = true;
@@ -174,6 +200,14 @@ public class Sovraznik : MonoBehaviour
         {
             ObSmrti();
         }
+        rb2d.velocity = Vector3.zero;
+        sePremika = false;
+        transform.Rotate(new Vector3(0, 0, 90));
+        Invoke("DestroyGO", casPredBrisanjem);
+    }
+
+    void DestroyGO()
+    {
         Destroy(gameObject);
     }
 }
