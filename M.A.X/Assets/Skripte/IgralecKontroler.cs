@@ -17,11 +17,11 @@ public class IgralecKontroler : MonoBehaviour {
 
     private bool facingRight;
     private bool jump;
+    private bool move { get; set; }
 
     private int Jumps; //num of current jumps
     public int originalJumps; //the original num of jumps
 
-    GameObject p;
     private Rigidbody2D rbd;
 
 	// Use this for initialization
@@ -29,7 +29,6 @@ public class IgralecKontroler : MonoBehaviour {
 
         player = GetComponent<Igralec>();
         rbd = GetComponent<Rigidbody2D>();
-        p = GameObject.Find("Igralec");
 
         moveSpeed = player.movementSpeed;
         jumpHeight = player.jumpHeight;
@@ -37,10 +36,9 @@ public class IgralecKontroler : MonoBehaviour {
 
         originalMoveSpeed = moveSpeed;
 
-        //distToGround = p.GetComponent<CircleCollider2D>().radius; //get distance from collider component center to the edge of the collider on the vertical axis
-
         facingRight = true;
         jump = false;
+        move = true;
         Jumps = originalJumps;
 	}
 
@@ -101,8 +99,6 @@ public class IgralecKontroler : MonoBehaviour {
 
         rbd.velocity = moveDir; //set player velocity (x axis)        
 
-        
-
         if (Grounded())
         {
             Jumps = originalJumps;
@@ -110,7 +106,6 @@ public class IgralecKontroler : MonoBehaviour {
 
         if (jump)
         {
-            //rbd.AddForce(new Vector2(rbd.velocity.x, jumpHeight));
             rbd.velocity = new Vector2(rbd.velocity.x, jumpHeight);
             jump = false;
             Jumps--;
@@ -123,16 +118,6 @@ public class IgralecKontroler : MonoBehaviour {
         //return Physics2D.OverlapCircle(groundCheck.position, 0.1f, Ground); 
     }
 
-    /*bool hittingWallLeft()
-    {
-        return Physics2D.Raycast(wallCheckLeft.position, -Vector2.up, 0.1f, Ground);
-    }
-
-    bool hittingWallRight()
-    {
-        return Physics2D.Raycast(wallCheckRight.position, -Vector2.up, 0.1f, Ground);
-    }*/
-
     void flip() //function to flip player left or right
     {
         if (facingRight)
@@ -142,6 +127,14 @@ public class IgralecKontroler : MonoBehaviour {
         else if (!facingRight)
         {
             transform.localScale = new Vector3(1.5f, 1.5f, 1); //turn left -------> to spremni pol v obratno
+        }
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Ground")
+        {
+
         }
     }
 }
