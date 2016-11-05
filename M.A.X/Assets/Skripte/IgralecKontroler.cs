@@ -10,6 +10,7 @@ public class IgralecKontroler : MonoBehaviour {
     private float jumpHeight;
     private float sprintSpeed;
     private float originalMoveSpeed;
+    private float moveSpeed;
     public float airControll; //air velocity multiplier
 
     public LayerMask Ground;
@@ -17,7 +18,6 @@ public class IgralecKontroler : MonoBehaviour {
 
     private bool facingRight;
     private bool jump;
-    private bool move { get; set; }
 
     private int Jumps; //num of current jumps
     public int originalJumps; //the original num of jumps
@@ -30,11 +30,11 @@ public class IgralecKontroler : MonoBehaviour {
         player = GetComponent<Igralec>();
         rbd = GetComponent<Rigidbody2D>();
 
-        moveSpeed = player.movementSpeed;
+        originalMoveSpeed = player.movementSpeed;
         jumpHeight = player.jumpHeight;
         sprintSpeed = player.sprintSpeed;
 
-        originalMoveSpeed = moveSpeed;
+        moveSpeed = originalMoveSpeed;
 
         facingRight = true;
         jump = false;
@@ -127,14 +127,6 @@ public class IgralecKontroler : MonoBehaviour {
         else if (!facingRight)
         {
             transform.localScale = new Vector3(1.5f, 1.5f, 1); //turn left -------> to spremni pol v obratno
-        }
-    }
-
-    void OnTriggerEnter(Collider other)
-    {
-        if (other.tag == "Ground")
-        {
-
         }
     }
 }
