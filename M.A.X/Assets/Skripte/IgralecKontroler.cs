@@ -6,12 +6,11 @@ public class IgralecKontroler : MonoBehaviour {
 
     Igralec player;
 
-    private float moveSpeed;
-    private float jumpHeight;
-    private float sprintSpeed;
+    private float moveSpeed = 20f;
+    private float jumpHeight = 15f;
+    private float sprintSpeed = 30f;
     private float originalMoveSpeed;
-    private float moveSpeed;
-    public float airControll; //air velocity multiplier
+    public float airControll = 1; //air velocity multiplier
 
     public LayerMask Ground;
     public Transform groundCheck;
@@ -20,7 +19,7 @@ public class IgralecKontroler : MonoBehaviour {
     private bool jump;
 
     private int Jumps; //num of current jumps
-    public int originalJumps; //the original num of jumps
+    public int originalJumps = 2; //the original num of jumps
 
     private Rigidbody2D rbd;
 
@@ -38,7 +37,6 @@ public class IgralecKontroler : MonoBehaviour {
 
         facingRight = true;
         jump = false;
-        move = true;
         Jumps = originalJumps;
 	}
 
@@ -122,11 +120,11 @@ public class IgralecKontroler : MonoBehaviour {
     {
         if (facingRight)
         {
-            transform.localScale = new Vector3(-1.5f, 1.5f, 1); //turn right ----> to spremni pol v 1.5, 1.5, 1
+            transform.localScale = new Vector3(2f, 2f, 1); //turn right ----> to spremni pol v 1.5, 1.5, 1
         }
         else if (!facingRight)
         {
-            transform.localScale = new Vector3(1.5f, 1.5f, 1); //turn left -------> to spremni pol v obratno
+            transform.localScale = new Vector3(2f, 2f, 1); //turn left -------> to spremni pol v obratno
         }
     }
 }
