@@ -25,9 +25,9 @@ GameObject:
   - 114: {fileID: 114000010803758090}
   - 114: {fileID: 114000013174816042}
   - 50: {fileID: 50000010492874306}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Max
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -54,7 +54,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000013139750954}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.03, y: -0.78, z: 0}
+  m_LocalPosition: {x: 0.03, y: -0.3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -67,7 +67,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012875589336}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -27.677, y: 13.986, z: 0}
+  m_LocalPosition: {x: -10, y: -13.442266, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -102,7 +102,7 @@ CircleCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: 0, y: -0.58}
+  m_Offset: {x: 0.09, y: -0.12}
   serializedVersion: 2
   m_Radius: 0.24033785
 --- !u!61 &61000012292933472
@@ -116,7 +116,7 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0.13252544}
+  m_Offset: {x: 0.07, y: 0.64}
   serializedVersion: 2
   m_Size: {x: 0.48, y: 1.3649491}
 --- !u!114 &114000010803758090
@@ -150,11 +150,11 @@ MonoBehaviour:
   movementSpeed: 20
   jumpHeight: 15
   sprintSpeed: 30
-  zacetnaZivljenja: 0
+  zacetnaZivljenja: 100
   health:
     bar: {fileID: 0}
-    maxVal: 0
-    currentVal: 0
+    maxVal: 100
+    currentVal: 100
 --- !u!212 &212000010501621052
 SpriteRenderer:
   m_ObjectHideFlags: 1

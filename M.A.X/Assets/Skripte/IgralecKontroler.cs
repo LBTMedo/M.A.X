@@ -124,7 +124,7 @@ public class IgralecKontroler : MonoBehaviour {
         }
         else if (!facingRight)
         {
-            transform.localScale = new Vector3(2f, 2f, 1); //turn left -------> to spremni pol v obratno
+            transform.localScale = new Vector3(-2f, 2f, 1); //turn left -------> to spremni pol v obratno
         }
     }
 }

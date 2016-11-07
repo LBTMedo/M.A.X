@@ -28,7 +28,7 @@ public class Igralec : MonoBehaviour {
 	
 	void Update ()
     {
-        if (Input.GetKeyDown(KeyCode.D))
+        if (Input.GetKeyDown(KeyCode.P))
         {
             trenutnaZivljenja -= 100;
             health.CurrentVal -= 100;
