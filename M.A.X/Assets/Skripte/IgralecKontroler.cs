@@ -2,6 +2,7 @@
 using System.Collections;
 
 [RequireComponent(typeof(BoxCollider2D))]
+[RequireComponent(typeof(Rigidbody2D))]
 public class IgralecKontroler : MonoBehaviour {
 
     Igralec player;
@@ -14,6 +15,8 @@ public class IgralecKontroler : MonoBehaviour {
 
     public LayerMask Ground;
     public Transform groundCheck;
+
+    private Animator anim;
 
     private bool facingRight;
     private bool jump;
@@ -28,6 +31,7 @@ public class IgralecKontroler : MonoBehaviour {
 
         player = GetComponent<Igralec>();
         rbd = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
 
         originalMoveSpeed = player.movementSpeed;
         jumpHeight = player.jumpHeight;
@@ -66,15 +70,19 @@ public class IgralecKontroler : MonoBehaviour {
             Debug.Log("A");
             moveDir = new Vector2(-moveSpeed, rbd.velocity.y);
             facingRight = false;
+
+            anim.SetFloat("speed", moveSpeed);
         }
         else if (Input.GetKey(KeyCode.D))
         {
             Debug.Log("D");
             moveDir = new Vector2(moveSpeed, rbd.velocity.y);
             facingRight = true;
+            anim.SetFloat("speed", moveSpeed);
         }
         else
         {
+            anim.SetFloat("speed", 0);
             if (Grounded())
             {
                 moveDir = new Vector2(0, 0);
@@ -120,11 +128,11 @@ public class IgralecKontroler : MonoBehaviour {
     {
         if (facingRight)
         {
-            transform.localScale = new Vector3(2f, 2f, 1); //turn right ----> to spremni pol v 1.5, 1.5, 1
+            transform.localScale = new Vector3(2, 2, 1); //turn right ----> to spremni pol v 1.5, 1.5, 1
         }
         else if (!facingRight)
         {
-            transform.localScale = new Vector3(-2f, 2f, 1); //turn left -------> to spremni pol v obratno
+            transform.localScale = new Vector3(-2, 2, 1); //turn left -------> to spremni pol v obratno
         }
     }
 }
