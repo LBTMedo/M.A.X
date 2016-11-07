@@ -7,6 +7,10 @@ public class Igralec : MonoBehaviour {
     public float trenutnaZivljenja { get; set; }
     protected bool mrtev = false;
 
+    public float movementSpeed;
+    public float jumpHeight;
+    public float sprintSpeed;
+
     public float zacetnaZivljenja;
     public event System.Action ObSmrti;
 
