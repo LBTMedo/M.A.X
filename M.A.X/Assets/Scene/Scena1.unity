@@ -263,7 +263,7 @@ GameObject:
   - 33: {fileID: 72990136}
   - 23: {fileID: 72990134}
   - 61: {fileID: 72990135}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: TlaNaprejLevo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1208,6 +1208,46 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1390761982}
   m_RootOrder: 1
+--- !u!1 &401844634
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 401844636}
+  - 114: {fileID: 401844635}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &401844635
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 401844634}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1390e07119335504b87998f1cd8a7925, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &401844636
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 401844634}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.0053308606, y: -11.360002, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 31
 --- !u!1 &412604777
 GameObject:
   m_ObjectHideFlags: 0
@@ -1924,6 +1964,34 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1715180957}
+--- !u!1 &663159088
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 663159089}
+  m_Layer: 8
+  m_Name: TockaZaStreljanje
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &663159089
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 663159088}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.62, y: 0.39, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 1353897265}
+  m_RootOrder: 0
 --- !u!1 &675635037
 GameObject:
   m_ObjectHideFlags: 0
@@ -3992,6 +4060,11 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1149077323}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1178871175 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4000010787480266, guid: c6adf627ceeb46747819791fe3e18a87,
+    type: 2}
+  m_PrefabInternal: {fileID: 1592282265}
 --- !u!1 &1206036165
 GameObject:
   m_ObjectHideFlags: 0
@@ -4783,6 +4856,54 @@ Transform:
   m_PrefabParentObject: {fileID: 4000012970571168, guid: c6adf627ceeb46747819791fe3e18a87,
     type: 2}
   m_PrefabInternal: {fileID: 1592282265}
+--- !u!114 &1353897266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1353897257}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 871acf8d6b005794ab73f83a599d06e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tockaZaStreljanje: {fileID: 663159089}
+  dnoIgralca: {fileID: 1178871175}
+  hitrostMetka: 5
+  dmgObSkokuNaGlavo: 100
+  vrsteMetkov:
+  - {fileID: 50000014273870220, guid: 56d15bdf26c2f664298fc0d62bf1d997, type: 2}
+  - {fileID: 50000013778058604, guid: fb448c9d6ae7e6a47b4523aba3873ba5, type: 2}
+  trenutniMetek: 0
+  streljanje: 13
+--- !u!1 &1368217517
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1368217518}
+  m_Layer: 8
+  m_Name: Dno
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1368217518
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1368217517}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.12, y: -0.29, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 1353897265}
+  m_RootOrder: 1
 --- !u!1 &1386516347
 GameObject:
   m_ObjectHideFlags: 0
@@ -5392,11 +5513,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4000012970571168, guid: c6adf627ceeb46747819791fe3e18a87, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -0.3
+      value: -8.52
       objectReference: {fileID: 0}
     - target: {fileID: 4000012970571168, guid: c6adf627ceeb46747819791fe3e18a87, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -1.7
+      value: -9.97
       objectReference: {fileID: 0}
     - target: {fileID: 4000012970571168, guid: c6adf627ceeb46747819791fe3e18a87, type: 2}
       propertyPath: m_LocalPosition.z
@@ -5435,6 +5556,23 @@ Prefab:
     - target: {fileID: 212000010501621052, guid: c6adf627ceeb46747819791fe3e18a87,
         type: 2}
       propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000010787480266, guid: c6adf627ceeb46747819791fe3e18a87, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0.06
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000010787480266, guid: c6adf627ceeb46747819791fe3e18a87, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -0.28
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010803758090, guid: c6adf627ceeb46747819791fe3e18a87,
+        type: 2}
+      propertyPath: Ground.m_Bits
+      value: 512
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000010787480266, guid: c6adf627ceeb46747819791fe3e18a87, type: 2}
+      propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -5689,9 +5827,9 @@ GameObject:
   - 61: {fileID: 1733148625}
   - 50: {fileID: 1733148624}
   - 114: {fileID: 1733148623}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Sovraznik
-  m_TagString: Untagged
+  m_TagString: Sovraznik
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5708,7 +5846,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   zacetnaZivljenja: 100
-  trenutnaZivljenja: 0
+  trenutnaZivljenja: 100
   rayLength: 15
   verjetnostObrata: 10
   grafika: {fileID: 1128904192}
