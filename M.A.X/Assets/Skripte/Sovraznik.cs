@@ -78,7 +78,7 @@ public class Sovraznik : MonoBehaviour
 
     void Attack()
     {
-        player.PrejmiSkodo(20);
+        //player.PrejmiSkodo(20);
     }
 
     void Update()
