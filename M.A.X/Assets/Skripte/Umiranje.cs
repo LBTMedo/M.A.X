@@ -15,6 +15,13 @@ public class Umiranje : MonoBehaviour {
 	}
     void OnTriggerEnter2D(Collider2D coll)
     {
-        player.PrejmiSkodo(1111);
+        if(coll.gameObject.tag == "Player")
+        {
+            coll.gameObject.SendMessage("PrejmiSkodo", 1000);
+        }
+        else
+        {
+            Destroy(coll.gameObject);
+        }
     }
 }

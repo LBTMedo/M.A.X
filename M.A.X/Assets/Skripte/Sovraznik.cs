@@ -16,10 +16,11 @@ public class Sovraznik : MonoBehaviour
     public Transform pogledKonec;
     public Transform pogledTla;
 
+    private Sovraznik_Borba sistemZaBorbo;
+
     public State state;
 
-    [SerializeField]
-    private bool left = false;
+    public bool left = false;
     [SerializeField]
     private bool sePremika = false;
     [SerializeField]
@@ -40,6 +41,8 @@ public class Sovraznik : MonoBehaviour
     Rigidbody2D rb2d;
     Igralec player;
 
+    Coroutine streljanje;
+
     protected bool mrtev = false;
 
     public event System.Action ObSmrti;
@@ -59,6 +62,8 @@ public class Sovraznik : MonoBehaviour
 
         InvokeRepeating("NakljucniObrat", 0f, 1f);
 
+        sistemZaBorbo = GetComponent<Sovraznik_Borba>();
+
     }
 
     void FixedUpdate()
@@ -70,7 +75,7 @@ public class Sovraznik : MonoBehaviour
         }
         else if (spotted && !zeNapada)
         {
-            InvokeRepeating("Attack", 0.5f, 1f);
+            Attack();
             zeNapada = true;
         }
 
@@ -78,7 +83,7 @@ public class Sovraznik : MonoBehaviour
 
     void Attack()
     {
-        //player.PrejmiSkodo(20);
+        streljanje = StartCoroutine(sistemZaBorbo.Streljanje());
     }
 
     void Update()

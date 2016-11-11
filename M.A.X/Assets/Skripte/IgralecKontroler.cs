@@ -20,6 +20,18 @@ public class IgralecKontroler : MonoBehaviour {
     private bool facingRight;
     private bool jump;
 
+    public bool desno
+    {
+        get
+        {
+            return facingRight;
+        }
+        private set
+        {
+            facingRight = value;
+        }
+    }
+
     private int Jumps; //num of current jumps
     public int originalJumps = 2; //the original num of jumps
 
@@ -114,7 +126,7 @@ public class IgralecKontroler : MonoBehaviour {
 
     bool Grounded() //returns true if player is on the "Ground" layer
     {
-        grounded = Physics2D.Raycast(groundCheck.position, -Vector2.up, 0.1f, Ground);
+        grounded = Physics2D.Raycast(groundCheck.position, -Vector2.up, 0.3f, Ground);
         return grounded;
         //return Physics2D.OverlapCircle(groundCheck.position, 0.1f, Ground); 
     }
