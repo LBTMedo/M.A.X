@@ -267,7 +267,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 88307832}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 88307835}
+        m_MethodName: flipTile
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &88307835
@@ -281,6 +292,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f7c2d484ac3e8d46bd750ecb6142289, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  state: 0
+  tileValue: 0
+  initialized: 0
 --- !u!1 &117014505
 GameObject:
   m_ObjectHideFlags: 0
@@ -463,7 +477,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 170382624}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 170382627}
+        m_MethodName: flipTile
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &170382627
@@ -477,6 +502,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f7c2d484ac3e8d46bd750ecb6142289, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  state: 0
+  tileValue: 0
+  initialized: 0
 --- !u!1 &318044238
 GameObject:
   m_ObjectHideFlags: 0
@@ -585,7 +613,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 318044240}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 318044243}
+        m_MethodName: flipTile
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &318044243
@@ -599,6 +638,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f7c2d484ac3e8d46bd750ecb6142289, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  state: 0
+  tileValue: 0
+  initialized: 0
 --- !u!1 &417965450
 GameObject:
   m_ObjectHideFlags: 0
@@ -648,34 +690,6 @@ RectTransform:
   m_AnchoredPosition: {x: 960, y: -448.21}
   m_SizeDelta: {x: 876, y: 844}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &460768300
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 460768301}
-  m_Layer: 0
-  m_Name: GameObject
-  m_TagString: Manager
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &460768301
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 460768300}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
 --- !u!1 &554154024
 GameObject:
   m_ObjectHideFlags: 0
@@ -770,6 +784,76 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!1 &600588367
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 600588369}
+  - 114: {fileID: 600588368}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Manager
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &600588368
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 600588367}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c797d53ca2e24942ba84da78e951a6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tileFace:
+  - {fileID: 21300000, guid: 95965bc9b9f2a184ca31656af27cf191, type: 3}
+  - {fileID: 21300000, guid: 1d9c00f2f0facb643b3aadba354bef93, type: 3}
+  - {fileID: 21300000, guid: 72b92983dde77b04cad4e67974c6706f, type: 3}
+  - {fileID: 21300000, guid: 944cbb8f2deb02b46b668fea4cefd43b, type: 3}
+  - {fileID: 21300000, guid: 6455e6c7bd9276e4e8843d7135db4d39, type: 3}
+  - {fileID: 21300000, guid: c812eb4ef9e658f468a00684442a3baf, type: 3}
+  - {fileID: 21300000, guid: fe4712fc1321e0347a676a8f1da03282, type: 3}
+  - {fileID: 21300000, guid: 0a0d53c0657dd6f47861a2175420d086, type: 3}
+  tileBack: {fileID: 21300000, guid: 8cde39abcb13e8b4b9f7eacbd110a54e, type: 3}
+  tiles:
+  - {fileID: 170382622}
+  - {fileID: 2021523206}
+  - {fileID: 1308510335}
+  - {fileID: 687293821}
+  - {fileID: 1422183818}
+  - {fileID: 318044238}
+  - {fileID: 944485608}
+  - {fileID: 1847741874}
+  - {fileID: 641472859}
+  - {fileID: 941770465}
+  - {fileID: 1503781845}
+  - {fileID: 1919370792}
+  - {fileID: 88307830}
+  - {fileID: 1677769820}
+  - {fileID: 1486782071}
+  - {fileID: 721134859}
+  matchText: {fileID: 117014507}
+  init: 0
+  matches: 8
+--- !u!4 &600588369
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 600588367}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
 --- !u!1 &613848875
 GameObject:
   m_ObjectHideFlags: 0
@@ -966,7 +1050,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 641472861}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 641472864}
+        m_MethodName: flipTile
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &641472864
@@ -980,6 +1075,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f7c2d484ac3e8d46bd750ecb6142289, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  state: 0
+  tileValue: 0
+  initialized: 0
 --- !u!1 &687293821
 GameObject:
   m_ObjectHideFlags: 0
@@ -1088,7 +1186,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 687293823}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 687293826}
+        m_MethodName: flipTile
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &687293826
@@ -1102,6 +1211,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f7c2d484ac3e8d46bd750ecb6142289, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  state: 0
+  tileValue: 0
+  initialized: 0
 --- !u!1 &721134859
 GameObject:
   m_ObjectHideFlags: 0
@@ -1210,7 +1322,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 721134861}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 721134864}
+        m_MethodName: flipTile
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &721134864
@@ -1224,6 +1347,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f7c2d484ac3e8d46bd750ecb6142289, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  state: 0
+  tileValue: 0
+  initialized: 0
 --- !u!1 &941770465
 GameObject:
   m_ObjectHideFlags: 0
@@ -1332,7 +1458,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 941770467}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 941770470}
+        m_MethodName: flipTile
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &941770470
@@ -1346,6 +1483,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f7c2d484ac3e8d46bd750ecb6142289, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  state: 0
+  tileValue: 0
+  initialized: 0
 --- !u!1 &944485608
 GameObject:
   m_ObjectHideFlags: 0
@@ -1454,7 +1594,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 944485610}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 944485613}
+        m_MethodName: flipTile
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &944485613
@@ -1468,6 +1619,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f7c2d484ac3e8d46bd750ecb6142289, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  state: 0
+  tileValue: 0
+  initialized: 0
 --- !u!1 &1033843345
 GameObject:
   m_ObjectHideFlags: 0
@@ -1638,7 +1792,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1308510337}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1308510340}
+        m_MethodName: flipTile
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1308510340
@@ -1652,6 +1817,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f7c2d484ac3e8d46bd750ecb6142289, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  state: 0
+  tileValue: 0
+  initialized: 0
 --- !u!1 &1422183818
 GameObject:
   m_ObjectHideFlags: 0
@@ -1760,7 +1928,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1422183820}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1422183823}
+        m_MethodName: flipTile
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1422183823
@@ -1774,6 +1953,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f7c2d484ac3e8d46bd750ecb6142289, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  state: 0
+  tileValue: 0
+  initialized: 0
 --- !u!1 &1486782071
 GameObject:
   m_ObjectHideFlags: 0
@@ -1882,7 +2064,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1486782073}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1486782076}
+        m_MethodName: flipTile
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1486782076
@@ -1896,6 +2089,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f7c2d484ac3e8d46bd750ecb6142289, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  state: 0
+  tileValue: 0
+  initialized: 0
 --- !u!1 &1503781845
 GameObject:
   m_ObjectHideFlags: 0
@@ -2004,7 +2200,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1503781847}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1503781850}
+        m_MethodName: flipTile
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1503781850
@@ -2018,6 +2225,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f7c2d484ac3e8d46bd750ecb6142289, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  state: 0
+  tileValue: 0
+  initialized: 0
 --- !u!1 &1677769820
 GameObject:
   m_ObjectHideFlags: 0
@@ -2126,7 +2336,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1677769822}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1677769825}
+        m_MethodName: flipTile
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1677769825
@@ -2140,6 +2361,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f7c2d484ac3e8d46bd750ecb6142289, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  state: 0
+  tileValue: 0
+  initialized: 0
 --- !u!1 &1847741874
 GameObject:
   m_ObjectHideFlags: 0
@@ -2248,7 +2472,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1847741876}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1847741879}
+        m_MethodName: flipTile
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1847741879
@@ -2262,6 +2497,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f7c2d484ac3e8d46bd750ecb6142289, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  state: 0
+  tileValue: 0
+  initialized: 0
 --- !u!1 &1919370792
 GameObject:
   m_ObjectHideFlags: 0
@@ -2370,7 +2608,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1919370794}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1919370797}
+        m_MethodName: flipTile
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1919370797
@@ -2384,6 +2633,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f7c2d484ac3e8d46bd750ecb6142289, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  state: 0
+  tileValue: 0
+  initialized: 0
 --- !u!1 &2021523206
 GameObject:
   m_ObjectHideFlags: 0
@@ -2492,7 +2744,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2021523208}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2021523211}
+        m_MethodName: flipTile
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &2021523211
@@ -2506,3 +2769,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f7c2d484ac3e8d46bd750ecb6142289, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  state: 0
+  tileValue: 0
+  initialized: 0

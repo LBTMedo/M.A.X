@@ -22,22 +22,31 @@ public class Tile : MonoBehaviour {
 
     void Start()
     {
-        state = 0;
+        state = 1;
         manager = GameObject.FindGameObjectWithTag ("Manager");
 
     }
 
     public void setupGraphics()
     {
-        tileBack = manager.GetComponent<GameManager>().getTileBack();
-        tileFace = manager.GetComponent<GameManager>().getTileFace(tileValue);
+        tileBack = manager.GetComponent<GameManagerMiniGame>().GetTileBack();
+        tileFace = manager.GetComponent<GameManagerMiniGame>().GetTileFace(tileValue);
 
         flipTile();
     }
 
 
-    void flipTile()
+    public void flipTile()
     {
+        if (state == 0)
+        {
+            state = 1;
+        }
+        else if (state == 1)
+        {
+            state = 0;
+        }
+
         if (state == 0 && !DO_NOT)
         {
             GetComponent<Image>().sprite = tileBack;

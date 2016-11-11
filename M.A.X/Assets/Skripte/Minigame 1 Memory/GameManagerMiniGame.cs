@@ -3,7 +3,7 @@ using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
 
-public class GameManager : MonoBehaviour {
+public class GameManagerMiniGame : MonoBehaviour {
 
     public Sprite[] tileFace;
     public Sprite tileBack;
