@@ -124,4 +124,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 20
   lifeTime: 4
-  tag: Sovraznik
+  tag1: Sovraznik
