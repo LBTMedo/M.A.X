@@ -22,7 +22,7 @@ public class Sovraznik_Borba : MonoBehaviour {
         igralec = FindObjectOfType<Igralec>().gameObject;
     }
 
-    public IEnumerator Streljanje()
+    /*public IEnumerator Streljanje()
     {
         target = (igralec.transform.position - tockaZaStreljanje.position).normalized;
 
@@ -39,6 +39,19 @@ public class Sovraznik_Borba : MonoBehaviour {
             }
 
             yield return new WaitForSeconds(0.5f);
+        }
+    }*/
+
+    public void Streljanje()
+    {
+        Rigidbody2D instancaMetka = Instantiate(metek, tockaZaStreljanje.position, tockaZaStreljanje.rotation) as Rigidbody2D;
+        if (!sovraznik.left)
+        {
+            instancaMetka.velocity = hitrostMetka * instancaMetka.transform.right;
+        }
+        else if (sovraznik.left)
+        {
+            instancaMetka.velocity = hitrostMetka * (-instancaMetka.transform.right);
         }
     }
 }

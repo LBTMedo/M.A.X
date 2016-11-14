@@ -83,7 +83,12 @@ public class Sovraznik : MonoBehaviour
 
     void Attack()
     {
-        streljanje = StartCoroutine(sistemZaBorbo.Streljanje());
+        InvokeRepeating("Streljaj", 0f, 0.5f);
+    }
+
+    void Streljaj()
+    {
+        sistemZaBorbo.Streljanje();
     }
 
     void Update()
@@ -206,6 +211,7 @@ public class Sovraznik : MonoBehaviour
             ObSmrti();
         }
         rb2d.velocity = Vector3.zero;
+        //StopCoroutine(streljanje);
         sePremika = false;
         transform.Rotate(new Vector3(0, 0, 90));
         Invoke("DestroyGO", casPredBrisanjem);
