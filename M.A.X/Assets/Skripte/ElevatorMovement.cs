@@ -19,7 +19,7 @@ public class ElevatorMovement: MonoBehaviour {
 	    pingpong = Mathf.PingPong(Time.time * speed, 1f);
 	}
 
-    void OnTriggerEnter(Collider2D other)
+    void OnTriggerEnter2d(Collider2D other)
     {
         if (other.tag == "Igralec")
         {

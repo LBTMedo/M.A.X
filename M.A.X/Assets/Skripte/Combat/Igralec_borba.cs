@@ -20,6 +20,8 @@ public class Igralec_borba : MonoBehaviour {
     private int trenutniMetek;
     private IgralecKontroler kontroler;
 
+    bool seJeZeVrnilo = false;
+
     private VrstaStreljanja vrsta;
 
     public KeyCode streljanje;
@@ -29,6 +31,8 @@ public class Igralec_borba : MonoBehaviour {
     public bool avtomatsko;
 
     Coroutine avtomatskoStreljanje;
+
+    int id = 0;
 
     void Start()
     {
@@ -65,7 +69,10 @@ public class Igralec_borba : MonoBehaviour {
         }
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
-            WeaponManager.ZamenjajOrozje();
+            if(WeaponManager.stOrozij() > 0)
+            {
+                WeaponManager.ZamenjajOrozje();
+            }
         }
         if (Input.GetKeyDown(KeyCode.M))
         {
@@ -83,6 +90,12 @@ public class Igralec_borba : MonoBehaviour {
             }
             avtomatsko = !avtomatsko;
         }
+        if (Input.GetKeyDown(KeyCode.B))
+        {
+            WeaponManager.kupiOrozje(id);
+            id++;
+        }
+
         Raycasting();
         desno = kontroler.desno;
         trenutnoOrozje = WeaponManager.VrniTrenutnoOrozje().parent;
@@ -123,12 +136,15 @@ public class Igralec_borba : MonoBehaviour {
 
     void MeleeAttack()
     {
-        trenutnoOrozje.Rotate(new Vector3(0, 0, -60));
-        trenutnoOrozje.position = new Vector3(trenutnoOrozje.position.x, trenutnoOrozje.position.y - 1f);
-        Invoke("ZavrtiNazaj", 0.5f);
+        if (WeaponManager.stOrozij() > 0)
+        {
+            trenutnoOrozje.Rotate(new Vector3(0, 0, -60));
+            trenutnoOrozje.position = new Vector3(trenutnoOrozje.position.x, trenutnoOrozje.position.y - 1f);
+            Invoke("ZavrtiNazaj", 0.5f);
+        }
     }
 
-    void ZavrtiNazaj()
+    public void ZavrtiNazaj()
     {
         trenutnoOrozje.Rotate(new Vector3(0, 0, 60));
         trenutnoOrozje.position = new Vector3(trenutnoOrozje.position.x, trenutnoOrozje.position.y + 1f);

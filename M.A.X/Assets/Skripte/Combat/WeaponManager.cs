@@ -4,29 +4,30 @@ using System.Collections.Generic;
 
 public class WeaponManager : MonoBehaviour {
 
+    static List<GameObject> vsaOrozja;
+
     static List<GameObject> orozja;
     static int trenutnoOrozje;
-
 
     void Start()
     {
         orozja = new List<GameObject>();
+        vsaOrozja = new List<GameObject>();
+
         foreach(Transform child in transform)
         {
-            orozja.Add(child.gameObject);
+            vsaOrozja.Add(child.gameObject);
         }
 
-        foreach(GameObject orozje in orozja)
+        foreach(GameObject orozje in vsaOrozja)
         {
             orozje.SetActive(false);
         }
-
-        orozja[trenutnoOrozje].SetActive(true);
     }
 
     public static Transform VrniTrenutnoOrozje()
     {
-        return orozja[trenutnoOrozje].transform;
+        return vsaOrozja[trenutnoOrozje].transform;
     }
 
     public static void ZamenjajOrozje()
@@ -42,6 +43,16 @@ public class WeaponManager : MonoBehaviour {
             orozje.SetActive(false);
         }
 
-        orozja[trenutnoOrozje].SetActive(true);
+        orozja[trenutnoOrozje].SetActive(true);        
+    }
+
+    public static int stOrozij()
+    {
+        return orozja.Count;
+    }
+
+    public static void kupiOrozje(int index)
+    {
+        orozja.Add(vsaOrozja[index]);
     }
 }

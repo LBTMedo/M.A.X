@@ -2259,6 +2259,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 20
+  cena: 0
 --- !u!1 &758483750
 GameObject:
   m_ObjectHideFlags: 0
@@ -5997,6 +5998,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 20
+  cena: 0
 --- !u!61 &1702639925
 BoxCollider2D:
   m_ObjectHideFlags: 0

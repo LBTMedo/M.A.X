@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Sovraznik
   - Manager
+  - Metek
   layers:
   - Default
   - TransparentFX
