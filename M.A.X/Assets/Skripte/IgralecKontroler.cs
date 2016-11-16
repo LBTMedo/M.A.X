@@ -21,6 +21,8 @@ public class IgralecKontroler : MonoBehaviour {
     private bool facingRight;
     private bool jump;
 
+    public Vector3 currentScale;
+
     public bool desno
     {
         get
@@ -58,6 +60,8 @@ public class IgralecKontroler : MonoBehaviour {
         facingRight = true;
         jump = false;
         Jumps = originalJumps;
+
+        currentScale = transform.localScale;
 	}
 
     void Update()
@@ -141,11 +145,11 @@ public class IgralecKontroler : MonoBehaviour {
     {
         if (facingRight)
         {
-            transform.localScale = new Vector3(2f, 2f, 1); //turn right ----> to spremni pol v 1.5, 1.5, 1
+            transform.localScale = new Vector3(currentScale.x, currentScale.y, 1); //turn right ----> to spremni pol v 1.5, 1.5, 1
         }
         else if (!facingRight)
         {
-            transform.localScale = new Vector3(-2f, 2f, 1); //turn left -------> to spremni pol v obratno
+            transform.localScale = new Vector3(-currentScale.x, currentScale.y, 1); //turn left -------> to spremni pol v obratno
         }
     }
 }

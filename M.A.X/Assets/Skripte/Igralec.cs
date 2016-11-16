@@ -92,7 +92,7 @@ public class Igralec : MonoBehaviour {
 
     void Povecaj()
     {
-        transform.localScale = new Vector3(originalenScale.x * 2, originalenScale.y * 2);
+        kontroler.currentScale = new Vector3(originalenScale.x * 2, originalenScale.y * 2);
     }
 
     void Pohitri()
@@ -102,7 +102,7 @@ public class Igralec : MonoBehaviour {
 
     void Ponastavi()
     {
-        transform.localScale = originalenScale;
+        kontroler.currentScale = originalenScale;
         kontroler.hitrostPremikanje = movementSpeed;
     }
 
