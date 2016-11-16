@@ -428,13 +428,13 @@ Transform:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 19560940}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -18.875399, y: 5.304435, z: -9.9}
-  m_LocalScale: {x: 1.3, y: 1.3, z: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_Father: {fileID: 1545756581}
+  m_RootOrder: 1
 --- !u!4 &21163977 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4000011022316460, guid: 068999ca5e49feb49905efc1f6c2d498,
@@ -4669,7 +4669,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
 --- !u!1001 &427539736
 Prefab:
   m_ObjectHideFlags: 0
@@ -9559,7 +9559,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 12
 --- !u!1 &821190785
 GameObject:
   m_ObjectHideFlags: 0
@@ -14129,7 +14129,7 @@ Transform:
   - {fileID: 1144010517}
   - {fileID: 1527308654}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
 --- !u!114 &1101054454
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18681,7 +18681,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
 --- !u!1 &1367847594
 GameObject:
   m_ObjectHideFlags: 0
@@ -20242,7 +20242,7 @@ Transform:
   - {fileID: 1576128630}
   - {fileID: 1498878352}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
 --- !u!1 &1498878351
 GameObject:
   m_ObjectHideFlags: 0
@@ -21120,6 +21120,11 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c6adf627ceeb46747819791fe3e18a87, type: 2}
   m_IsPrefabParent: 0
+--- !u!4 &1545756581 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4000012970571168, guid: c6adf627ceeb46747819791fe3e18a87,
+    type: 2}
+  m_PrefabInternal: {fileID: 1545756580}
 --- !u!1 &1558583205
 GameObject:
   m_ObjectHideFlags: 0
@@ -28741,7 +28746,7 @@ RectTransform:
   - {fileID: 773697252}
   - {fileID: 269577273}
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 13
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
