@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using System.Collections.Generic;
 
 public class Shop : MonoBehaviour {
 
@@ -9,6 +10,11 @@ public class Shop : MonoBehaviour {
 
     [SerializeField]
     private Image shopBackground;
+
+    [SerializeField]
+    private Image[] slikeZaIteme;
+
+  
    
 
 	// Use this for initialization
@@ -16,6 +22,8 @@ public class Shop : MonoBehaviour {
         shopBackground.enabled = false;
         Image[] ary = shopBackground.GetComponentsInChildren<Image>();
         Button[] ary2 = shopBackground.GetComponentsInChildren<Button>();
+  
+
         foreach (Button b in ary2)
         {
             b.enabled = false;
@@ -32,6 +40,43 @@ public class Shop : MonoBehaviour {
         izpisCollider.text = "";
         izpisCollider.fontSize = 14;
 	}
+
+    void LoadItemsAvailable(Image[] array)
+    {
+        List<GameObject> orozjaNaVoljo = new List<GameObject>();
+        orozjaNaVoljo = WeaponManager.vrniVsaOrozja();
+        for(int i=0; i<orozjaNaVoljo.Count;i++)
+        {
+            RocnoOrozje r = orozjaNaVoljo[i].GetComponent<RocnoOrozje>();
+        
+            
+                if (array[i].tag == "Shop Item Background")
+                {
+                    Text[] arrayOfTexts = array[i].GetComponentsInChildren<Text>();
+                    foreach (Text t in arrayOfTexts)
+                    {
+                        if (t.tag == "Shop Item Cost")
+                        {
+                            t.text = r.cena.ToString();
+                            t.enabled = true;
+                        }
+                        else if(t.tag == "Shop Item Damage")
+                        {
+                            t.text = r.damage.ToString();
+                            t.enabled = true;
+                        }
+                    }
+                    array[i].enabled = true;
+                    Image[] children = array[i].GetComponentsInChildren<Image>();
+                    foreach(Image i1 in children)
+                    {
+                        i1.enabled = true;
+                    }
+                }
+
+            
+        }
+    }
 
     void OnTriggerEnter2D(Collider2D other)
     {
@@ -65,9 +110,9 @@ public class Shop : MonoBehaviour {
             izpisCollider.fontSize = 14;
         }
     }
-	
-	// Update is called once per frame
-	void Update () {
+
+    void startUpEnableDisableManager()
+    {
         if (Input.GetKeyDown(KeyCode.F))
         {
             shopBackground.enabled = true;
@@ -85,7 +130,25 @@ public class Shop : MonoBehaviour {
                 {
                     t.enabled = true;
                 }
+
+                if (c.tag == "Shop Item" || c.tag == "Shop Item Background")
+                {
+                    c.enabled = false;
+                    Text[] ary3 = c.GetComponentsInChildren<Text>();
+                    foreach (Text t in ary3)
+                    {
+                        t.enabled = false;
+                    }
+                }
             }
+            LoadItemsAvailable(slikeZaIteme);
         }
     }
+	
+	// Update is called once per frame
+	void Update () {
+        startUpEnableDisableManager();
+    }
+
+    
 }
