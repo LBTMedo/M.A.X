@@ -6,6 +6,7 @@ public class IgralecKontroler : MonoBehaviour {
 
     Igralec player;
 
+    [SerializeField]
     private float moveSpeed = 20f;
     private float jumpHeight = 15f;
     private float sprintSpeed = 30f;
@@ -30,6 +31,11 @@ public class IgralecKontroler : MonoBehaviour {
         {
             facingRight = value;
         }
+    }
+
+    public float hitrostPremikanje
+    {
+        set { moveSpeed = value; }
     }
 
     private int Jumps; //num of current jumps
