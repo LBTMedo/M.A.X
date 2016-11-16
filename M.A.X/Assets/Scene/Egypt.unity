@@ -27991,11 +27991,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000010403116418, guid: 153029102071339429757915b5faae6d, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 3.91
+      value: 5.69
       objectReference: {fileID: 0}
     - target: {fileID: 4000010403116418, guid: 153029102071339429757915b5faae6d, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0.23
+      value: 26.34
       objectReference: {fileID: 0}
     - target: {fileID: 61000013380409120, guid: 153029102071339429757915b5faae6d,
         type: 2}
