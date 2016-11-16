@@ -5,6 +5,7 @@ public class Button4 : MonoBehaviour {
 
     public bool pressed;
     public float distance = 15f;
+    private int count = 0;
 
     GameObject largeElevator;
     ElevatorMovement movement;
@@ -20,10 +21,11 @@ public class Button4 : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        if (pressed)
+        if (pressed && count == 0)
         {
             transform.Translate(-Vector2.up * Time.deltaTime * distance);
             movement.move = true;
+            count++;
         }
 
     }
