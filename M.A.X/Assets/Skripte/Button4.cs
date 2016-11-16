@@ -1,0 +1,35 @@
+﻿using UnityEngine;
+using System.Collections;
+
+public class Button4 : MonoBehaviour {
+
+    public bool pressed;
+    public float distance = 15f;
+
+    GameObject largeElevator;
+    ElevatorMovement movement;
+
+    // Use this for initialization
+    void Start()
+    {
+        largeElevator = GameObject.Find("Large stone elevator");
+        movement = largeElevator.GetComponent<ElevatorMovement>();
+        pressed = false;
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (pressed)
+        {
+            transform.Translate(-Vector2.up * Time.deltaTime * distance);
+            movement.move = true;
+        }
+
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        pressed = true;
+    }
+}
