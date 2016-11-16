@@ -11,6 +11,7 @@ public class Kamera : MonoBehaviour
     public float premikPoY = -3f;
     private float pozicijaY;
     private bool pogled = false;
+    private bool upNdownNewBalance = true;
     float offsetZ;
     Vector3 ZadnjaPozicija;
     Vector3 Hitrost;
@@ -37,16 +38,54 @@ public class Kamera : MonoBehaviour
         {
             NaslednjaPozicija = Vector3.MoveTowards(NaslednjaPozicija, Vector3.zero, Time.deltaTime * VracanjeKamereHitrost);
         }
-        NaslednjaPozicija.y = pozicijaY + premikPoY;
-        Vector3 nextPozicija = player.position + NaslednjaPozicija + Vector3.forward * offsetZ;
-        Vector3 novaPozicija = Vector3.SmoothDamp(transform.position, nextPozicija, ref Hitrost, damping);
-        transform.position = novaPozicija;
-        ZadnjaPozicija = player.position;
+        if (pogled == false)
+        {
+            NaslednjaPozicija.y = pozicijaY + premikPoY;
+            Vector3 nextPozicija = player.position + NaslednjaPozicija + Vector3.forward * offsetZ;
+            Vector3 novaPozicija = Vector3.SmoothDamp(transform.position, nextPozicija, ref Hitrost, damping);
+            transform.position = novaPozicija;
+            ZadnjaPozicija = player.position;
+        }
+        else
+        {
+            if (upNdownNewBalance == true)
+            {
+                NaslednjaPozicija.y = pozicijaY - 10f;
+                Vector3 nextPozicija = player.position + NaslednjaPozicija + Vector3.forward * offsetZ;
+                Vector3 novaPozicija = Vector3.SmoothDamp(transform.position, nextPozicija, ref Hitrost, damping);
+                transform.position = novaPozicija;
+                ZadnjaPozicija = player.position;
+            }
+            else
+            {
+                NaslednjaPozicija.y = pozicijaY + 3.5f;
+                Vector3 nextPozicija = player.position + NaslednjaPozicija + Vector3.forward * offsetZ;
+                Vector3 novaPozicija = Vector3.SmoothDamp(transform.position, nextPozicija, ref Hitrost, damping);
+                transform.position = novaPozicija;
+                ZadnjaPozicija = player.position;
+            }
+        }
+    }
+    void FixedUpdate()
+    {
+
         if (Input.GetKeyDown(KeyCode.S))
         {
-            NaslednjaPozicija.y = pozicijaY -8f;
-            nextPozicija = player.position + NaslednjaPozicija + Vector3.forward * offsetZ;
-            novaPozicija = Vector3.SmoothDamp(transform.position, nextPozicija, ref Hitrost, damping);
+            upNdownNewBalance = true;
+            pogled = true;
+        }
+        if (Input.GetKeyUp(KeyCode.S))
+        {
+            pogled = false;
+        }
+        if (Input.GetKeyDown(KeyCode.W))
+        {
+            upNdownNewBalance = false;
+            pogled = true;
+        }
+        if (Input.GetKeyUp(KeyCode.W))
+        {
+            pogled = false;
         }
     }
 }
