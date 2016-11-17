@@ -9,6 +9,8 @@ public class GameManager : MonoBehaviour {
 
     public static int ubitiSovrazniki;
 
+    public static int denar;
+
     Igralec igralec;
 
     Sovraznik[] sovrazniki; 
@@ -16,6 +18,8 @@ public class GameManager : MonoBehaviour {
     void Start()
     {
         ubitiSovrazniki = 0;
+
+        denar = 0;
 
         igralec = FindObjectOfType<Igralec>();
         igralec.ObSmrti += RestartGame;
@@ -35,6 +39,12 @@ public class GameManager : MonoBehaviour {
     void PovecajStUbitihSovraznikov()
     {
         ubitiSovrazniki++;
+    }
+
+    public static void DodajDenar(int value)
+    {
+        denar += value;
+        Debug.Log("Denar: " + denar.ToString());
     }
 
 }

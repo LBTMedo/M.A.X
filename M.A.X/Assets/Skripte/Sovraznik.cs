@@ -31,8 +31,9 @@ public class Sovraznik : MonoBehaviour
     private bool zeNapada = false;
     [SerializeField]
     private float speed = 10;
-
     private float casPredBrisanjem = 3f;
+    [SerializeField]
+    int stKovancev;
 
     Vector3 levo;
     Vector3 desno;
@@ -40,6 +41,7 @@ public class Sovraznik : MonoBehaviour
 
     Rigidbody2D rb2d;
     Igralec player;
+    public Rigidbody2D kovanecPrefab;
 
     Coroutine streljanje;
 
@@ -49,6 +51,7 @@ public class Sovraznik : MonoBehaviour
 
     void Start()
     {
+        stKovancev = Random.Range(1, 4);
         trenutnaZivljenja = zacetnaZivljenja;
         startPozicija = transform.position;
 
@@ -211,8 +214,16 @@ public class Sovraznik : MonoBehaviour
             ObSmrti();
         }
         rb2d.velocity = Vector3.zero;
+
+        for (int i = 0; i < stKovancev; i++)
+        {
+            Rigidbody2D kovanec = Instantiate(kovanecPrefab, transform.position, transform.rotation) as Rigidbody2D;
+            kovanec.AddForce(new Vector2(Random.Range(1, 4), Random.Range(1, 4)) * Random.Range(10,40));
+        }
+
         //StopCoroutine(streljanje);
         sePremika = false;
+
         transform.Rotate(new Vector3(0, 0, 90));
         Invoke("DestroyGO", casPredBrisanjem);
     }

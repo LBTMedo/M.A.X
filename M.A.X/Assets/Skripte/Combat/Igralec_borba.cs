@@ -16,9 +16,10 @@ public class Igralec_borba : MonoBehaviour {
     public Transform konec;
 
     public Rigidbody2D[] vrsteMetkov;
-    [SerializeField]
-    private int trenutniMetek;
+    public int trenutniMetek { private set; get; }
     private IgralecKontroler kontroler;
+
+    Ammo ammo;
 
     bool seJeZeVrnilo = false;
 
@@ -27,7 +28,7 @@ public class Igralec_borba : MonoBehaviour {
     public KeyCode streljanje;
 
     public bool desno;
-
+    bool hasBullets;
     public bool avtomatsko;
 
     Coroutine avtomatskoStreljanje;
@@ -41,11 +42,15 @@ public class Igralec_borba : MonoBehaviour {
         kontroler = GetComponent<IgralecKontroler>();
         desno = kontroler.desno;
         avtomatsko = false;
+        ammo = FindObjectOfType<Ammo>();
+        hasBullets = true;
     }
 
     void Update()
     {
-        if (Input.GetKeyDown(streljanje))
+        hasBullets = (ammo.metki[trenutniMetek] > 0) ? true : false;
+
+        if (Input.GetKeyDown(streljanje) && hasBullets)
         {
             if (vrsta == VrstaStreljanja.enojno)
             {
@@ -56,7 +61,7 @@ public class Igralec_borba : MonoBehaviour {
                 avtomatskoStreljanje = StartCoroutine(Streljanje());
             }
         }
-        if (Input.GetKeyUp(streljanje))
+        if (Input.GetKeyUp(streljanje) || !hasBullets)
         {
             if(vrsta == VrstaStreljanja.avtomatsko)
             {
@@ -114,6 +119,8 @@ public class Igralec_borba : MonoBehaviour {
         {
             instancaMetka.velocity = hitrostMetka * (-tockaZaStreljanje.right);
         }
+
+        ammo.ZmanjsajSTMetkov(1, trenutniMetek);
     }
 
     IEnumerator Streljanje()
@@ -129,6 +136,8 @@ public class Igralec_borba : MonoBehaviour {
             {
                 instancaMetka.velocity = hitrostMetka * (-tockaZaStreljanje.right);
             }
+
+            ammo.ZmanjsajSTMetkov(1, trenutniMetek);
 
             yield return new WaitForSeconds(0.5f);
         }
@@ -158,6 +167,7 @@ public class Igralec_borba : MonoBehaviour {
         {
             trenutniMetek = 0;
         }
+        ammo.ZamenjajIndex(trenutniMetek);
     }
 
     void Raycasting()
