@@ -15,6 +15,10 @@ public class Shop : MonoBehaviour {
     private Image[] slikeZaIteme;
 
   
+    public Image[] VrniArraySlik()
+    {
+        return slikeZaIteme;
+    }
    
 
 	// Use this for initialization
@@ -41,7 +45,7 @@ public class Shop : MonoBehaviour {
         izpisCollider.fontSize = 14;
 	}
 
-    void LoadItemsAvailable(Image[] array)
+    public void LoadItemsAvailable(Image[] array)
     {
         List<GameObject> orozjaNaVoljo = new List<GameObject>();
         orozjaNaVoljo = WeaponManager.vrniVsaOrozja();
