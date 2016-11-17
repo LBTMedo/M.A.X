@@ -113,4 +113,17 @@ public class Igralec : MonoBehaviour {
         Invoke("Ponastavi", 3f);
     }
 
+   /* void OnColliderEnter2D(Collider2D other)
+    {
+        if(other.tag == "Sovraznik")
+        {
+            Sovraznik enemy = other.gameObject.GetComponent<Sovraznik>();
+            if(enemy.vrsta == Sovraznik.Vrsta.leteci)
+            {
+                PrejmiSkodo(100f);
+                Destroy(other.gameObject);
+            }
+        }
+    }*/
+
 }
