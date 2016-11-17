@@ -12,6 +12,7 @@ TagManager:
   - Shop Item
   - Shop Item Damage
   - WeaponImg
+  - AlreadyOwned
   layers:
   - Default
   - TransparentFX

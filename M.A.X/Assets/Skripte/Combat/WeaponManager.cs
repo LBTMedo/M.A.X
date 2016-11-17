@@ -30,6 +30,11 @@ public class WeaponManager : MonoBehaviour {
         return vsaOrozja;
     }
 
+    public static List<GameObject> vrniKupljenaOrozja()
+    {
+        return orozja;
+    }
+
     public static Transform VrniTrenutnoOrozje()
     {
         return vsaOrozja[trenutnoOrozje].transform;

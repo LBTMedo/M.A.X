@@ -45,6 +45,8 @@ public class Shop : MonoBehaviour {
     {
         List<GameObject> orozjaNaVoljo = new List<GameObject>();
         orozjaNaVoljo = WeaponManager.vrniVsaOrozja();
+        List<GameObject> kupljenaOrozja = new List<GameObject>();
+        kupljenaOrozja = WeaponManager.vrniKupljenaOrozja();
         for(int i=0; i<orozjaNaVoljo.Count;i++)
         {
             RocnoOrozje r = orozjaNaVoljo[i].GetComponent<RocnoOrozje>();
@@ -74,7 +76,23 @@ public class Shop : MonoBehaviour {
                     {
                         i1.sprite = r.VrniSliko();
                     }
+                    if (i1.tag != "AlreadyOwned")
+                    {
                         i1.enabled = true;
+                    }
+                    else if(i1.tag == "AlreadyOwned")
+                    {
+                        foreach(GameObject g in kupljenaOrozja)
+                        {
+                            RocnoOrozje r1 = g.GetComponent<RocnoOrozje>();
+                            if(r.ime == r1.ime)
+                            {
+                                i1.enabled = true;
+                                Button b = array[i].GetComponent<Button>();
+                                b.interactable = false;
+                            }
+                        }
+                    }
                     }
                 }
 
@@ -128,14 +146,17 @@ public class Shop : MonoBehaviour {
             }
             foreach (Image c in ary)
             {
-                c.enabled = true;
-                Text[] ary1 = c.GetComponentsInChildren<Text>();
-                foreach (Text t in ary1)
+                if (c.tag != "AlreadyOwned")
                 {
-                    t.enabled = true;
+                    c.enabled = true;
+                    Text[] ary1 = c.GetComponentsInChildren<Text>();
+                    foreach (Text t in ary1)
+                    {
+                        t.enabled = true;
+                    }
                 }
 
-                if (c.tag == "Shop Item" || c.tag == "Shop Item Background" || c.tag == "WeaponImg")
+                if (c.tag == "Shop Item" || c.tag == "Shop Item Background" || c.tag == "WeaponImg" || c.tag == "AlreadyOwned")
                 {
                     c.enabled = false;
                     Text[] ary3 = c.GetComponentsInChildren<Text>();

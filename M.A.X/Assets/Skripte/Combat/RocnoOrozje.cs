@@ -5,6 +5,7 @@ public class RocnoOrozje : MonoBehaviour {
 
     public float damage = 20f;
     public float cena;
+    public string ime;
 
     [SerializeField]
     private Sprite slikaOrozja;
