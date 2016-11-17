@@ -70,6 +70,10 @@ public class Shop : MonoBehaviour {
                     Image[] children = array[i].GetComponentsInChildren<Image>();
                     foreach(Image i1 in children)
                     {
+                        if(i1.tag == "WeaponImg")
+                    {
+                        i1.sprite = r.VrniSliko();
+                    }
                         i1.enabled = true;
                     }
                 }
@@ -131,7 +135,7 @@ public class Shop : MonoBehaviour {
                     t.enabled = true;
                 }
 
-                if (c.tag == "Shop Item" || c.tag == "Shop Item Background")
+                if (c.tag == "Shop Item" || c.tag == "Shop Item Background" || c.tag == "WeaponImg")
                 {
                     c.enabled = false;
                     Text[] ary3 = c.GetComponentsInChildren<Text>();
