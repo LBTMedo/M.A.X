@@ -19,10 +19,13 @@ public class Shop : MonoBehaviour {
     {
         return slikeZaIteme;
     }
+
+    bool entered;
    
 
 	// Use this for initialization
 	void Start () {
+        entered = false;
         shopBackground.enabled = false;
         Image[] ary = shopBackground.GetComponentsInChildren<Image>();
         Button[] ary2 = shopBackground.GetComponentsInChildren<Button>();
@@ -109,6 +112,7 @@ public class Shop : MonoBehaviour {
         if (other.tag == "Player")
         {
             izpisCollider.text = "Pritisni 'F' za nakup";
+            entered = true;
         }
     }
 
@@ -116,6 +120,7 @@ public class Shop : MonoBehaviour {
     {
         if (other.tag == "Player")
         {
+            entered = false;
             shopBackground.enabled = false;
             Image[] ary = shopBackground.GetComponentsInChildren<Image>();
             Button[] ary2 = shopBackground.GetComponentsInChildren<Button>();
@@ -139,7 +144,7 @@ public class Shop : MonoBehaviour {
 
     void startUpEnableDisableManager()
     {
-        if (Input.GetKeyDown(KeyCode.F))
+        if (Input.GetKeyDown(KeyCode.F) && entered == true)
         {
             shopBackground.enabled = true;
             Image[] ary = shopBackground.GetComponentsInChildren<Image>();
