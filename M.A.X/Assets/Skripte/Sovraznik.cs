@@ -5,13 +5,21 @@ public class Sovraznik : MonoBehaviour
 {
 
     public enum State { idle, attacking };
+    public enum Vrsta { navadni, leteci };
 
     public float zacetnaZivljenja;
     public float trenutnaZivljenja;
     public float rayLength = 15;
     public float verjetnostObrata = 10f;
+    public float pogled = 10f;
+    float dolzinaY;
+    float pozicijaX;
+    public float hitrostPikiranja = 1000f;
 
-    public GameObject grafika;
+    bool pozicijaDesno = true;
+    bool pikira = false;
+
+  //  public GameObject grafika;
 
     public Transform pogledKonec;
     public Transform pogledTla;
@@ -19,6 +27,7 @@ public class Sovraznik : MonoBehaviour
     private Sovraznik_Borba sistemZaBorbo;
 
     public State state;
+    public Vrsta vrsta;
 
     public bool left = false;
     [SerializeField]
@@ -45,6 +54,8 @@ public class Sovraznik : MonoBehaviour
 
     Coroutine streljanje;
 
+    Vector3 direction;
+
     protected bool mrtev = false;
 
     public event System.Action ObSmrti;
@@ -67,6 +78,14 @@ public class Sovraznik : MonoBehaviour
 
         sistemZaBorbo = GetComponent<Sovraznik_Borba>();
 
+        if(vrsta == Vrsta.leteci)
+        {
+           // grafika = null;
+        }
+       
+
+        dolzinaY = Vector3.Distance(transform.position, pogledKonec.position);
+        pozicijaX = pogledKonec.position.x;
     }
 
     void FixedUpdate()
@@ -81,12 +100,30 @@ public class Sovraznik : MonoBehaviour
             Attack();
             zeNapada = true;
         }
+        if (pikira)
+        {
+            float step = hitrostPikiranja * Time.deltaTime;
+            transform.position = Vector2.MoveTowards(transform.position, direction, step);
+        }
 
     }
 
     void Attack()
     {
-        InvokeRepeating("Streljaj", 0f, 0.5f);
+        if (vrsta == Vrsta.navadni)
+        {
+            InvokeRepeating("Streljaj", 0f, 0.5f);
+        }
+        else if(vrsta == Vrsta.leteci)
+        {
+            Pikiraj();
+        }
+    }
+
+    void Pikiraj()
+    {
+        pikira = true;
+        Debug.Log("Pikiranje");
     }
 
     void Streljaj()
@@ -99,11 +136,11 @@ public class Sovraznik : MonoBehaviour
         Raycasting();
         if (sePremika)
         {
-            grafika.GetComponent<Animator>().SetBool("isMoving", true);
+            //grafika.GetComponent<Animator>().SetBool("isMoving", true);
         }
         else
         {
-            grafika.GetComponent<Animator>().SetBool("isMoving", false);
+           // grafika.GetComponent<Animator>().SetBool("isMoving", false);
         }
         if (Input.GetKeyDown(KeyCode.K))
         {
@@ -113,23 +150,75 @@ public class Sovraznik : MonoBehaviour
 
     void Raycasting()
     {
-        Debug.DrawLine(transform.position, pogledKonec.position, Color.blue);
-        Debug.DrawLine(new Vector3(transform.position.x, (float)(transform.position.y + 0.2), transform.position.z), new Vector3(pogledTla.position.x, (float)(pogledTla.position.y + 0.2), pogledTla.position.z), Color.blue);
-
-        if (Physics2D.Linecast(transform.position, pogledKonec.position, 1 << LayerMask.NameToLayer("Igralec")))
+        if (vrsta == Vrsta.navadni)
         {
-            state = State.attacking;
-            sePremika = false; 
-            spotted = true;
-            rb2d.velocity = Vector3.zero;
-        }
+            Debug.DrawLine(transform.position, pogledKonec.position, Color.blue);
+            Debug.DrawLine(new Vector3(transform.position.x, (float)(transform.position.y + 0.2), transform.position.z), new Vector3(pogledTla.position.x, (float)(pogledTla.position.y + 0.2), pogledTla.position.z), Color.blue);
 
-        if (Physics2D.Linecast(transform.position, pogledTla.position, 1 << LayerMask.NameToLayer("Tla")))
+            if (Physics2D.Linecast(transform.position, pogledKonec.position, 1 << LayerMask.NameToLayer("Igralec")))
+            {
+                state = State.attacking;
+                sePremika = false;
+                spotted = true;
+                rb2d.velocity = Vector3.zero;
+            }
+
+            if (Physics2D.Linecast(transform.position, pogledTla.position, 1 << LayerMask.NameToLayer("Tla")))
+            {
+                ChangeDirectionSimple();
+                tla = true;
+            }
+        }
+        else if(vrsta == Vrsta.leteci)
         {
-            ChangeDirectionSimple();
-            tla = true;
-        }
+            if (pozicijaDesno)
+            {
+                PozicijaDesno();
+            }
+            else
+            {
+                PozicijaLevo();
+            }
 
+            if(pozicijaX >= pogledKonec.position.x + pogled || pozicijaX <= pogledKonec.position.x - pogled)
+            {
+                FlipRayCast();
+            }
+            
+            Debug.DrawLine(transform.position, new Vector3(pozicijaX, dolzinaY), Color.red);
+
+            if (Physics2D.Linecast(transform.position, new Vector3(pozicijaX, dolzinaY), 1 << LayerMask.NameToLayer("Igralec")))
+            {
+                state = State.attacking;
+                sePremika = false;
+                spotted = true;
+                rb2d.velocity = Vector3.zero;
+                //direction = new Vector3(pozicijaX, dolzinaY + 1f);
+                direction = player.transform.position;
+            }
+
+            if (Physics2D.Linecast(transform.position, pogledTla.position, 1 << LayerMask.NameToLayer("Tla")))
+            {
+                ChangeDirectionSimple();
+                tla = true;
+            }
+        }
+    }
+
+    void PozicijaLevo()
+    {
+        pozicijaX -= 0.1f;
+    }
+
+
+    void PozicijaDesno()
+    {
+        pozicijaX += 0.1f;
+    }
+
+    void FlipRayCast()
+    {
+        pozicijaDesno = !pozicijaDesno;
     }
 
     void ChangeDirectionSimple()
@@ -232,4 +321,26 @@ public class Sovraznik : MonoBehaviour
     {
         Destroy(gameObject);
     }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (vrsta == Vrsta.leteci)
+        {
+            if (other.tag == "Player")
+            {
+                other.gameObject.SendMessage("PrejmiSkodo", 50f);
+                for (int i = 0; i < stKovancev; i++)
+                {
+                    Rigidbody2D kovanec = Instantiate(kovanecPrefab, transform.position, transform.rotation) as Rigidbody2D;
+                    kovanec.AddForce(new Vector2(Random.Range(1, 4), Random.Range(1, 4)) * Random.Range(10, 40));
+                }
+                Destroy(gameObject);
+            }
+            else
+            {
+                Destroy(gameObject);
+            }
+        }
+    }
+
 }
