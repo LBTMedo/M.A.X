@@ -25,6 +25,16 @@ public class WeaponManager : MonoBehaviour {
         }
     }
 
+    public static List<GameObject> vrniVsaOrozja()
+    {
+        return vsaOrozja;
+    }
+
+    public static List<GameObject> vrniKupljenaOrozja()
+    {
+        return orozja;
+    }
+
     public static Transform VrniTrenutnoOrozje()
     {
         return vsaOrozja[trenutnoOrozje].transform;

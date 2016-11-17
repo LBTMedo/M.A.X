@@ -4,9 +4,9 @@ using System.Collections;
 public class Door1 : MonoBehaviour {
 
     Button1 button1;
-    private bool pressed;
+    public bool pressed;
     public float distance = 100f;
-    private int count = 0;
+    public int count = 0;
 
     public bool door1, door2, door3;
 
