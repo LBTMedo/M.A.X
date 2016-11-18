@@ -237,8 +237,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012875589336}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 42.34, y: 14.7, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 0}
+  m_LocalPosition: {x: -19.157188, y: -0.09089476, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 4000014183308142}
@@ -456,7 +456,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 20
-  cena: 0
+  cena: 21
+  ime: iiga
+  slikaOrozja: {fileID: 21300000, guid: 74d64646fd1d04d428a8aad66de4ab53, type: 3}
 --- !u!114 &114000010803758090
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -468,12 +470,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5cc7d2af9c6c2747ac826a19b19bea3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moveSpeed: 20
   airControll: 0.5
   Ground:
     serializedVersion: 2
     m_Bits: 512
   groundCheck: {fileID: 4000010787480266}
   grounded: 0
+  currentScale: {x: 0, y: 0, z: 0}
   originalJumps: 2
 --- !u!114 &114000011314127930
 MonoBehaviour:
@@ -489,14 +493,13 @@ MonoBehaviour:
   tockaZaStreljanje: {fileID: 4000014183308142}
   tarca: {fileID: 4000011746426674}
   dnoIgralca: {fileID: 4000010787480266}
-  hitrostMetka: 5
+  hitrostMetka: 15
   dmgObSkokuNaGlavo: 100
   zacetek: {fileID: 4000012850730328}
   konec: {fileID: 4000010537789644}
   vrsteMetkov:
   - {fileID: 50000014273870220, guid: 56d15bdf26c2f664298fc0d62bf1d997, type: 2}
   - {fileID: 50000013778058604, guid: fb448c9d6ae7e6a47b4523aba3873ba5, type: 2}
-  trenutniMetek: 0
   streljanje: 13
   desno: 0
   avtomatsko: 0
@@ -512,7 +515,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 20
-  cena: 0
+  cena: 20
+  ime: kreki
+  slikaOrozja: {fileID: 21300000, guid: e31c9c381ab954f4eb92e2c754310aa1, type: 3}
 --- !u!114 &114000013144886608
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -544,7 +549,7 @@ MonoBehaviour:
   trenutnaZivljenja: 0
   movementSpeed: 20
   jumpHeight: 15
-  sprintSpeed: 30
+  sprintSpeed: 100
   zacetnaZivljenja: 100
   health:
     bar: {fileID: 0}
