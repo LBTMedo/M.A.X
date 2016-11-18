@@ -7,15 +7,27 @@ public class RandomFlyingObjects : MonoBehaviour {
     [SerializeField]
     GameObject parent;
     Transform[] children;
+    bool reloaded;
 
     public GameObject prefab;
 
+    [SerializeField]
+    GameObject gumb;
+    ButtonBoss gumb1;
+
 	void Start()
     {
+        reloaded = true;
         children = parent.GetComponentsInChildren<Transform>();
+        gumb1 = FindObjectOfType<ButtonBoss>();
     }
 
-    void GenerateAndDropObjects()
+    public bool Reloaded()
+    {
+        return reloaded;
+    }
+
+    public void GenerateAndDropObjects()
     {
         int[] chosenIndex;
         chosenIndex = new int[3];
@@ -42,5 +54,15 @@ public class RandomFlyingObjects : MonoBehaviour {
         {
             Instantiate(prefab, children[i2].position, children[i2].rotation);
         }
+
+        reloaded = false;
+        StartCoroutine(Reload());
+    }
+
+    IEnumerator Reload()
+    {
+        yield return new WaitForSeconds(5);
+        reloaded = true;
+        gumb.transform.position = gumb1.defaultButtonPos;
     }
 }
