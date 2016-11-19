@@ -26,7 +26,7 @@ GameObject:
   - 114: {fileID: 114000013610374184}
   m_Layer: 0
   m_Name: Metek2
-  m_TagString: Untagged
+  m_TagString: Metek
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -38,7 +38,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012477652514}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.6819725, y: -12.505359, z: 0}
+  m_LocalPosition: {x: -9.351737, y: -12.867776, z: 0}
   m_LocalScale: {x: 0.6, y: 0.6, z: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -96,7 +96,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &61000010855611934
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -105,7 +105,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1000012477652514}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 1b64f102c802333478e326639a7a171e, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
@@ -123,3 +123,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 20
+  lifeTime: 4
+  tag1: Sovraznik

@@ -4,7 +4,7 @@ using System.Collections;
 [RequireComponent(typeof(IgralecKontroler))]
 public class Igralec : MonoBehaviour {
 
-    public float trenutnaZivljenja { get; set; }
+    public float trenutnaZivljenja;
     protected bool mrtev = false;
 
     public float movementSpeed;
@@ -14,25 +14,32 @@ public class Igralec : MonoBehaviour {
     public float zacetnaZivljenja;
     public event System.Action ObSmrti;
 
+    private Vector3 originalenScale;
+
     [SerializeField]
     private IgralecStat health;
 
     HitIndicator indikator;
+
+    private IgralecKontroler kontroler;
 
     void Start ()
     {
         indikator = GetComponent<HitIndicator>();
         trenutnaZivljenja = zacetnaZivljenja;
         Debug.Log(trenutnaZivljenja);
+        originalenScale = transform.localScale;
+        kontroler = GetComponent<IgralecKontroler>();
     }
 	
 	void Update ()
     {
         if (Input.GetKeyDown(KeyCode.P))
         {
-            trenutnaZivljenja -= 100;
-            health.CurrentVal -= 100;
+            trenutnaZivljenja -= 20;
+            health.CurrentVal -= 20;
             Debug.Log(trenutnaZivljenja);
+            transform.localScale = new Vector3(4,4,0);
         }
 
         if (trenutnaZivljenja <= 0 && !mrtev)
@@ -54,7 +61,6 @@ public class Igralec : MonoBehaviour {
         {
             health.CurrentVal += 100;
         }
-
     }
 
     private void Awake()
@@ -78,5 +84,46 @@ public class Igralec : MonoBehaviour {
         }
         Destroy(gameObject);
     }
+
+    public void DodajZivlenja(float ammount)
+    {
+        trenutnaZivljenja += ammount;
+    }
+
+    void Povecaj()
+    {
+        kontroler.currentScale = new Vector3(originalenScale.x * 2, originalenScale.y * 2);
+    }
+
+    void Pohitri()
+    {
+        kontroler.hitrostPremikanje = sprintSpeed;
+    }
+
+    void Ponastavi()
+    {
+        kontroler.currentScale = originalenScale;
+        kontroler.hitrostPremikanje = movementSpeed;
+    }
+
+    void Enlarge()
+    {
+        Povecaj();
+        Pohitri();
+        Invoke("Ponastavi", 3f);
+    }
+
+   /* void OnColliderEnter2D(Collider2D other)
+    {
+        if(other.tag == "Sovraznik")
+        {
+            Sovraznik enemy = other.gameObject.GetComponent<Sovraznik>();
+            if(enemy.vrsta == Sovraznik.Vrsta.leteci)
+            {
+                PrejmiSkodo(100f);
+                Destroy(other.gameObject);
+            }
+        }
+    }*/
 
 }

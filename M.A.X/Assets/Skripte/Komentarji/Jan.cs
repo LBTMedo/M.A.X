@@ -10,8 +10,11 @@
  * https://www.youtube.com/watch?v=IdfR9Iu4oKg&t=596s
  * Težave: obračanje igralca(rigidbody.velocity namesto transform.translate), dolžina linecastov, obračanje pred luknjami, hitrost animacije
  * 
- * 
- * 
- * 
- * 
+ * 3 teden
+ * https://www.youtube.com/playlist?list=PLXzbvVfPPpBmWBfdNT7JqmZevisTL4iyR - weapon manager 
+ * https://unity3d.com/learn/tutorials/topics/physics/raycasting
+ * https://unity3d.com/learn/tutorials/topics/physics/detecting-collisions-oncollisionenter
+ * Težave: sovražnik streljanje( ko je obrnjen v levo ne dela vredu), InvokeRepeating namesto coroutine(z coroutine ni šlo ubiti sovražnika)
+ *
+ *
  * */

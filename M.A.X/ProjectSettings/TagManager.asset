@@ -6,6 +6,13 @@ TagManager:
   tags:
   - Sovraznik
   - Manager
+  - Metek
+  - Shop Item Cost
+  - Shop Item Background
+  - Shop Item
+  - Shop Item Damage
+  - WeaponImg
+  - AlreadyOwned
   layers:
   - Default
   - TransparentFX
