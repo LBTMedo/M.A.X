@@ -30,9 +30,10 @@ public class RandomFlyingObjects : MonoBehaviour {
     public void GenerateAndDropObjects()
     {
         int[] chosenIndex;
-        chosenIndex = new int[3];
 
         int numOfObjects = Random.Range(2, 4);
+
+        chosenIndex = new int[numOfObjects];
 
         for (int i = 0; i < numOfObjects; i++)
         {
