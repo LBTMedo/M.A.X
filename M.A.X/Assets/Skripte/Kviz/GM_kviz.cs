@@ -14,29 +14,37 @@ public class GM_kviz : MonoBehaviour {
     [SerializeField]
     private int trenutnoVprasanje;
 
+    public int pravilniOdgovori = 0;
+    public bool konecIgre = false;
+
     public int denar;
 
     public GameObject[] gumbi;
+    public GameObject kartica;
+    public GameObject casTekst;
+    public GameObject konecTekst;
     public Text[] textOdgovori;
     public Text vprasanje;
 
+    Vprasanje chosenQuestion;
+
     public Text timeText;
+    public Text endText;
     public Button gumb1;
     public Button gumb2;
     public Button gumb3;
-
-   
 
     List<Vprasanje> izbranaVprasanja = new List<Vprasanje>();
 
     void Start()
     {
-        //inkrement = SeznamVprasanj.vprasanja.Count / steviloVprasanj;
+        trenutnoVprasanje = 0;
 
         for (int i = 0; i < steviloVprasanj; i++)
         {
-            izbranaVprasanja.Add(SeznamVprasanj.vprasanja[Random.Range(0, SeznamVprasanj.vprasanja.Count - 1)]);
-            //stevec += inkrement;
+            int index = Random.Range(0, SeznamVprasanj.vprasanja.Count - 1);
+            izbranaVprasanja.Add(SeznamVprasanj.vprasanja[index]);
+            SeznamVprasanj.vprasanja.RemoveAt(index);
         }
         Debug.Log(izbranaVprasanja.Count.ToString());
 
@@ -50,20 +58,49 @@ public class GM_kviz : MonoBehaviour {
 
     void Update()
     {
-        if(countdown <= 0)
+        if (!konecIgre)
         {
-           // NaslednjeVprasanje();
-            countdown = preostaliCas;
-        }
+            if (countdown <= 0)
+            {
+                NaslednjeVprasanje();
+                countdown = preostaliCas;
+            }
 
-        countdown -= Time.deltaTime;
-        timeText.text = Mathf.Floor(countdown + 1).ToString();
+            countdown -= Time.deltaTime;
+            timeText.text = Mathf.Floor(countdown + 1).ToString();
+        }
     }
 
     void NaslednjeVprasanje()
     {
-        Vprasanje chosenQuestion = izbranaVprasanja[trenutnoVprasanje];
+        countdown = preostaliCas;
+
+        if (trenutnoVprasanje == steviloVprasanj)
+        {
+            konecIgre = true;
+            for (int i = 0; i < gumbi.Length; i++)
+            {
+                gumbi[i].SetActive(false);
+            }
+
+            kartica.SetActive(false);
+            casTekst.SetActive(false);
+            endText.text = "Konec igre\n " + pravilniOdgovori + " / " + steviloVprasanj;
+            konecTekst.SetActive(true);
+        }
+
+        chosenQuestion = izbranaVprasanja[trenutnoVprasanje];
         int stOdgovorov = chosenQuestion.odgovori.Count;
+
+        for (int i = 0; i < chosenQuestion.odgovori.Count; i++)
+        {
+            gumbi[i].GetComponent<Image>().color = Color.white;
+        }
+
+        for (int i = 0; i < gumbi.Length; i++)
+        {
+            gumbi[i].SetActive(false);
+        }
 
         for (int i = 0; i < stOdgovorov; i++)
         {
@@ -74,5 +111,82 @@ public class GM_kviz : MonoBehaviour {
 
         vprasanje.text = chosenQuestion.vprasanje;
 
+        
+        trenutnoVprasanje++;
+    }
+
+    public void Gumb1()
+    {
+        if (chosenQuestion.odgovori[0].pravilnost)
+        {
+            gumbi[0].GetComponent<Image>().color = Color.green;
+            pravilniOdgovori++;
+        }
+        else
+        {
+            gumbi[0].GetComponent<Image>().color = Color.red;
+            for (int i = 0; i < chosenQuestion.odgovori.Count; i++)
+            {
+                if (chosenQuestion.odgovori[i].pravilnost)
+                {
+                    gumbi[i].GetComponent<Image>().color = Color.green;
+                }
+            }
+        }
+
+        if (preostaliCas >= 2f)
+        {
+            Invoke("NaslednjeVprasanje", 1f);
+        }
+    }
+
+    public void Gumb2()
+    {
+        if (chosenQuestion.odgovori[1].pravilnost)
+        {
+            gumbi[1].GetComponent<Image>().color = Color.green;
+            pravilniOdgovori++;
+        }
+        else
+        {
+            gumbi[1].GetComponent<Image>().color = Color.red;
+            for (int i = 0; i < chosenQuestion.odgovori.Count; i++)
+            {
+                if (chosenQuestion.odgovori[i].pravilnost)
+                {
+                    gumbi[i].GetComponent<Image>().color = Color.green;
+                }
+            }
+        }
+
+        if(preostaliCas >= 2f)
+        {
+            Invoke("NaslednjeVprasanje", 1f);
+        }
+    }
+
+    public void Gumb3()
+    {
+        if (chosenQuestion.odgovori[2].pravilnost)
+        {
+            gumbi[2].GetComponent<Image>().color = Color.green;
+            pravilniOdgovori++;
+        }
+        else
+        {
+            gumbi[2].GetComponent<Image>().color = Color.red;
+            for (int i = 0; i < chosenQuestion.odgovori.Count; i++)
+            {
+                if (chosenQuestion.odgovori[i].pravilnost)
+                {
+                    gumbi[i].GetComponent<Image>().color = Color.green;
+                }
+            }
+        }
+
+        if (preostaliCas >= 2f)
+        {
+            Invoke("NaslednjeVprasanje", 1f);
+        }
     }
 }
