@@ -90,6 +90,11 @@ NavMeshSettings:
     cellSize: 0.16666667
     manualCellSize: 0
   m_NavMeshData: {fileID: 0}
+--- !u!4 &26566256 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4000012970571168, guid: c6adf627ceeb46747819791fe3e18a87,
+    type: 2}
+  m_PrefabInternal: {fileID: 1592282265}
 --- !u!1 &32836124
 GameObject:
   m_ObjectHideFlags: 0
@@ -5540,6 +5545,7 @@ GameObject:
   - 124: {fileID: 1681414342}
   - 92: {fileID: 1681414341}
   - 81: {fileID: 1681414340}
+  - 114: {fileID: 1681414345}
   m_Layer: 0
   m_Name: Camera
   m_TagString: Untagged
@@ -5609,12 +5615,29 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1681414339}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.4417874, y: -0.7155969, z: -7.029297}
+  m_LocalPosition: {x: 27.2, y: 14.7, z: -7.029297}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 36
+--- !u!114 &1681414345
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1681414339}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb85ca193c252ea4cabf3e731ba27d52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 26566256}
+  damping: 1
+  GledajeNaprejFaktor: 3
+  VracanjeKamereHitrost: 0.5
+  PragKamere: 0.1
+  premikPoY: -3
 --- !u!1001 &1700983836
 Prefab:
   m_ObjectHideFlags: 0

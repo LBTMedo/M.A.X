@@ -5,10 +5,10 @@ public class Kamera : MonoBehaviour
 {
     public Transform player;
     public float damping = 1;
-    public float GledajeNaprejFaktor = 3;
-    public float VracanjeKamereHitrost = 0.5f;
-    public float PragKamere = 0.1f;
-    public float premikPoY = -3f;
+    public float GledajeNaprejFaktor = 1;
+    public float VracanjeKamereHitrost = 15f;
+    public float PragKamere = 0.0000001f;
+    public float premikPoY = 0f;
     private float pozicijaY;
     private bool pogled = false;
     private bool upNdownNewBalance = true;

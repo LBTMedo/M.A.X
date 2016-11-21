@@ -571,7 +571,7 @@ MonoBehaviour:
   dnoIgralca: {fileID: 4000010787480266}
   hitrostMetka: 15
   dmgObSkokuNaGlavo: 100
-  zvok: {fileID: 8300000, guid: 582dfb70e63aa3f4f90b8159dd2fefcb, type: 3}
+  zvok: {fileID: 8300000, guid: 744a897cc9e6e554ba0096a05e6f2375, type: 3}
   zacetek: {fileID: 4000012850730328}
   konec: {fileID: 4000010537789644}
   vrsteMetkov:
