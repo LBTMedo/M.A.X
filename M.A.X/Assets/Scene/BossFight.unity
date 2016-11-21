@@ -385,7 +385,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parent: {fileID: 213321683}
-  prefab: {fileID: 1000013953830128, guid: 050f2424fcd4cee4486ae35fd1ddfecc, type: 2}
+  prefab:
+  - {fileID: 1000012622763886, guid: e3568af3021a37c448a2a2cc9a3f3299, type: 2}
+  - {fileID: 1000014091273574, guid: 31fcb3975e0a95b4ea4a6144f87bbf70, type: 2}
+  - {fileID: 1000012230274318, guid: a99e61bfe7946444a8792e919a70a3dd, type: 2}
+  - {fileID: 1000013551426844, guid: 1738a9f08ecc5c041a66438c51ae5733, type: 2}
   gumb: {fileID: 351555445}
 --- !u!1 &288747100
 GameObject:
@@ -2080,6 +2084,8 @@ GameObject:
   - 4: {fileID: 1237884116}
   - 60: {fileID: 1237884115}
   - 60: {fileID: 1237884114}
+  - 68: {fileID: 1237884118}
+  - 68: {fileID: 1237884117}
   m_Layer: 0
   m_Name: Streha
   m_TagString: Untagged
@@ -2146,6 +2152,36 @@ Transform:
   - {fileID: 1488324560}
   m_Father: {fileID: 0}
   m_RootOrder: 4
+--- !u!68 &1237884117
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1237884113}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 6200000, guid: 60324432f58964d4e8269aa875885594, type: 2}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  m_Points:
+  - {x: -0.44612765, y: 0.48200262}
+  - {x: -0.1924082, y: 0.7414715}
+--- !u!68 &1237884118
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1237884113}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 6200000, guid: 60324432f58964d4e8269aa875885594, type: 2}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  m_Points:
+  - {x: -2.3275962, y: 0.47746772}
+  - {x: -2.5427403, y: 0.7224396}
 --- !u!1 &1242141867
 GameObject:
   m_ObjectHideFlags: 0

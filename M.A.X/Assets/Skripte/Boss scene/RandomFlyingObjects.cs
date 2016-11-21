@@ -9,7 +9,7 @@ public class RandomFlyingObjects : MonoBehaviour {
     Transform[] children;
     bool reloaded;
 
-    public GameObject prefab;
+    public GameObject[] prefab;
 
     [SerializeField]
     GameObject gumb;
@@ -53,7 +53,8 @@ public class RandomFlyingObjects : MonoBehaviour {
 
         foreach(int i2 in chosenIndex)
         {
-            Instantiate(prefab, children[i2].position, children[i2].rotation);
+            int prefabNum = Random.Range(1, prefab.Length);
+            Instantiate(prefab[prefabNum], children[i2].position, children[i2].rotation);
         }
 
         reloaded = false;

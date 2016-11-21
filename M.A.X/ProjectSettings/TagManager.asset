@@ -13,6 +13,7 @@ TagManager:
   - Shop Item Damage
   - WeaponImg
   - AlreadyOwned
+  - Brick
   layers:
   - Default
   - TransparentFX

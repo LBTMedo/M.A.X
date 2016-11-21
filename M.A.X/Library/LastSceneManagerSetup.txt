@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scene/Kviz.unity
+- path: Assets/Scene/BossFight.unity
   isLoaded: 1
   isActive: 1
