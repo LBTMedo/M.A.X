@@ -3,6 +3,9 @@ using System.Collections;
 
 public class Kamera : MonoBehaviour
 {
+    public float glasnost;
+    private AudioSource source;
+    public AudioClip[] back;
     public Transform player;
     public float damping = 1;
     public float GledajeNaprejFaktor = 1;
@@ -12,6 +15,7 @@ public class Kamera : MonoBehaviour
     private float pozicijaY;
     private bool pogled = false;
     private bool upNdownNewBalance = true;
+    private GameObject obj;
     float offsetZ;
     Vector3 ZadnjaPozicija;
     Vector3 Hitrost;
@@ -19,6 +23,12 @@ public class Kamera : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+      //   obj = GameObject.Find("Persistent Object");
+      //  obj = obj.GetComponent(PersistentScript);
+        source = GetComponent<AudioSource>();
+        int rand = Random.Range(0, back.Length);
+        source.clip = back[rand];
+        source.Play();
         ZadnjaPozicija = player.position;
         pozicijaY = (transform.position - player.position).y;
         offsetZ = (transform.position - player.position).z;
