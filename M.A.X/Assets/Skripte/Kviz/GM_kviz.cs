@@ -11,38 +11,48 @@ public class GM_kviz : MonoBehaviour {
     int stevec = 0;
     int inkrement;
 
+    [SerializeField]
+    private int trenutnoVprasanje;
+
     public int denar;
 
     public GameObject[] gumbi;
+    public Text[] textOdgovori;
+    public Text vprasanje;
 
     public Text timeText;
     public Button gumb1;
     public Button gumb2;
     public Button gumb3;
 
-    List<Vprasanje> izbranaVprasanja;
+   
+
+    List<Vprasanje> izbranaVprasanja = new List<Vprasanje>();
 
     void Start()
     {
-        //gumb1.GetComponentInChildren<Text>().text = "Jaz sem gumb1";
+        //inkrement = SeznamVprasanj.vprasanja.Count / steviloVprasanj;
 
-        inkrement = SeznamVprasanj.vprasanja.Count / steviloVprasanj;
-
-        izbranaVprasanja = new List<Vprasanje>();
         for (int i = 0; i < steviloVprasanj; i++)
         {
-            izbranaVprasanja.Add(SeznamVprasanj.vprasanja[Random.Range(stevec, inkrement)]);
-            stevec += inkrement;
+            izbranaVprasanja.Add(SeznamVprasanj.vprasanja[Random.Range(0, SeznamVprasanj.vprasanja.Count - 1)]);
+            //stevec += inkrement;
+        }
+        Debug.Log(izbranaVprasanja.Count.ToString());
+
+        for (int i = 0; i < gumbi.Length; i++)
+        {
+            gumbi[i].SetActive(false);
         }
 
-        gumbi[0].SetActive(false);
+        NaslednjeVprasanje();
     }
 
     void Update()
     {
         if(countdown <= 0)
         {
-            NaslednjeVprasanje();
+           // NaslednjeVprasanje();
             countdown = preostaliCas;
         }
 
@@ -52,6 +62,17 @@ public class GM_kviz : MonoBehaviour {
 
     void NaslednjeVprasanje()
     {
-        Debug.Log("Naslednje vprasanje!");
+        Vprasanje chosenQuestion = izbranaVprasanja[trenutnoVprasanje];
+        int stOdgovorov = chosenQuestion.odgovori.Count;
+
+        for (int i = 0; i < stOdgovorov; i++)
+        {
+            gumbi[i].SetActive(true);
+            textOdgovori[i].text = chosenQuestion.odgovori[i].odgovor;
+            Debug.Log(chosenQuestion.odgovori[i].odgovor);
+        }
+
+        vprasanje.text = chosenQuestion.vprasanje;
+
     }
 }
