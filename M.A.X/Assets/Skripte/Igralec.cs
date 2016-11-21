@@ -3,6 +3,11 @@ using System.Collections;
 
 [RequireComponent(typeof(IgralecKontroler))]
 public class Igralec : MonoBehaviour {
+    public AudioClip zvokUmri;
+    public AudioClip zvok;
+    private AudioSource source;
+    private float volLowRange = .5f;
+    private float volHighRange = 1.0f;
 
     public float trenutnaZivljenja;
     protected bool mrtev = false;
@@ -25,6 +30,7 @@ public class Igralec : MonoBehaviour {
 
     void Start ()
     {
+        source = GetComponent<AudioSource>();
         indikator = GetComponent<HitIndicator>();
         trenutnaZivljenja = zacetnaZivljenja;
         Debug.Log(trenutnaZivljenja);
@@ -72,10 +78,12 @@ public class Igralec : MonoBehaviour {
     {
         trenutnaZivljenja -= skoda;
         health.CurrentVal -= skoda;
+        source.PlayOneShot(zvok, 1F);
     }
 
     public void Smrt()
     {
+        source.PlayOneShot(zvokUmri, 1F);
         mrtev = true;
         Debug.Log("Smrt");
         if (ObSmrti != null)

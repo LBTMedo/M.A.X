@@ -110,6 +110,7 @@ GameObject:
   - 50: {fileID: 50000010492874306}
   - 114: {fileID: 114000013144886608}
   - 114: {fileID: 114000011314127930}
+  - 82: {fileID: 82000014258495704}
   m_Layer: 8
   m_Name: Max
   m_TagString: Player
@@ -433,6 +434,80 @@ BoxCollider2D:
   m_Offset: {x: 0.07, y: 0.64}
   serializedVersion: 2
   m_Size: {x: 0.48, y: 1.3649491}
+--- !u!82 &82000014258495704
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012875589336}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 77c8677ce9cf77d4a810b565f7aa2791, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!114 &114000010596608406
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -472,6 +547,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 20
   airControll: 0.5
+  zvok: {fileID: 8300000, guid: 77c8677ce9cf77d4a810b565f7aa2791, type: 3}
   Ground:
     serializedVersion: 2
     m_Bits: 512
@@ -495,6 +571,7 @@ MonoBehaviour:
   dnoIgralca: {fileID: 4000010787480266}
   hitrostMetka: 15
   dmgObSkokuNaGlavo: 100
+  zvok: {fileID: 8300000, guid: 582dfb70e63aa3f4f90b8159dd2fefcb, type: 3}
   zacetek: {fileID: 4000012850730328}
   konec: {fileID: 4000010537789644}
   vrsteMetkov:
@@ -546,6 +623,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e22e99eeb740c284a8934867cff44652, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  zvokUmri: {fileID: 8300000, guid: 60411b7d714b43f49a70e7a719b5f5ff, type: 3}
+  zvok: {fileID: 8300000, guid: 054cf19d40034c84d8626ce1b8b5d646, type: 3}
   trenutnaZivljenja: 0
   movementSpeed: 20
   jumpHeight: 15

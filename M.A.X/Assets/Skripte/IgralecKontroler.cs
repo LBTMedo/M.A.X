@@ -13,6 +13,11 @@ public class IgralecKontroler : MonoBehaviour {
     private float originalMoveSpeed;
     public float airControll = 1; //air velocity multiplier
 
+    public AudioClip zvok;
+    private AudioSource source;
+    private float volLowRange = .5f;
+    private float volHighRange = 1.0f;
+
     public LayerMask Ground;
     public Transform groundCheck;
 
@@ -48,6 +53,7 @@ public class IgralecKontroler : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 
+        source = GetComponent<AudioSource>();
         player = GetComponent<Igralec>();
         rbd = GetComponent<Rigidbody2D>();
 
@@ -128,6 +134,7 @@ public class IgralecKontroler : MonoBehaviour {
 
         if (jump)
         {
+            source.PlayOneShot(zvok, 1F);
             rbd.velocity = new Vector2(rbd.velocity.x, jumpHeight);
             jump = false;
             Jumps--;

@@ -12,6 +12,11 @@ public class Igralec_borba : MonoBehaviour {
     public float hitrostMetka = 5f;
     public float dmgObSkokuNaGlavo = 100f;
 
+    public AudioClip zvok;
+    private AudioSource source;
+    private float volLowRange = .5f;
+    private float volHighRange = 1.0f;
+
     public Transform zacetek;
     public Transform konec;
 
@@ -37,6 +42,7 @@ public class Igralec_borba : MonoBehaviour {
 
     void Start()
     {
+        source = GetComponent<AudioSource>();
         vrsta = VrstaStreljanja.enojno;
         trenutniMetek = 0;
         kontroler = GetComponent<IgralecKontroler>();
@@ -108,6 +114,7 @@ public class Igralec_borba : MonoBehaviour {
 
     void Streljaj()
     {
+        source.PlayOneShot(zvok, 1F);
         Vector3 smer = (tarca.position - tockaZaStreljanje.position).normalized;
 
         Rigidbody2D instancaMetka = Instantiate(vrsteMetkov[trenutniMetek], tockaZaStreljanje.position, tockaZaStreljanje.rotation) as Rigidbody2D;
@@ -127,6 +134,7 @@ public class Igralec_borba : MonoBehaviour {
     {
         for (;;)
         {
+            source.PlayOneShot(zvok, 1F);
             Rigidbody2D instancaMetka = Instantiate(vrsteMetkov[trenutniMetek], tockaZaStreljanje.position, tockaZaStreljanje.rotation) as Rigidbody2D;
             if (desno)
             {

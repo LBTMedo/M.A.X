@@ -4,6 +4,13 @@ using System.Collections;
 public class Sovraznik : MonoBehaviour
 {
 
+    public AudioClip zvokPrejmiSkodo;
+    public AudioClip zvokUmri;
+    public AudioClip zvokStreljaj;
+    private AudioSource source;
+    private float volLowRange = .5f;
+    private float volHighRange = 1.0f;
+
     public enum State { idle, attacking };
     public enum Vrsta { navadni, leteci };
 
@@ -62,6 +69,7 @@ public class Sovraznik : MonoBehaviour
 
     void Start()
     {
+        source = GetComponent<AudioSource>();
         stKovancev = Random.Range(1, 4);
         trenutnaZivljenja = zacetnaZivljenja;
         startPozicija = transform.position;
@@ -128,6 +136,7 @@ public class Sovraznik : MonoBehaviour
 
     void Streljaj()
     {
+        source.PlayOneShot(zvokStreljaj, 1F);
         sistemZaBorbo.Streljanje();
     }
 
@@ -271,6 +280,7 @@ public class Sovraznik : MonoBehaviour
 
     public void PrejmiSkodo(float skoda)
     {
+        source.PlayOneShot(zvokPrejmiSkodo, 1F);
         trenutnaZivljenja -= skoda;
         if (trenutnaZivljenja <= 0 && !mrtev)
         {
@@ -297,6 +307,7 @@ public class Sovraznik : MonoBehaviour
 
     public virtual void Smrt()
     {
+        source.PlayOneShot(zvokUmri, 1F);
         mrtev = true;
         if (ObSmrti != null)
         {
