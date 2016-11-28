@@ -55,7 +55,7 @@ public class Igralec_borba : MonoBehaviour {
 
     void Update()
     {
-       // hasBullets = (ammo.metki[trenutniMetek] > 0) ? true : false;
+        hasBullets = (ammo.metki[trenutniMetek] > 0) ? true : false;
 
         if (Input.GetKeyDown(streljanje) && hasBullets)
         {

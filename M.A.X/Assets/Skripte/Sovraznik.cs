@@ -26,7 +26,7 @@ public class Sovraznik : MonoBehaviour
     bool pozicijaDesno = true;
     bool pikira = false;
 
-  //  public GameObject grafika;
+    //public GameObject grafika;
 
     public Transform pogledKonec;
     public Transform pogledTla;
