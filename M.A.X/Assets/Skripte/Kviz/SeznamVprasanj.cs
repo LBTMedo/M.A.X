@@ -290,17 +290,17 @@ public class SeznamVprasanj : MonoBehaviour {
         odgovori1.Clear();
         odgovori1.Add(new Odgovor
         {
-            odgovor = "Knjiga o posmrtnem življenju.",
+            odgovor = "Amor-ra",
             pravilnost = true
         });
         odgovori1.Add(new Odgovor
         {
-            odgovor = "Knjiga z imeni mrtvih faraonov.",
+            odgovor = "Osiris",
             pravilnost = false
         });
         odgovori1.Add(new Odgovor
         {
-            odgovor = "Zbirka himen, molitev in zakletev.",
+            odgovor = "Ptah",
             pravilnost = false
         });
 
