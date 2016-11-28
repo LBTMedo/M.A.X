@@ -13,7 +13,7 @@ public class Button4 : MonoBehaviour {
     // Use this for initialization
     void Start()
     {
-        largeElevator = GameObject.Find("Large stone elevator");
+        largeElevator = GameObject.Find("DisabledElevator");
         movement = largeElevator.GetComponent<ElevatorMovement>();
         pressed = false;
     }
