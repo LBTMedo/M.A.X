@@ -14,6 +14,7 @@ TagManager:
   - WeaponImg
   - AlreadyOwned
   - Brick
+  - spawn
   layers:
   - Default
   - TransparentFX
