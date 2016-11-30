@@ -28,8 +28,7 @@ public class Preveri : MonoBehaviour
         {
             if (ustavi == 0)
             {
-
-                target.transform.Translate(Vector3.forward * 10 );
+                target.transform.Translate(Vector3.back * 10, Space.World);
                 target.transform.Translate(Vector3.up *10 , Space.World);
                 ustavi = 1;
             }
@@ -39,8 +38,7 @@ public class Preveri : MonoBehaviour
             if (ustavi == 1)
             {
 
-
-                target.transform.Translate(Vector3.forward * 10);
+                target.transform.Translate(Vector3.forward * 10, Space.World);
                 target.transform.Translate(Vector3.down * 10, Space.World);
                 ustavi = 0;
 

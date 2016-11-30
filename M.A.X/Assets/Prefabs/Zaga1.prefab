@@ -20,10 +20,12 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000010985215944}
   - 212: {fileID: 212000012488771488}
-  - 50: {fileID: 50000011588607114}
   - 58: {fileID: 58000012602094134}
+  - 114: {fileID: 114000012807907812}
+  - 114: {fileID: 114000012390642136}
+  - 50: {fileID: 50000011516810766}
   m_Layer: 0
-  m_Name: rotating saw (1)
+  m_Name: Zaga1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -42,7 +44,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!50 &50000011588607114
+--- !u!50 &50000011516810766
 Rigidbody2D:
   serializedVersion: 2
   m_ObjectHideFlags: 1
@@ -73,6 +75,28 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.15529251
+--- !u!114 &114000012390642136
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013744322094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d349f6d9f0c0a5749a50e0f3eedb77dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114000012807907812
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013744322094}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d6318891a1fdd74196240ffa78f4d7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212000012488771488
 SpriteRenderer:
   m_ObjectHideFlags: 1
