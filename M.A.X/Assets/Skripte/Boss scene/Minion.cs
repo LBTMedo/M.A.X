@@ -14,11 +14,13 @@ public class Minion : MonoBehaviour {
     public float pogledSprint = 10f;
     public float pogledBoom = 1f;
 
-    public Transform smer;
+    Vector3 smer;
 
     Rigidbody2D rb2d;
 
     private float damage;
+
+    Igralec igralec;
 
     private void Start()
     {
@@ -30,7 +32,11 @@ public class Minion : MonoBehaviour {
 
         damage = Random.Range(20, 40);
 
-        rb2d = GetComponent<Rigidbody2D>();        
+        rb2d = GetComponent<Rigidbody2D>();
+
+        smer = new Vector3(transform.position.x - 5, transform.position.y, transform.position.z);
+
+        igralec = FindObjectOfType<Igralec>();
     }
 
     private void Update()
@@ -54,7 +60,8 @@ public class Minion : MonoBehaviour {
     private void FixedUpdate()
     {
         Raycasting();
-        Move();
+        smer = new Vector3(transform.position.x - 5, transform.position.y, transform.position.z);
+        rb2d.velocity = new Vector3((-Vector3.right.normalized.x * currentSpeed * Time.fixedDeltaTime), rb2d.velocity.y);
     }
 
     void Raycasting()
@@ -77,15 +84,18 @@ public class Minion : MonoBehaviour {
     void Explode()
     {
         Debug.Log("Explode!");
+        if(Vector2.Distance(igralec.transform.position, transform.position ) <= 2f)
+        {
+            igralec.PrejmiSkodo(40);
+            Debug.Log("Skoda");
+        }
+        Destroy(gameObject);
     }
 
     void Move()
     {
-        Vector3 dir = smer.position - transform.position;
-        // transform.Translate(smer.position);
+        Vector3 dir;
 
-        //rb2d.AddForce(dir * speed * Time.fixedDeltaTime);
-        rb2d.velocity = new Vector3(dir.normalized.x * (speed * Time.fixedDeltaTime), rb2d.velocity.y);
     }
 
     void PrejmiSkodo(float dmg)
