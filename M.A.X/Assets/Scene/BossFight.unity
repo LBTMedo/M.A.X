@@ -1019,6 +1019,34 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 9
+--- !u!1 &552287075
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 552287076}
+  m_Layer: 0
+  m_Name: Desno
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &552287076
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 552287075}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 6.42, y: 3, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 13
 --- !u!1 &567455608
 GameObject:
   m_ObjectHideFlags: 0
@@ -1761,9 +1789,10 @@ GameObject:
   m_Component:
   - 4: {fileID: 961604372}
   - 33: {fileID: 961604371}
-  - 65: {fileID: 961604370}
   - 23: {fileID: 961604369}
   - 114: {fileID: 961604368}
+  - 61: {fileID: 961604373}
+  - 50: {fileID: 961604370}
   m_Layer: 0
   m_Name: Boss
   m_TagString: Untagged
@@ -1784,9 +1813,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minionMetek: {fileID: 1000011989670194, guid: 5805c02e9441f9f4c862ea3f29a221f0,
     type: 2}
+  spellMetek: {fileID: 1000013158391234, guid: 4fbb6e3a27d21bc44a08357b9f74e442, type: 2}
   spawn: {fileID: 1126183246}
+  strelPoint: {fileID: 1126183246}
+  pogledZid: {fileID: 1328423105}
   timer: 3
+  akcija: 3
   speed: 100
+  hitrostMetka: 100
+  steviloMinionov: 1
+  sedi: 1
+  sePremika: 0
+  levo: 0
 --- !u!23 &961604369
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1816,18 +1854,23 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!65 &961604370
-BoxCollider:
+--- !u!50 &961604370
+Rigidbody2D:
+  serializedVersion: 2
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 961604367}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!33 &961604371
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -1847,8 +1890,23 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
   m_Children:
   - {fileID: 1126183246}
+  - {fileID: 1328423105}
   m_Father: {fileID: 0}
   m_RootOrder: 10
+--- !u!61 &961604373
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 961604367}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
 --- !u!1 &963895686
 GameObject:
   m_ObjectHideFlags: 0
@@ -2218,11 +2276,39 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1000010588078890, guid: 3598dd3df5c084441b22abc35796be91, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3598dd3df5c084441b22abc35796be91, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1158715293
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1158715294}
+  m_Layer: 0
+  m_Name: Levo
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1158715294
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1158715293}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -7.99, y: 3, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
 --- !u!1 &1169381335
 GameObject:
   m_ObjectHideFlags: 0
@@ -2767,6 +2853,34 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!1 &1328423104
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1328423105}
+  m_Layer: 0
+  m_Name: Pogled
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1328423105
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1328423104}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.45, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 961604372}
+  m_RootOrder: 1
 --- !u!1 &1339058355
 GameObject:
   m_ObjectHideFlags: 0
@@ -3095,7 +3209,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnPoint: {fileID: 529504059}
+  levo: {fileID: 1158715294}
+  desno: {fileID: 552287076}
   minion: {fileID: 1000011117261368, guid: 9bda4def63e2fcb4c851f3c6c138e6c3, type: 2}
+  healthPickup: {fileID: 1000013624122942, guid: c73ab3a2064e8234283c95fb696d36d6,
+    type: 2}
+  ammoPickup: {fileID: 1000013933192628, guid: 39e4453dfe276484a8f3fe09b6f8da4d, type: 2}
   timer: 3
 --- !u!1 &1648024675
 GameObject:
@@ -3553,7 +3672,7 @@ GameObject:
   - 61: {fileID: 2047914557}
   - 114: {fileID: 2047914559}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: Trigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3580,8 +3699,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2047914556}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.35453, y: -4.62, z: 0}
-  m_LocalScale: {x: 9, y: 1, z: 1}
+  m_LocalPosition: {x: 0.25, y: -4.62, z: 0}
+  m_LocalScale: {x: 26, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
