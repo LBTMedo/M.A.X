@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public class Boss : MonoBehaviour {
@@ -12,16 +13,25 @@ public class Boss : MonoBehaviour {
     public Transform strelPoint;
     Rigidbody2D metek;
 
+    public float armour = 10f;
+
     public Transform pogledZid;
     Rigidbody2D rb2d;
 
     public float timer = 3f;
     public float akcija = 3f;
 
-   [SerializeField]
+    [SerializeField]
     private float speed = 100f;
     [SerializeField]
     private float hitrostMetka = 100f;
+
+    [SerializeField]
+    private float health = 100;
+
+    public Slider healthBar;
+
+    public event System.Action ObSmrti;
 
     public int steviloMinionov = 10;
     private int trenutniMinion;
@@ -33,8 +43,18 @@ public class Boss : MonoBehaviour {
     [SerializeField]
     private bool levo;
 
+    public Igralec igralec;
+    public IgralecKontroler kontroler;
+    public Igralec_borba borba;
+
+    bool notDead = true;
+
     private void Start()
     {
+        //igralec = FindObjectOfType<Igralec>();
+        //kontroler = FindObjectOfType<IgralecKontroler>();
+        //borba = FindObjectOfType<Igralec_borba>();
+
         SpawnMinion();
         trenutniMinion = 0;
 
@@ -42,6 +62,9 @@ public class Boss : MonoBehaviour {
 
         levo = true;
         rb2d = GetComponent<Rigidbody2D>();
+
+
+        healthBar.value = Mathf.RoundToInt(health);
     }
 
     private void Update()
@@ -54,18 +77,41 @@ public class Boss : MonoBehaviour {
         }
 
         akcija -= Time.deltaTime;
-        if(akcija <= 0 && !sedi)
+        if (akcija <= 0 && !sedi)
         {
             akcija = 3f;
             Streljaj();
         }
 
-        if(trenutniMinion == steviloMinionov)
+        if (trenutniMinion == steviloMinionov)
         {
             sedi = !sedi;
             sePremika = !sePremika;
             trenutniMinion++;
         }
+
+        if (health <= 0)
+        {
+            Smrt();
+        }
+    }
+
+    void Smrt()
+    {
+        if (ObSmrti != null)
+        {
+            ObSmrti();
+        }
+
+        igralec.disabled = false;
+        kontroler.disabled = false;
+        borba.disabled = false;
+        Time.timeScale = 1f;
+
+        //Animacija BOOM
+
+
+        Destroy(gameObject);
     }
 
     private void FixedUpdate()
@@ -129,5 +175,44 @@ public class Boss : MonoBehaviour {
     {
         Rigidbody2D spell = Instantiate(spellMetek, strelPoint.position, strelPoint.rotation) as Rigidbody2D;
         //spell.velocity = transform.right * hitrostMetka;
+    }
+
+    void PrejmiSkodo(float ammount)
+    {
+        ammount /= armour;
+
+        if (!sedi && notDead)
+        {
+            health -= ammount;
+            healthBar.value = Mathf.RoundToInt(health);
+            if(health <= 10)
+            {
+                armour = 0.1f;
+                SlowMotion();
+                notDead = false;
+            }
+        }
+    }
+
+    void Damage()
+    {
+        Smrt();
+        healthBar.gameObject.SetActive(false);
+    }
+
+    void SlowMotion()
+    {
+        // igralec.disabled = true;
+        //kontroler.disabled = true;
+        //borba.disabled = true;
+        Time.timeScale = 0.2f;
+
+        Invoke("Napad", 0.4f);
+    }
+
+    void Napad()
+    {
+        //kontroler.SlowMotionAttack();
+        Damage();
     }
 }

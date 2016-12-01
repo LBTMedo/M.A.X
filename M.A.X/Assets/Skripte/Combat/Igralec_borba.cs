@@ -27,6 +27,8 @@ public class Igralec_borba : MonoBehaviour {
 
     Ammo ammo;
 
+    public bool disabled = false;
+
     bool seJeZeVrnilo = false;
 
     private VrstaStreljanja vrsta;
@@ -55,65 +57,68 @@ public class Igralec_borba : MonoBehaviour {
 
     void Update()
     {
-        hasBullets = (ammo.metki[trenutniMetek] > 0) ? true : false;
+        if (!disabled)
+        {
+            hasBullets = (ammo.metki[trenutniMetek] > 0) ? true : false;
 
-        if (Input.GetKeyDown(streljanje) && hasBullets)
-        {
-            if (vrsta == VrstaStreljanja.enojno)
+            if (Input.GetKeyDown(streljanje) && hasBullets)
             {
-                Streljaj();
+                if (vrsta == VrstaStreljanja.enojno)
+                {
+                    Streljaj();
+                }
+                else
+                {
+                    avtomatskoStreljanje = StartCoroutine(Streljanje());
+                }
             }
-            else
+            if (Input.GetKeyUp(streljanje) || !hasBullets)
             {
-                avtomatskoStreljanje = StartCoroutine(Streljanje());
+                if (vrsta == VrstaStreljanja.avtomatsko)
+                {
+                    StopCoroutine(avtomatskoStreljanje);
+                }
             }
-        }
-        if (Input.GetKeyUp(streljanje) || !hasBullets)
-        {
-            if(vrsta == VrstaStreljanja.avtomatsko)
+            if (Input.GetKeyDown(KeyCode.C))
             {
-                StopCoroutine(avtomatskoStreljanje);
+                ZamenjajVrstoMetka();
             }
-        }
-        if (Input.GetKeyDown(KeyCode.C))
-        {
-            ZamenjajVrstoMetka();
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha1))
-        {
-            if(WeaponManager.stOrozij() > 0)
+            if (Input.GetKeyDown(KeyCode.Alpha1))
             {
-                WeaponManager.ZamenjajOrozje();
+                if (WeaponManager.stOrozij() > 0)
+                {
+                    WeaponManager.ZamenjajOrozje();
+                }
             }
-        }
-        if (Input.GetKeyDown(KeyCode.M))
-        {
-            MeleeAttack();
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha2))
-        {
-            if(vrsta == VrstaStreljanja.enojno)
+            if (Input.GetKeyDown(KeyCode.M))
             {
-                vrsta = VrstaStreljanja.avtomatsko;
+                MeleeAttack();
             }
-            else
+            if (Input.GetKeyDown(KeyCode.Alpha2))
             {
-                vrsta = VrstaStreljanja.enojno;
+                if (vrsta == VrstaStreljanja.enojno)
+                {
+                    vrsta = VrstaStreljanja.avtomatsko;
+                }
+                else
+                {
+                    vrsta = VrstaStreljanja.enojno;
+                }
+                avtomatsko = !avtomatsko;
             }
-            avtomatsko = !avtomatsko;
-        }
-        if (Input.GetKeyDown(KeyCode.B))
-        {
-            WeaponManager.kupiOrozje(id);
-            id++;
-        }
+            if (Input.GetKeyDown(KeyCode.B))
+            {
+                WeaponManager.kupiOrozje(id);
+                id++;
+            }
 
-        Raycasting();
-        desno = kontroler.desno;
-        trenutnoOrozje = WeaponManager.VrniTrenutnoOrozje().parent;
+            Raycasting();
+            desno = kontroler.desno;
+            trenutnoOrozje = WeaponManager.VrniTrenutnoOrozje().parent;
+        }
     }
 
-    void Streljaj()
+    public void Streljaj()
     {
         source.volume = glasnost;
         source.PlayOneShot(zvok,glasnost);
