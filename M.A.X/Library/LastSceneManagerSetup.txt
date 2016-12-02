@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scene/LVL 1 Co-op Egypt.unity
+- path: Assets/Scene/Menu.unity
   isLoaded: 1
   isActive: 1
