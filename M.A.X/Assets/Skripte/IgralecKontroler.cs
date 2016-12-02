@@ -28,6 +28,12 @@ public class IgralecKontroler : MonoBehaviour {
 
     public Vector3 currentScale;
 
+    public bool disabled = false;
+
+    Boss boss = null;
+    Igralec_borba borba = null;
+
+
     public bool desno
     {
         get
@@ -68,76 +74,88 @@ public class IgralecKontroler : MonoBehaviour {
         Jumps = originalJumps;
 
         currentScale = transform.localScale;
+
+        if (disabled)
+        {
+            boss = FindObjectOfType<Boss>();
+            borba = FindObjectOfType<Igralec_borba>();
+        }
 	}
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && Jumps != 0)
+        if (!disabled)
         {
-            Debug.Log("Space");
-            jump = true;
+            if (Input.GetKeyDown(KeyCode.Space) && Jumps != 0)
+            {
+                Debug.Log("Space");
+                jump = true;
+            }
         }
     }
 
     void FixedUpdate() {
         Vector2 moveDir;
 
-        if (Input.GetKey(KeyCode.LeftShift) && Grounded())
+        if (!disabled)
         {
-            moveSpeed = sprintSpeed;
-        }
-        else
-        {
-            moveSpeed = originalMoveSpeed;
-        }
-
-        if (Input.GetKey(KeyCode.A))
-        {
-            Debug.Log("A");
-            moveDir = new Vector2(-moveSpeed, rbd.velocity.y);
-            facingRight = false;
-        }
-        else if (Input.GetKey(KeyCode.D))
-        {
-            Debug.Log("D");
-            moveDir = new Vector2(moveSpeed, rbd.velocity.y);
-            facingRight = true;
-        }
-        else
-        {
-            if (Grounded())
+            if (Input.GetKey(KeyCode.LeftShift) && Grounded())
             {
-                moveDir = new Vector2(0, 0);
+                moveSpeed = sprintSpeed;
             }
             else
             {
-                moveDir = new Vector2(0, rbd.velocity.y);
+                moveSpeed = originalMoveSpeed;
             }
-        }
+
+            if (Input.GetKey(KeyCode.A))
+            {
+                Debug.Log("A");
+                moveDir = new Vector2(-moveSpeed, rbd.velocity.y);
+                facingRight = false;
+            }
+            else if (Input.GetKey(KeyCode.D))
+            {
+                Debug.Log("D");
+                moveDir = new Vector2(moveSpeed, rbd.velocity.y);
+                facingRight = true;
+            }
+            else
+            {
+                if (Grounded())
+                {
+                    moveDir = new Vector2(0, 0);
+                }
+                else
+                {
+                    moveDir = new Vector2(0, rbd.velocity.y);
+                }
+            }
 
 
 
-        if (!Grounded())
-        {
-            Debug.Log(airControll);
-            moveDir.x = airControll * moveDir.x;
-        }
+            if (!Grounded())
+            {
+                Debug.Log(airControll);
+                moveDir.x = airControll * moveDir.x;
+            }
 
-        flip();
+            flip();
 
-        rbd.velocity = moveDir; //set player velocity (x axis)        
+            rbd.velocity = moveDir; //set player velocity (x axis)        
 
-        if (Grounded())
-        {
-            Jumps = originalJumps;
-        }
+            if (Grounded())
+            {
+                Jumps = originalJumps;
+            }
 
-        if (jump)
-        {
-            source.PlayOneShot(zvok, 1F);
-            rbd.velocity = new Vector2(rbd.velocity.x, jumpHeight);
-            jump = false;
-            Jumps--;
+            if (jump)
+            {
+                source.PlayOneShot(zvok, 1F);
+                rbd.velocity = new Vector2(rbd.velocity.x, jumpHeight);
+                jump = false;
+                Jumps--;
+            }
         }
 	}
 
@@ -157,6 +175,21 @@ public class IgralecKontroler : MonoBehaviour {
         else if (!facingRight)
         {
             transform.localScale = new Vector3(-currentScale.x, currentScale.y, 1); //turn left -------> to spremni pol v obratno
+        }
+    }
+
+    public void SlowMotionAttack()
+    {
+        if (disabled)
+        {
+            if(boss.gameObject.transform.position.x < transform.position.x && facingRight)
+            {
+                flip();
+            }
+            if(boss.gameObject.transform.position.x > transform.position.x && !facingRight){
+                flip();
+            }
+            borba.Streljaj();
         }
     }
 }

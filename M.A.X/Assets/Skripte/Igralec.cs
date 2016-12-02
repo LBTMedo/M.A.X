@@ -28,6 +28,8 @@ public class Igralec : MonoBehaviour {
 
     private IgralecKontroler kontroler;
 
+    public bool disabled = false;
+
     void Start ()
     {
         source = GetComponent<AudioSource>();
@@ -40,32 +42,35 @@ public class Igralec : MonoBehaviour {
 	
 	void Update ()
     {
-        if (Input.GetKeyDown(KeyCode.P))
+        if (!disabled)
         {
-            trenutnaZivljenja -= 20;
-            health.CurrentVal -= 20;
-            Debug.Log(trenutnaZivljenja);
-            transform.localScale = new Vector3(4,4,0);
-        }
-
-        if (trenutnaZivljenja <= 0 && !mrtev)
-        {
-            Smrt();
-        }
-
-        if (Input.GetKeyDown(KeyCode.Q))    
-        {
-            health.CurrentVal -= 10;
-            indikator.damaged = true;
-            if(indikator.sceneLoad == true)
+            if (Input.GetKeyDown(KeyCode.P))
             {
-                indikator.sceneLoad = false;
+                trenutnaZivljenja -= 20;
+                health.CurrentVal -= 20;
+                Debug.Log(trenutnaZivljenja);
+                transform.localScale = new Vector3(4, 4, 0);
             }
-        }
 
-        if (Input.GetKeyDown(KeyCode.W))
-        {
-            health.CurrentVal += 100;
+            if (trenutnaZivljenja <= 0 && !mrtev)
+            {
+                Smrt();
+            }
+
+            if (Input.GetKeyDown(KeyCode.Q))
+            {
+                health.CurrentVal -= 10;
+                indikator.damaged = true;
+                if (indikator.sceneLoad == true)
+                {
+                    indikator.sceneLoad = false;
+                }
+            }
+
+            if (Input.GetKeyDown(KeyCode.W))
+            {
+                health.CurrentVal += 100;
+            }
         }
     }
 
