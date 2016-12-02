@@ -17,6 +17,7 @@ public class GameManager : MonoBehaviour {
 
     void Start()
     {
+        Debug.Log(Application.loadedLevel.ToString());
         ubitiSovrazniki = 0;
 
         denar = 0;
@@ -28,22 +29,27 @@ public class GameManager : MonoBehaviour {
         foreach(Sovraznik s in sovrazniki)
         {
             s.ObSmrti += PovecajStUbitihSovraznikov;
+           
         }
     }
 
     public static void RestartGame()
     {
+        GameControl.control.currentLevel = currentLevel;
         SceneManager.LoadScene(currentLevel);
     }
 
     void PovecajStUbitihSovraznikov()
     {
         ubitiSovrazniki++;
+        GameControl.control.ubitiSovrazniki = ubitiSovrazniki;
     }
 
     public static void DodajDenar(int value)
     {
+       
         denar += value;
+        GameControl.control.denar = denar;
         Debug.Log("Denar: " + denar.ToString());
     }
 

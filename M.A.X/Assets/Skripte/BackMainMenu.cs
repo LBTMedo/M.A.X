@@ -31,6 +31,7 @@ public class BackMainMenu : MonoBehaviour {
             musicSlider = obj1.value;
             source.volume = glastnost * musicSlider;
         }
+       
 
     }
 }

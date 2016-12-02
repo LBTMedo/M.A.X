@@ -23,11 +23,10 @@ public class Kamera : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-      //   obj = GameObject.Find("Persistent Object");
-      //  obj = obj.GetComponent(PersistentScript);
+
         source = GetComponent<AudioSource>();
         int rand = Random.Range(0, back.Length);
-        source.clip = back[rand];
+        source.clip = back[0];
         source.Play();
         ZadnjaPozicija = player.position;
         pozicijaY = (transform.position - player.position).y;

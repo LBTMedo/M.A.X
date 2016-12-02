@@ -88821,11 +88821,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4000014204107644, guid: 4f8d2d9ac276ce646b2d2e06a4e1ca61, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0.8
+      value: -201.9
       objectReference: {fileID: 0}
     - target: {fileID: 4000014204107644, guid: 4f8d2d9ac276ce646b2d2e06a4e1ca61, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 3.4644518
+      value: 9.6
       objectReference: {fileID: 0}
     - target: {fileID: 4000014204107644, guid: 4f8d2d9ac276ce646b2d2e06a4e1ca61, type: 2}
       propertyPath: m_LocalPosition.z
