@@ -5,7 +5,7 @@ public class Kamera : MonoBehaviour
 {
     public float glasnost;
     private AudioSource source;
-    public AudioClip[] back;
+    //public AudioClip[] back;
     public Transform player;
     public float damping = 1;
     public float GledajeNaprejFaktor = 1;
@@ -25,9 +25,9 @@ public class Kamera : MonoBehaviour
     {
 
         source = GetComponent<AudioSource>();
-        int rand = Random.Range(0, back.Length);
-        source.clip = back[0];
-        source.Play();
+        //int rand = Random.Range(0, back.Length);
+        //source.clip = back[0];
+        //source.Play();
         ZadnjaPozicija = player.position;
         pozicijaY = (transform.position - player.position).y;
         offsetZ = (transform.position - player.position).z;

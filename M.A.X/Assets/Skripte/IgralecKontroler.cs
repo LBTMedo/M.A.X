@@ -161,6 +161,7 @@ public class IgralecKontroler : MonoBehaviour {
 
     bool Grounded() //returns true if player is on the "Ground" layer
     {
+        Debug.DrawRay(groundCheck.position, new Vector3(groundCheck.position.x, groundCheck.position.y - 0.3f), Color.red);
         grounded = Physics2D.Raycast(groundCheck.position, -Vector2.up, 0.3f, Ground);
         return grounded;
         //return Physics2D.OverlapCircle(groundCheck.position, 0.1f, Ground); 
