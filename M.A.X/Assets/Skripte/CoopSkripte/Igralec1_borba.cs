@@ -25,7 +25,7 @@ public class Igralec1_borba : MonoBehaviour {
     public int trenutniMetek { private set; get; }
     private Player1Kontroler kontroler;
 
-    Ammo ammo;
+    AmmoCoop1 ammo;
 
     public bool disabled = false;
 
@@ -51,7 +51,7 @@ public class Igralec1_borba : MonoBehaviour {
         kontroler = GetComponent<Player1Kontroler>();
         desno = kontroler.desno;
         avtomatsko = false;
-        ammo = FindObjectOfType<Ammo>();
+        ammo = FindObjectOfType<AmmoCoop1>();
         hasBullets = true;
     }
 
