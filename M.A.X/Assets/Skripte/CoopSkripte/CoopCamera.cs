@@ -5,6 +5,14 @@ public class CoopCamera : MonoBehaviour {
 
     public Transform igralec1, igralec2;
     public float minSizeY = 5f;
+    Igralec1 p1;
+    Igralec2 p2;
+
+    void Start()
+    {
+        p1 = FindObjectOfType<Igralec1>();
+        p2 = FindObjectOfType<Igralec2>();
+    }
 
     void SetCameraPos()
     {
@@ -26,7 +34,10 @@ public class CoopCamera : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        SetCameraPos();
-        SetCameraSize();
+        if (p1.trenutnaZivljenja > 0 && p2.trenutnaZivljenja > 0)
+        {
+            SetCameraPos();
+            SetCameraSize();
+        }
 	}
 }
