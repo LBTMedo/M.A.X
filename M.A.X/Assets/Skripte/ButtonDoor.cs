@@ -19,6 +19,7 @@ public class ButtonDoor : MonoBehaviour {
 
         if (entered && count < movetimes)
         {
+            if (count < movetimes)
             transform.Translate(Vector3.up * distance);
             count++;
         }

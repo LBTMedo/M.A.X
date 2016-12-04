@@ -14,7 +14,7 @@ public class Chest : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        open = trigger.GetComponent<DoorTrigger1>().entered;
+        open = trigger.GetComponent<DoorTrigger>().entered;
         if (open)
         {
             renderer.sprite = OpenSprite;

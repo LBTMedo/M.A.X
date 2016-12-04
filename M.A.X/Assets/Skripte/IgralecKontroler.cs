@@ -28,12 +28,6 @@ public class IgralecKontroler : MonoBehaviour {
 
     public Vector3 currentScale;
 
-    public bool disabled = false;
-
-    Boss boss = null;
-    Igralec_borba borba = null;
-
-
     public bool desno
     {
         get
@@ -56,12 +50,15 @@ public class IgralecKontroler : MonoBehaviour {
 
     private Rigidbody2D rbd;
 
+    Animator anim;
+
 	// Use this for initialization
 	void Start () {
 
         source = GetComponent<AudioSource>();
         player = GetComponent<Igralec>();
         rbd = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
 
         originalMoveSpeed = player.movementSpeed;
         jumpHeight = player.jumpHeight;
@@ -74,95 +71,87 @@ public class IgralecKontroler : MonoBehaviour {
         Jumps = originalJumps;
 
         currentScale = transform.localScale;
-
-        if (disabled)
-        {
-            boss = FindObjectOfType<Boss>();
-            borba = FindObjectOfType<Igralec_borba>();
-        }
 	}
 
     void Update()
     {
-        if (!disabled)
+        if (Input.GetKeyDown(KeyCode.Space) && Jumps != 0)
         {
-            if (Input.GetKeyDown(KeyCode.Space) && Jumps != 0)
-            {
-                Debug.Log("Space");
-                jump = true;
-            }
+            Debug.Log("Space");
+            jump = true;
+            transform.parent = null;
         }
     }
 
     void FixedUpdate() {
         Vector2 moveDir;
 
-        if (!disabled)
+        if (Input.GetKey(KeyCode.LeftShift) && Grounded())
         {
-            if (Input.GetKey(KeyCode.LeftShift) && Grounded())
-            {
-                moveSpeed = sprintSpeed;
-            }
-            else
-            {
-                moveSpeed = originalMoveSpeed;
-            }
+            moveSpeed = sprintSpeed;
+        }
+        else
+        {
+            moveSpeed = originalMoveSpeed;
+        }
 
-            if (Input.GetKey(KeyCode.A))
-            {
-                Debug.Log("A");
-                moveDir = new Vector2(-moveSpeed, rbd.velocity.y);
-                facingRight = false;
-            }
-            else if (Input.GetKey(KeyCode.D))
-            {
-                Debug.Log("D");
-                moveDir = new Vector2(moveSpeed, rbd.velocity.y);
-                facingRight = true;
-            }
-            else
-            {
-                if (Grounded())
-                {
-                    moveDir = new Vector2(0, 0);
-                }
-                else
-                {
-                    moveDir = new Vector2(0, rbd.velocity.y);
-                }
-            }
-
-
-
-            if (!Grounded())
-            {
-                Debug.Log(airControll);
-                moveDir.x = airControll * moveDir.x;
-            }
-
-            flip();
-
-            rbd.velocity = moveDir; //set player velocity (x axis)        
-
+        if (Input.GetKey(KeyCode.A))
+        {
+            Debug.Log("A");
+            moveDir = new Vector2(-moveSpeed, rbd.velocity.y);
+            facingRight = false;
+            anim.SetFloat("speed", 1f);
+        }
+        else if (Input.GetKey(KeyCode.D))
+        {
+            Debug.Log("D");
+            moveDir = new Vector2(moveSpeed, rbd.velocity.y);
+            facingRight = true;
+            anim.SetFloat("speed", 1f);
+        }
+        else
+        {
             if (Grounded())
             {
-                Jumps = originalJumps;
+                moveDir = new Vector2(0, rbd.velocity.y);
             }
-
-            if (jump)
+            else
             {
-                source.PlayOneShot(zvok, 1F);
-                rbd.velocity = new Vector2(rbd.velocity.x, jumpHeight);
-                jump = false;
-                Jumps--;
+                moveDir = new Vector2(0, rbd.velocity.y);
             }
+            anim.SetFloat("speed", 0f);
+        }
+
+
+
+        if (!Grounded())
+        {
+            anim.SetFloat("speed", 0f);
+            Debug.Log(airControll);
+            moveDir.x = airControll * moveDir.x;
+        }
+
+        flip();
+
+        rbd.velocity = moveDir; //set player velocity (x axis)        
+
+        if (Grounded())
+        {
+            Jumps = originalJumps;
+        }
+
+        if (jump)
+        {
+            source.PlayOneShot(zvok, 1F);
+            rbd.velocity = new Vector2(rbd.velocity.x, jumpHeight);
+            jump = false;
+            Jumps--;
         }
 	}
 
     bool Grounded() //returns true if player is on the "Ground" layer
     {
-        Debug.DrawRay(groundCheck.position, new Vector3(groundCheck.position.x, groundCheck.position.y - 0.3f), Color.red);
-        grounded = Physics2D.Raycast(groundCheck.position, -Vector2.up, 0.3f, Ground);
+        grounded = Physics2D.Raycast(groundCheck.position, -Vector2.up, 0.15f, Ground);
         return grounded;
         //return Physics2D.OverlapCircle(groundCheck.position, 0.1f, Ground); 
     }
@@ -176,21 +165,6 @@ public class IgralecKontroler : MonoBehaviour {
         else if (!facingRight)
         {
             transform.localScale = new Vector3(-currentScale.x, currentScale.y, 1); //turn left -------> to spremni pol v obratno
-        }
-    }
-
-    public void SlowMotionAttack()
-    {
-        if (disabled)
-        {
-            if(boss.gameObject.transform.position.x < transform.position.x && facingRight)
-            {
-                flip();
-            }
-            if(boss.gameObject.transform.position.x > transform.position.x && !facingRight){
-                flip();
-            }
-            borba.Streljaj();
         }
     }
 }

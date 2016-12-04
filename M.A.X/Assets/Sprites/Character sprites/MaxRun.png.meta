@@ -1,13 +1,16 @@
 fileFormatVersion: 2
-guid: 6531af9d4766ae34fb78c6399b4bbcea
-timeCreated: 1478546704
+guid: 36220c5700eed5e49aafdfbca36f656c
+timeCreated: 1480779237
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Background-Egypt_0
-    21300002: Background-Egypt_1
-    21300004: Background-Egypt_2
-    21300006: Background-Egypt_3
+    21300000: MaxRun_0
+    21300002: MaxRun_2
+    21300004: MaxRun_3
+    21300006: MaxRun_4
+    21300008: MaxRun_5
+    21300010: MaxRun_1
+    21300012: MaxRun_6
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -48,7 +51,7 @@ TextureImporter:
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 80
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
   textureType: 8
@@ -57,52 +60,91 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Background-Egypt_0
+      name: MaxRun_0
       rect:
         serializedVersion: 2
-        x: 1
-        y: 234
-        width: 422
-        height: 95
+        x: 0
+        y: 127
+        width: 80
+        height: 129
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Background-Egypt_1
+      name: MaxRun_2
       rect:
         serializedVersion: 2
-        x: 0
-        y: 441
-        width: 422
-        height: 71
+        x: 80
+        y: 124
+        width: 79
+        height: 132
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Background-Egypt_2
+      name: MaxRun_3
       rect:
         serializedVersion: 2
-        x: 0
-        y: 399
-        width: 423
-        height: 40
+        x: 229
+        y: 121
+        width: 66
+        height: 135
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Background-Egypt_3
+      name: MaxRun_4
       rect:
         serializedVersion: 2
-        x: 0
-        y: 331
-        width: 423
-        height: 68
+        x: 295
+        y: 121
+        width: 66
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: MaxRun_5
+      rect:
+        serializedVersion: 2
+        x: 361
+        y: 122
+        width: 54
+        height: 134
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: MaxRun_1
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 123
+        width: 70
+        height: 133
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: MaxRun_6
+      rect:
+        serializedVersion: 2
+        x: 415
+        y: 123
+        width: 62
+        height: 133
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
