@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: 6531af9d4766ae34fb78c6399b4bbcea
-timeCreated: 1478546704
+guid: 02108e341b93bed459c201c4eb75e540
+timeCreated: 1480779028
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Background-Egypt_0
-    21300002: Background-Egypt_1
-    21300004: Background-Egypt_2
-    21300006: Background-Egypt_3
+    21300000: Max_idle_0
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -57,52 +54,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Background-Egypt_0
+      name: Max_idle_0
       rect:
         serializedVersion: 2
-        x: 1
-        y: 234
-        width: 422
-        height: 95
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Background-Egypt_1
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 441
-        width: 422
-        height: 71
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Background-Egypt_2
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 399
-        width: 423
-        height: 40
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Background-Egypt_3
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 331
-        width: 423
-        height: 68
+        x: 70
+        y: 20
+        width: 47
+        height: 159
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}

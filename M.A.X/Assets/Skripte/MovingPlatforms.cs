@@ -23,4 +23,14 @@ public class MovingPlatforms : MonoBehaviour {
         transform.position = Vector3.Lerp(endpos, start, Mathf.SmoothStep(0f, 1f, pingpong));
 
     }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.tag == "Player")
+        {
+            GameObject child = new GameObject();
+            child.transform.parent = transform;
+            other.transform.parent = child.transform;
+        }
+    }
 }

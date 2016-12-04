@@ -50,12 +50,15 @@ public class IgralecKontroler : MonoBehaviour {
 
     private Rigidbody2D rbd;
 
+    Animator anim;
+
 	// Use this for initialization
 	void Start () {
 
         source = GetComponent<AudioSource>();
         player = GetComponent<Igralec>();
         rbd = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
 
         originalMoveSpeed = player.movementSpeed;
         jumpHeight = player.jumpHeight;
@@ -76,6 +79,7 @@ public class IgralecKontroler : MonoBehaviour {
         {
             Debug.Log("Space");
             jump = true;
+            transform.parent = null;
         }
     }
 
@@ -96,29 +100,33 @@ public class IgralecKontroler : MonoBehaviour {
             Debug.Log("A");
             moveDir = new Vector2(-moveSpeed, rbd.velocity.y);
             facingRight = false;
+            anim.SetFloat("speed", 1f);
         }
         else if (Input.GetKey(KeyCode.D))
         {
             Debug.Log("D");
             moveDir = new Vector2(moveSpeed, rbd.velocity.y);
             facingRight = true;
+            anim.SetFloat("speed", 1f);
         }
         else
         {
             if (Grounded())
             {
-                moveDir = new Vector2(0, 0);
+                moveDir = new Vector2(0, rbd.velocity.y);
             }
             else
             {
                 moveDir = new Vector2(0, rbd.velocity.y);
             }
+            anim.SetFloat("speed", 0f);
         }
 
 
 
         if (!Grounded())
         {
+            anim.SetFloat("speed", 0f);
             Debug.Log(airControll);
             moveDir.x = airControll * moveDir.x;
         }
@@ -143,7 +151,7 @@ public class IgralecKontroler : MonoBehaviour {
 
     bool Grounded() //returns true if player is on the "Ground" layer
     {
-        grounded = Physics2D.Raycast(groundCheck.position, -Vector2.up, 0.3f, Ground);
+        grounded = Physics2D.Raycast(groundCheck.position, -Vector2.up, 0.15f, Ground);
         return grounded;
         //return Physics2D.OverlapCircle(groundCheck.position, 0.1f, Ground); 
     }

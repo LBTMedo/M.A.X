@@ -17,7 +17,7 @@ public class Door : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        entered = trigger.GetComponent<DoorTrigger1>().entered;
+        entered = trigger.GetComponent<DoorTrigger>().entered;
         
 	    if (entered && count < MoveTimes)
         {
