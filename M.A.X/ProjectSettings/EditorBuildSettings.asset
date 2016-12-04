@@ -12,4 +12,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scene/Egypt.unity
   - enabled: 1
+    path: Assets/Scene/BossFight.unity
+  - enabled: 1
     path: Assets/Scene/LVL 1 Co-op Egypt.unity
+  - enabled: 1
+    path: Assets/Scene/Minigame1 Memory.unity
+  - enabled: 1
+    path: Assets/Scene/Kviz.unity
+  - enabled: 1
+    path: Assets/Scene/Endless.unity

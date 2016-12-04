@@ -35,8 +35,8 @@ public class GameManager : MonoBehaviour {
 
     public static void RestartGame()
     {
-        GameControl.control.currentLevel = currentLevel;
-        SceneManager.LoadScene(currentLevel);
+        
+        SceneManager.LoadScene(GameControl.control.currentLevel);
     }
 
     void PovecajStUbitihSovraznikov()

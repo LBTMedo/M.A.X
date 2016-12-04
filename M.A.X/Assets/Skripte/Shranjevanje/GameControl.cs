@@ -16,6 +16,7 @@ public class GameControl : MonoBehaviour
     public int currentLevel = 1;
     public int ubitiSovrazniki = 0;
     public int denar = 0;
+    public string savegameIme;
 
     void Awake()
     {
@@ -25,16 +26,10 @@ public class GameControl : MonoBehaviour
             control = this;
         }
         else if (control != this)
-        {
+        {            
             Destroy(gameObject);
         }
-        denar = 0;
-        ubitiSovrazniki = 0;
-        currentLevel = 1;
-        MUSIC = 0.5f;
-        MASTER = 0.5f;
-        SFX = 0.5f;
-        Debug.Log(Application.persistentDataPath.ToString());
+
     }
 
     // Update is called once per frame
@@ -46,7 +41,7 @@ public class GameControl : MonoBehaviour
     public void Save()
     {
         BinaryFormatter bf = new BinaryFormatter();
-        FileStream file = File.Create(Application.persistentDataPath + "/playerInfo.dat");
+        FileStream file = File.Create(Application.persistentDataPath + "/"+savegameIme+".dat");
 
         PlayerData data = new PlayerData();
         data.SFX = SFX;
@@ -55,26 +50,26 @@ public class GameControl : MonoBehaviour
         data.currentLevel = currentLevel;
         data.ubitiSovrazniki = ubitiSovrazniki;
         data.denar = denar ;
+        data.savegameIme = savegameIme;
         bf.Serialize(file, data);
         file.Close();
     }
     public void Load()
     {
-        if (File.Exists(Application.persistentDataPath + "/playerInfo.dat"))
+        if (File.Exists(Application.persistentDataPath + "/" + savegameIme + ".dat"))
         {
             BinaryFormatter bf = new BinaryFormatter();
-            FileStream file = File.Open(Application.persistentDataPath + "/playerInfo.dat", FileMode.Open);
+            FileStream file = File.Open(Application.persistentDataPath + "/" + savegameIme + ".dat", FileMode.Open);
             PlayerData data = (PlayerData)bf.Deserialize(file);
             file.Close();
             MUSIC = data.MUSIC;
             SFX = data.SFX;
             MASTER = data.MASTER;
             currentLevel = data.currentLevel;
-            Debug.Log(currentLevel);
              
             ubitiSovrazniki = data.ubitiSovrazniki;
             denar = data.denar;
-   
+            savegameIme = data.savegameIme;
             SceneManager.LoadScene(currentLevel);
 
         }
@@ -94,4 +89,5 @@ class PlayerData
     public int currentLevel;
     public int ubitiSovrazniki;
     public int denar;
+    public string savegameIme;
 }
