@@ -104,7 +104,7 @@ public class Boss : MonoBehaviour {
         }
 
         igralec.disabled = false;
-        kontroler.disabled = false;
+        //kontroler.disabled = false;
         borba.disabled = false;
         Time.timeScale = 1f;
 
