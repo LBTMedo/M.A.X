@@ -71,7 +71,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000012219370856}
   - 61: {fileID: 61000010970727106}
-  - 114: {fileID: 114000011753672312}
   m_Layer: 12
   m_Name: Okvir
   m_TagString: Untagged
@@ -99,7 +98,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000010890503050}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.11, y: -0.68, z: 0}
+  m_LocalPosition: {x: -0.1572274, y: -7.1131816, z: 0}
   m_LocalScale: {x: 10, y: 4, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -213,17 +212,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5509faaaa32e7564583b7bfc391d3ee6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114000011753672312
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000012471715314}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5509faaaa32e7564583b7bfc391d3ee6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  levo: {fileID: 0}
+  desno: {fileID: 0}
 --- !u!212 &212000010458529748
 SpriteRenderer:
   m_ObjectHideFlags: 1

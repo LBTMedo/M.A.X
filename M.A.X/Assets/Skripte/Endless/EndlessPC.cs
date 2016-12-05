@@ -6,7 +6,7 @@ public class EndlessPC : MonoBehaviour {
     Igralec player;
 
     [SerializeField]
-    private float moveSpeed = 1f;
+    private float moveSpeed = 8f;
     private float jumpHeight = 15f;
     private float sprintSpeed = 30f;
     private float originalMoveSpeed;
@@ -48,12 +48,15 @@ public class EndlessPC : MonoBehaviour {
     public float hitrostPremikanje
     {
         set { moveSpeed = value; }
+        get { return moveSpeed; }
     }
 
     private int Jumps; //num of current jumps
     public int originalJumps = 2; //the original num of jumps
 
     private Rigidbody2D rbd;
+
+    public float stevec;
 
     // Use this for initialization
     void Start()
@@ -80,12 +83,8 @@ public class EndlessPC : MonoBehaviour {
             borba = FindObjectOfType<Igralec_borba>();
         }
 
-        InvokeRepeating("PovecajHitrost", 10f, 10f);
-    }
+        stevec = 10f;
 
-    void PovecajHitrost()
-    {
-        moveSpeed += 1;
     }
 
     void Update()
@@ -98,7 +97,14 @@ public class EndlessPC : MonoBehaviour {
                 jump = true;
             }
         }
-        rbd.velocity = new Vector2(10f, rbd.velocity.y);
+        rbd.velocity = new Vector2(moveSpeed, rbd.velocity.y);
+
+        stevec -= Time.deltaTime;
+        if(stevec <= 0f)
+        {
+            stevec = 10f;
+            moveSpeed += 1f;
+        }
     }
 
     void FixedUpdate()
