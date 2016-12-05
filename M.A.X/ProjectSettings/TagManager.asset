@@ -18,6 +18,7 @@ TagManager:
   - Levo
   - Desno
   - Platforma
+  - Water
   layers:
   - Default
   - TransparentFX
