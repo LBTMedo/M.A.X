@@ -15,6 +15,8 @@ public class novuporbnik : MonoBehaviour {
     public void OnclickSave()
     {
         GameControl.control.savegameIme = tekst.text;
+        GameControl.control.SingleGameProgress = 1;
+        GameControl.control.CooPGameProgress = 1;
         GameControl.control.Save();
         GameControl.control.SaveDefault();
 

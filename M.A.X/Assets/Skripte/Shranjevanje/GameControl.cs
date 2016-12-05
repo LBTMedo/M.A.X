@@ -33,6 +33,8 @@ public class GameControl : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        GameControl.control.SingleGameProgress = 1;
+        GameControl.control.CooPGameProgress = 1;
 
     }
 
@@ -134,6 +136,13 @@ public class GameControl : MonoBehaviour
         bf.Serialize(file, data);
         file.Close();
 
+    }
+    public void LoadNextLevel()
+    {
+        GameControl.control.currentLevel += 1;
+        GameControl.control.Save();
+        GameControl.control.SaveDefault();
+        SceneManager.LoadScene(GameControl.control.currentLevel);
     }
 }
 [Serializable]
