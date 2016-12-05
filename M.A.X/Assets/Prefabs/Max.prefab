@@ -112,6 +112,8 @@ GameObject:
   - 114: {fileID: 114000011314127930}
   - 82: {fileID: 82000014258495704}
   - 95: {fileID: 95000011199812322}
+  - 114: {fileID: 114000013779704058}
+  - 114: {fileID: 114000011597811654}
   m_Layer: 8
   m_Name: Max
   m_TagString: Player
@@ -239,7 +241,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012875589336}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -19.452, y: -0.04, z: 0}
+  m_LocalPosition: {x: 7.2, y: 4.38, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -571,6 +573,8 @@ MonoBehaviour:
     m_Bits: 512
   groundCheck: {fileID: 4000010787480266}
   grounded: 0
+  disabled: 0
+  powerup: 0
   currentScale: {x: 0, y: 0, z: 0}
   originalJumps: 2
 --- !u!114 &114000011314127930
@@ -595,9 +599,24 @@ MonoBehaviour:
   vrsteMetkov:
   - {fileID: 50000014273870220, guid: 56d15bdf26c2f664298fc0d62bf1d997, type: 2}
   - {fileID: 50000013778058604, guid: fb448c9d6ae7e6a47b4523aba3873ba5, type: 2}
+  disabled: 0
   streljanje: 13
   desno: 0
   avtomatsko: 0
+--- !u!114 &114000011597811654
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012875589336}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7487c1b61fdff2b4994d1dd3180026cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  floatspeed: 3
+  disabled: 1
 --- !u!114 &114000011805601046
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -652,6 +671,20 @@ MonoBehaviour:
     bar: {fileID: 0}
     maxVal: 100
     currentVal: 100
+  disabled: 0
+--- !u!114 &114000013779704058
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012875589336}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f5a10e47e8ac3149a951a4eaf62543a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  artefacts: 
+  full: 0
 --- !u!212 &212000010501621052
 SpriteRenderer:
   m_ObjectHideFlags: 1
