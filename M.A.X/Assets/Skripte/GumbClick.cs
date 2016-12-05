@@ -4,29 +4,28 @@ using System.Collections;
 using UnityEngine.UI;
 
 public class GumbClick : MonoBehaviour {
-    private float master = 0.5f,sfxa = 0.5f;
     public AudioClip zvok;
     private AudioSource source;
     public Slider Master;
     public Slider SFX;
     // Use this for initialization
     void Start () {
-
+     
         source = GetComponent<AudioSource>();
-        source.PlayOneShot(zvok, master* sfxa);
+        source.PlayOneShot(zvok, GameControl.control.MASTER * GameControl.control.SFX);
 	}
 	
 	// Update is called once per frame
 	void Update () {
-        if (master != Master.value)
+        if (GameControl.control.MASTER != Master.value)
         {
-            master = Master.value;
-            source.volume = master * sfxa;
+            GameControl.control.MASTER = Master.value;
+            source.volume = GameControl.control.MASTER * GameControl.control.SFX;
         }
-        if (sfxa != SFX.value)
+        if (GameControl.control.SFX != SFX.value)
         {
-            sfxa = SFX.value;
-            source.volume = master * sfxa;
+            GameControl.control.SFX = SFX.value;
+            source.volume = GameControl.control.MASTER * GameControl.control.SFX;
         }
     }
 }

@@ -10,23 +10,23 @@ public class GameControl : MonoBehaviour
 {
 
     public static GameControl control;
-    public float SFX = 0.5f;
-    public float MASTER = 0.5f;
-    public float MUSIC = 0.5f;
-    public int currentLevel = 1;
-    public int ubitiSovrazniki = 0;
-    public int denar = 0;
+    public float SFX;
+    public float MASTER;
+    public float MUSIC;
+    public int currentLevel;
+    public int ubitiSovrazniki;
+    public int denar;
     public string savegameIme;
 
     void Awake()
     {
         if (control == null)
         {
-            DontDestroyOnLoad(gameObject);
+            DontDestroyOnLoad(gameObject);     
             control = this;
         }
         else if (control != this)
-        {            
+        {
             Destroy(gameObject);
         }
 
@@ -41,16 +41,16 @@ public class GameControl : MonoBehaviour
     public void Save()
     {
         BinaryFormatter bf = new BinaryFormatter();
-        FileStream file = File.Create(Application.persistentDataPath + "/"+savegameIme+".dat");
+        FileStream file = File.Create(Application.persistentDataPath + "/" + savegameIme + ".dat");
 
         PlayerData data = new PlayerData();
-        data.SFX = SFX;
-        data.MUSIC = MUSIC;
-        data.MASTER = MASTER;
-        data.currentLevel = currentLevel;
-        data.ubitiSovrazniki = ubitiSovrazniki;
-        data.denar = denar ;
-        data.savegameIme = savegameIme;
+        data.SFX = GameControl.control.SFX;
+        data.MUSIC = GameControl.control.MUSIC;
+        data.MASTER = GameControl.control.MASTER;
+        data.currentLevel = GameControl.control.currentLevel;
+        data.ubitiSovrazniki = GameControl.control.ubitiSovrazniki;
+        data.denar = GameControl.control.denar;
+        data.savegameIme = GameControl.control.savegameIme;
         bf.Serialize(file, data);
         file.Close();
     }
@@ -62,15 +62,14 @@ public class GameControl : MonoBehaviour
             FileStream file = File.Open(Application.persistentDataPath + "/" + savegameIme + ".dat", FileMode.Open);
             PlayerData data = (PlayerData)bf.Deserialize(file);
             file.Close();
-            MUSIC = data.MUSIC;
-            SFX = data.SFX;
-            MASTER = data.MASTER;
-            currentLevel = data.currentLevel;
-             
-            ubitiSovrazniki = data.ubitiSovrazniki;
-            denar = data.denar;
-            savegameIme = data.savegameIme;
-            SceneManager.LoadScene(currentLevel);
+            GameControl.control.MUSIC = data.MUSIC;
+            GameControl.control.SFX = data.SFX;
+            GameControl.control.MASTER = data.MASTER;
+            GameControl.control.currentLevel = data.currentLevel;
+            GameControl.control.ubitiSovrazniki = data.ubitiSovrazniki;
+            GameControl.control.denar = data.denar;
+            GameControl.control.savegameIme = data.savegameIme;
+            SceneManager.LoadScene(GameControl.control.currentLevel);
 
         }
         else
