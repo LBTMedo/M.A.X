@@ -17,9 +17,10 @@ public class GameControl : MonoBehaviour
     public int ubitiSovrazniki;
     public int denar;
     public int smrti;
-    public string savegameIme;
+    public string savegameIme = "DefaultUser";
     public int SingleGameProgress = 1;
     public int CooPGameProgress = 1;
+    public float cas;
 
     void Awake()
     {
@@ -57,6 +58,7 @@ public class GameControl : MonoBehaviour
         data.smrti = GameControl.control.smrti;
         data.SingleGameProgress = GameControl.control.SingleGameProgress;
         data.CooPGameProgress = GameControl.control.CooPGameProgress;
+        data.cas = GameControl.control.cas;
 
         bf.Serialize(file, data);
         file.Close();
@@ -79,6 +81,7 @@ public class GameControl : MonoBehaviour
             GameControl.control.smrti = data.smrti;
             GameControl.control.CooPGameProgress = data.CooPGameProgress;
             GameControl.control.SingleGameProgress = data.SingleGameProgress;
+            GameControl.control.cas = data.cas;
         }
         else
         {
@@ -103,6 +106,7 @@ public class GameControl : MonoBehaviour
             GameControl.control.smrti = data.smrti;
             GameControl.control.CooPGameProgress = data.CooPGameProgress;
             GameControl.control.SingleGameProgress = data.SingleGameProgress;
+            GameControl.control.cas = data.cas;
             return GameControl.control.savegameIme;
         }
         else
@@ -126,6 +130,7 @@ public class GameControl : MonoBehaviour
         data.smrti = GameControl.control.smrti;
         data.SingleGameProgress = GameControl.control.SingleGameProgress;
         data.CooPGameProgress = GameControl.control.CooPGameProgress;
+        data.cas = GameControl.control.cas;
         bf.Serialize(file, data);
         file.Close();
 
@@ -145,4 +150,5 @@ class PlayerData
     public int smrti;
     public int SingleGameProgress;
     public int CooPGameProgress;
+    public float cas;
 }

@@ -142,7 +142,7 @@ public class IgralecKontroler : MonoBehaviour {
 
         if (jump)
         {
-            source.PlayOneShot(zvok, 1F);
+            source.PlayOneShot(zvok, GameControl.control.MASTER * GameControl.control.SFX);
             rbd.velocity = new Vector2(rbd.velocity.x, jumpHeight);
             jump = false;
             Jumps--;

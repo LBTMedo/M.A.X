@@ -22,12 +22,14 @@ public class BackMainMenu : MonoBehaviour {
         {
             
             GameControl.control.MASTER = obj.value;
-            Debug.Log("spremeni0");
+
+
            source.volume = GameControl.control.MASTER * GameControl.control.MUSIC;
         }
         if (GameControl.control.MUSIC != obj1.value)
         {
-            Debug.Log("spremeni1");
+
+
             GameControl.control.MUSIC = obj1.value;
             source.volume = GameControl.control.MASTER * GameControl.control.MUSIC;
         }
