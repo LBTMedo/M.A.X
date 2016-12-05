@@ -17,7 +17,7 @@ public class GameManager : MonoBehaviour {
 
     void Start()
     {
-        Debug.Log(Application.loadedLevel.ToString());
+        
         ubitiSovrazniki = 0;
 
         denar = 0;
@@ -50,7 +50,6 @@ public class GameManager : MonoBehaviour {
        
         denar += value;
         GameControl.control.denar = denar;
-        Debug.Log("Denar: " + denar.ToString());
     }
 
 }

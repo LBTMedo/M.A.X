@@ -17,10 +17,10 @@ public class ShraniIgro : MonoBehaviour {
     {
         if (entered == false)
         {
-            GameControl.control.ubitiSovrazniki = 2;
-            GameControl.control.denar = 350;
+
             GameControl.control.currentLevel += 1;
             GameControl.control.Save();
+            GameControl.control.SaveDefault();
             SceneManager.LoadScene(GameControl.control.currentLevel);
             entered = true;
         }

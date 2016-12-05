@@ -16,7 +16,10 @@ public class GameControl : MonoBehaviour
     public int currentLevel;
     public int ubitiSovrazniki;
     public int denar;
+    public int smrti;
     public string savegameIme;
+    public int SingleGameProgress = 1;
+    public int CooPGameProgress = 1;
 
     void Awake()
     {
@@ -51,6 +54,10 @@ public class GameControl : MonoBehaviour
         data.ubitiSovrazniki = GameControl.control.ubitiSovrazniki;
         data.denar = GameControl.control.denar;
         data.savegameIme = GameControl.control.savegameIme;
+        data.smrti = GameControl.control.smrti;
+        data.SingleGameProgress = GameControl.control.SingleGameProgress;
+        data.CooPGameProgress = GameControl.control.CooPGameProgress;
+
         bf.Serialize(file, data);
         file.Close();
     }
@@ -69,13 +76,59 @@ public class GameControl : MonoBehaviour
             GameControl.control.ubitiSovrazniki = data.ubitiSovrazniki;
             GameControl.control.denar = data.denar;
             GameControl.control.savegameIme = data.savegameIme;
-            SceneManager.LoadScene(GameControl.control.currentLevel);
-
+            GameControl.control.smrti = data.smrti;
+            GameControl.control.CooPGameProgress = data.CooPGameProgress;
+            GameControl.control.SingleGameProgress = data.SingleGameProgress;
         }
         else
         {
 
         }
+    }
+    public string LoadDefault()
+    {
+        if (File.Exists(Application.persistentDataPath + "/DefaultUser.dat"))
+        {
+            BinaryFormatter bf = new BinaryFormatter();
+            FileStream file = File.Open(Application.persistentDataPath + "/DefaultUser.dat", FileMode.Open);
+            PlayerData data = (PlayerData)bf.Deserialize(file);
+            file.Close();
+            GameControl.control.MUSIC = data.MUSIC;
+            GameControl.control.SFX = data.SFX;
+            GameControl.control.MASTER = data.MASTER;
+            GameControl.control.currentLevel = data.currentLevel;
+            GameControl.control.ubitiSovrazniki = data.ubitiSovrazniki;
+            GameControl.control.denar = data.denar;
+            GameControl.control.savegameIme = data.savegameIme;
+            GameControl.control.smrti = data.smrti;
+            GameControl.control.CooPGameProgress = data.CooPGameProgress;
+            GameControl.control.SingleGameProgress = data.SingleGameProgress;
+            return GameControl.control.savegameIme;
+        }
+        else
+        {
+            return "NoDefaultUser";
+        }
+    }
+    public void SaveDefault()
+    {
+        BinaryFormatter bf = new BinaryFormatter();
+        FileStream file = File.Create(Application.persistentDataPath + "/DefaultUser.dat");
+
+        PlayerData data = new PlayerData();
+        data.SFX = GameControl.control.SFX;
+        data.MUSIC = GameControl.control.MUSIC;
+        data.MASTER = GameControl.control.MASTER;
+        data.currentLevel = GameControl.control.currentLevel;
+        data.ubitiSovrazniki = GameControl.control.ubitiSovrazniki;
+        data.denar = GameControl.control.denar;
+        data.savegameIme = GameControl.control.savegameIme;
+        data.smrti = GameControl.control.smrti;
+        data.SingleGameProgress = GameControl.control.SingleGameProgress;
+        data.CooPGameProgress = GameControl.control.CooPGameProgress;
+        bf.Serialize(file, data);
+        file.Close();
+
     }
 }
 [Serializable]
@@ -89,4 +142,7 @@ class PlayerData
     public int ubitiSovrazniki;
     public int denar;
     public string savegameIme;
+    public int smrti;
+    public int SingleGameProgress;
+    public int CooPGameProgress;
 }

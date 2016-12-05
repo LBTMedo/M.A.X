@@ -8,7 +8,7 @@ public class Igralec : MonoBehaviour {
     private AudioSource source;
     private float volLowRange = .5f;
     private float volHighRange = 1.0f;
-
+    int smrti = 0;
     public float trenutnaZivljenja;
     protected bool mrtev = false;
 
@@ -55,6 +55,8 @@ public class Igralec : MonoBehaviour {
             if (trenutnaZivljenja <= 0 && !mrtev)
             {
                 Smrt();
+                smrti++;
+                GameControl.control.smrti = smrti;
             }
 
             if (Input.GetKeyDown(KeyCode.Q))
