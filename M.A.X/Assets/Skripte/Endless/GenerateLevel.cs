@@ -6,8 +6,8 @@ public class GenerateLevel : MonoBehaviour {
 
     public GameObject[] prefabs;
 
-    float maxXDelta = 30f;
-    float minXDelta = 20f;
+    float maxXDelta = 33f;
+    float minXDelta = 25f;
 
     float[] yScales = { 4f, 4f, 12f, 4f, 15f, 15f };
 
