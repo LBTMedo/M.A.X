@@ -85,19 +85,20 @@ public class Igralec : MonoBehaviour {
     {
         trenutnaZivljenja -= skoda;
         health.CurrentVal -= skoda;
-        source.PlayOneShot(zvok, GameControl.control.MASTER * GameControl.control.SFX);
+        //source.PlayOneShot(zvok, GameControl.control.MASTER * GameControl.control.SFX);
     }
 
     public void Smrt()
     {
        
-        source.PlayOneShot(zvokUmri, GameControl.control.MASTER * GameControl.control.SFX);
+        //source.PlayOneShot(zvokUmri, GameControl.control.MASTER * GameControl.control.SFX);
         mrtev = true;
-        Debug.Log("Smrt");
-        if (ObSmrti != null)
+        //Debug.Log("Smrt");
+        /*if (ObSmrti != null)
         {
             ObSmrti();
-        }
+        }*/
+        GameManager.RestartGame();
         Destroy(gameObject);
     }
 

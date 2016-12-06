@@ -40,7 +40,7 @@ public class GameManager : MonoBehaviour {
 
     public static void RestartGame()
     {
-        
+        Debug.Log("SMRT");
         SceneManager.LoadScene(GameControl.control.currentLevel);
     }
 
@@ -55,6 +55,7 @@ public class GameManager : MonoBehaviour {
        
         denar += value;
         GameControl.control.denar += denar;
+        Debug.Log("Denar " + denar);
     }
 
 }
