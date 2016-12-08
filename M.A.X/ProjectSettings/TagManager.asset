@@ -18,6 +18,8 @@ TagManager:
   - Levo
   - Desno
   - Platforma
+  - ZaIzbris
+  - MiniToClick
   layers:
   - Default
   - TransparentFX
@@ -32,7 +34,7 @@ TagManager:
   - Background
   - Sovraznik
   - Platforma
-  - 
+  - Deleted
   - 
   - 
   - 
