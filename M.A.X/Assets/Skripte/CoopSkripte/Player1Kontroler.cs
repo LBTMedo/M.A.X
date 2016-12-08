@@ -127,7 +127,7 @@ public class Player1Kontroler : MonoBehaviour {
             {
                 if (Grounded())
                 {
-                    moveDir = new Vector2(0, 0);
+                    moveDir = new Vector2(0, rbd.velocity.y);
                 }
                 else
                 {
@@ -156,7 +156,7 @@ public class Player1Kontroler : MonoBehaviour {
 
             if (jump)
             {
-                source.PlayOneShot(zvok, GameControl.control.MASTER * GameControl.control.SFX);
+                source.PlayOneShot(zvok, 1F);
                 rbd.velocity = new Vector2(rbd.velocity.x, jumpHeight);
                 jump = false;
                 Jumps--;

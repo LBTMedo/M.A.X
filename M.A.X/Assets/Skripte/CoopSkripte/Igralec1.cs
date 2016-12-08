@@ -9,6 +9,7 @@ public class Igralec1 : MonoBehaviour {
     private AudioSource source;
     private float volLowRange = .5f;
     private float volHighRange = 1.0f;
+    int smrti = 0;
 
     public float trenutnaZivljenja;
     protected bool mrtev = false;
@@ -56,6 +57,8 @@ public class Igralec1 : MonoBehaviour {
             if (trenutnaZivljenja <= 0 && !mrtev)
             {
                 Smrt();
+                smrti++;
+                GameControl.control.smrti += smrti;
             }
 
             if (Input.GetKeyDown(KeyCode.Q))
@@ -84,18 +87,19 @@ public class Igralec1 : MonoBehaviour {
     {
         trenutnaZivljenja -= skoda;
         health.CurrentVal -= skoda;
-        source.PlayOneShot(zvok, 1F);
+        //source.PlayOneShot(zvok, 1F);
     }
 
     public void Smrt()
     {
-        source.PlayOneShot(zvokUmri, 1F);
+        //source.PlayOneShot(zvokUmri, 1F);
         mrtev = true;
-        Debug.Log("Smrt");
+        /*Debug.Log("Smrt");
         if (ObSmrti != null)
         {
             ObSmrti();
-        }
+        }*/
+        GameManager.RestartGame();
         Destroy(gameObject);
     }
 
