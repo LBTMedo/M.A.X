@@ -42,6 +42,7 @@ public class GameManager : MonoBehaviour {
     {
         Debug.Log("SMRT");
         SceneManager.LoadScene(GameControl.control.currentLevel);
+        //SceneManager.LoadScene(currentLevel);
     }
 
     void PovecajStUbitihSovraznikov()

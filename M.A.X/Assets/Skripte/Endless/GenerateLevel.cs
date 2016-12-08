@@ -6,10 +6,10 @@ public class GenerateLevel : MonoBehaviour {
 
     public GameObject[] prefabs;
 
-    float maxXDelta = 33f;
-    float minXDelta = 25f;
+    float maxXDelta = 38f;
+    float minXDelta = 33f;
 
-    float[] yScales = { 4f, 4f, 12f, 4f, 15f, 15f };
+    float[] yScales = { 6f, 6f, 6f, 6f, 6f, 6f, 15f, 15f, 15f, 4.5f, 4.5f, 4.5f, 15f, 15f, 15f };
 
     float[] xPozicije = { 1f };
 
@@ -21,7 +21,7 @@ public class GenerateLevel : MonoBehaviour {
 
     EndlessPC kontroler;
 
-    public float maxYDelta = 3f;
+    public float maxYDelta = 2f;
 
     int multiplier;
 
@@ -88,7 +88,7 @@ public class GenerateLevel : MonoBehaviour {
         //float scale = Random.Range(0.5f, 1.5f);
 
         stevec++;
-        if (stevec == 5)
+        if (stevec == 2)
         {
             trenutniPrefab += 3;
             if (trenutniPrefab == prefabs.Length)
