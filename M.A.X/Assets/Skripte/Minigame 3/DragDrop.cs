@@ -7,7 +7,7 @@ public class DragDrop : MonoBehaviour
 
     private Vector3 dragPosition;
     Transform trans;
-    public Transform ObjetkZaDelanje;
+    
     float scroll = 0.0f;
     public bool JeKlikjena = false;
     private bool once = false;

@@ -32,7 +32,7 @@ public class Settings : MonoBehaviour {
             Nacin = 1;
             tekst.text = "MOVE";
         }
-        Debug.Log(Nacin);
+
     }
     public void ChangeBlockType()
     {
