@@ -47,6 +47,7 @@ public class Boss : MonoBehaviour {
     public IgralecKontroler kontroler;
     public Igralec_borba borba;
 
+    private Animator anim;
     bool notDead = true;
 
     private void Start()
@@ -63,6 +64,8 @@ public class Boss : MonoBehaviour {
         levo = true;
         rb2d = GetComponent<Rigidbody2D>();
 
+        anim = GetComponent<Animator>();
+
 
         healthBar.value = Mathf.RoundToInt(health);
     }
@@ -72,15 +75,25 @@ public class Boss : MonoBehaviour {
         timer -= Time.deltaTime;
         if (timer <= 0 && trenutniMinion < steviloMinionov)
         {
+            anim.SetBool("shoot", true);
             timer = 3f;
             SpawnMinion();
+        }
+        else
+        {
+            anim.SetBool("shoot", false);
         }
 
         akcija -= Time.deltaTime;
         if (akcija <= 0 && !sedi)
         {
+            anim.SetBool("shoot", true);
             akcija = 3f;
             Streljaj();
+        }
+        else
+        {
+            anim.SetBool("shoot", false);
         }
 
         if (trenutniMinion == steviloMinionov)
@@ -118,15 +131,22 @@ public class Boss : MonoBehaviour {
     {
         if(!sedi && sePremika)
         {
+            anim.SetFloat("speed", 1f);
             Raycasting();
             Move();
+        }
+        else
+        {
+            anim.SetFloat("speed", 0f);
         }
     }
 
     public void SpawnMinion()
     {
+        //anim.SetBool("shoot", true);
         metek = Instantiate(minionMetek, spawn.position, spawn.rotation) as Rigidbody2D;
         trenutniMinion++;
+        //anim.SetBool("shoot", false);
     }
 
     void Raycasting()
@@ -173,8 +193,11 @@ public class Boss : MonoBehaviour {
 
     void Streljaj()
     {
+        //anim.SetBool("shoot", true);
         Rigidbody2D spell = Instantiate(spellMetek, strelPoint.position, strelPoint.rotation) as Rigidbody2D;
+
         //spell.velocity = transform.right * hitrostMetka;
+        //anim.SetBool("shoot", false);
     }
 
     void PrejmiSkodo(float ammount)
