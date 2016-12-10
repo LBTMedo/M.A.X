@@ -32,6 +32,8 @@ public class EndlessPC : MonoBehaviour {
     Boss boss = null;
     Igralec_borba borba = null;
 
+    public bool zacetek = false;
+
 
     public bool desno
     {
@@ -97,13 +99,16 @@ public class EndlessPC : MonoBehaviour {
                 jump = true;
             }
         }
-        rbd.velocity = new Vector2(moveSpeed, rbd.velocity.y);
-
-        stevec -= Time.deltaTime;
-        if(stevec <= 0f)
+        if (zacetek)
         {
-            stevec = 10f;
-            moveSpeed += 1f;
+            rbd.velocity = new Vector2(moveSpeed, rbd.velocity.y);
+
+            stevec -= Time.deltaTime;
+            if (stevec <= 0f)
+            {
+                stevec = 10f;
+                moveSpeed += 1f;
+            }
         }
     }
 
@@ -116,7 +121,7 @@ public class EndlessPC : MonoBehaviour {
             Jumps = originalJumps;
         }
 
-        if (jump)
+        if (jump && zacetek)
         {
             source.PlayOneShot(zvok, 1F);
             rbd.velocity = new Vector2(rbd.velocity.x, jumpHeight);
@@ -127,7 +132,8 @@ public class EndlessPC : MonoBehaviour {
 
     bool Grounded() //returns true if player is on the "Ground" layer
     {
-        grounded = Physics2D.Raycast(groundCheck.position, -Vector2.up, 0.3f, Ground);
+        grounded = Physics2D.Raycast(groundCheck.position, -Vector2.up, 0.1f, Ground);
+        //Debug.DrawRay(groundCheck.position, new Vector3(groundCheck.position.x, groundCheck.position.y - 0.3f), Color.red);
         return grounded;
         //return Physics2D.OverlapCircle(groundCheck.position, 0.1f, Ground); 
     }

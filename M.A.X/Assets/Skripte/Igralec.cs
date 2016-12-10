@@ -56,7 +56,7 @@ public class Igralec : MonoBehaviour {
             {
                 Smrt();
                 smrti++;
-                GameControl.control.smrti = smrti;
+                GameControl.control.smrti += smrti;
             }
 
             if (Input.GetKeyDown(KeyCode.Q))
@@ -85,18 +85,20 @@ public class Igralec : MonoBehaviour {
     {
         trenutnaZivljenja -= skoda;
         health.CurrentVal -= skoda;
-        source.PlayOneShot(zvok, 1F);
+        //source.PlayOneShot(zvok, GameControl.control.MASTER * GameControl.control.SFX);
     }
 
     public void Smrt()
     {
-        source.PlayOneShot(zvokUmri, 1F);
+       
+        //source.PlayOneShot(zvokUmri, GameControl.control.MASTER * GameControl.control.SFX);
         mrtev = true;
-        Debug.Log("Smrt");
-        if (ObSmrti != null)
+        //Debug.Log("Smrt");
+        /*if (ObSmrti != null)
         {
             ObSmrti();
-        }
+        }*/
+        GameManager.RestartGame();
         Destroy(gameObject);
     }
 

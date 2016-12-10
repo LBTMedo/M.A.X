@@ -13,7 +13,8 @@ public class GameManager : MonoBehaviour {
 
     Igralec igralec;
 
-    Sovraznik[] sovrazniki; 
+    Sovraznik[] sovrazniki;
+    float cas;
 
     void Start()
     {
@@ -32,24 +33,29 @@ public class GameManager : MonoBehaviour {
            
         }
     }
+    void Update()
+    {
+        GameControl.control.cas += Time.unscaledDeltaTime * 1f;
+    }
 
     public static void RestartGame()
     {
-        
+        Debug.Log("SMRT");
         SceneManager.LoadScene(GameControl.control.currentLevel);
     }
 
     void PovecajStUbitihSovraznikov()
     {
-        ubitiSovrazniki++;
-        GameControl.control.ubitiSovrazniki = ubitiSovrazniki;
+
+        GameControl.control.ubitiSovrazniki += 1;
     }
 
     public static void DodajDenar(int value)
     {
        
         denar += value;
-        GameControl.control.denar = denar;
+        GameControl.control.denar += denar;
+        Debug.Log("Denar " + denar);
     }
 
 }

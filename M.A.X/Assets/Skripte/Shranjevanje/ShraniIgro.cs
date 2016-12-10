@@ -15,7 +15,7 @@ public class ShraniIgro : MonoBehaviour {
 	}
     void OnTriggerEnter2D(Collider2D coll)
     {
-        if (entered == false)
+        if (entered == false) //&& /*BossDoor.open == true*/)
         {
 
             GameControl.control.currentLevel += 1;

@@ -136,7 +136,7 @@ public class Sovraznik : MonoBehaviour
 
     void Streljaj()
     {
-        source.PlayOneShot(zvokStreljaj, 1F);
+        source.PlayOneShot(zvokStreljaj, GameControl.control.MASTER * GameControl.control.SFX);
         sistemZaBorbo.Streljanje();
     }
 
@@ -280,7 +280,7 @@ public class Sovraznik : MonoBehaviour
 
     public void PrejmiSkodo(float skoda)
     {
-        source.PlayOneShot(zvokPrejmiSkodo, 1F);
+        source.PlayOneShot(zvokPrejmiSkodo, GameControl.control.MASTER * GameControl.control.SFX);
         trenutnaZivljenja -= skoda;
         if (trenutnaZivljenja <= 0 && !mrtev)
         {
@@ -307,7 +307,7 @@ public class Sovraznik : MonoBehaviour
 
     public virtual void Smrt()
     {
-        source.PlayOneShot(zvokUmri, 1F);
+        source.PlayOneShot(zvokUmri, GameControl.control.MASTER * GameControl.control.SFX);
         mrtev = true;
         if (ObSmrti != null)
         {

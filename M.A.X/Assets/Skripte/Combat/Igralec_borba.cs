@@ -120,8 +120,7 @@ public class Igralec_borba : MonoBehaviour {
 
     public void Streljaj()
     {
-        source.volume = glasnost;
-        source.PlayOneShot(zvok,glasnost);
+        source.PlayOneShot(zvok, GameControl.control.MASTER * GameControl.control.SFX);
         Vector3 smer = (tarca.position - tockaZaStreljanje.position).normalized;
 
         Rigidbody2D instancaMetka = Instantiate(vrsteMetkov[trenutniMetek], tockaZaStreljanje.position, tockaZaStreljanje.rotation) as Rigidbody2D;
@@ -141,8 +140,7 @@ public class Igralec_borba : MonoBehaviour {
     {
         for (;;)
         {
-            source.volume = 0.25f;
-            source.PlayOneShot(zvok, 1F);
+            source.PlayOneShot(zvok, GameControl.control.MASTER * GameControl.control.SFX);
             Rigidbody2D instancaMetka = Instantiate(vrsteMetkov[trenutniMetek], tockaZaStreljanje.position, tockaZaStreljanje.rotation) as Rigidbody2D;
             if (desno)
             {
