@@ -82,6 +82,7 @@ public class Shop : MonoBehaviour {
                         if(i1.tag == "WeaponImg")
                     {
                         i1.sprite = r.VrniSliko();
+                        i1.preserveAspect = true;
                     }
                     if (i1.tag != "AlreadyOwned")
                     {
