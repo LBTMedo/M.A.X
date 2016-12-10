@@ -1,0 +1,7 @@
+<TextureAtlas imagePath="Anubis_idlexm.png">
+	<SubTexture name="Anubis_IDLE1.png" x="1888" y="0" width="925" height="1579"/>
+	<SubTexture name="Anubis_IDLE2.png" x="957" y="0" width="929" height="1586"/>
+	<SubTexture name="Anubis_IDLE3.png" x="0" y="0" width="955" height="1600"/>
+	<SubTexture name="Anubis_IDLE4.png" x="957" y="0" width="929" height="1586"/>
+	<SubTexture name="Anubis_IDLE5.png" x="1888" y="0" width="925" height="1579"/>
+</TextureAtlas>
