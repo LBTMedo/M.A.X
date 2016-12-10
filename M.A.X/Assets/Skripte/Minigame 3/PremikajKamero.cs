@@ -4,7 +4,7 @@ using System.Collections;
 public class PremikajKamero : MonoBehaviour {
 
     private float zoomSpeed = 2.0f;
-
+    public static  bool click = false;
     public float KameraXObc = 100.0f;
     public float KameraYObc = 100.0f;
 
@@ -13,8 +13,11 @@ public class PremikajKamero : MonoBehaviour {
     private float scroll = 5f;
     void Update()
     {
-        scroll += -Input.GetAxis("Mouse ScrollWheel");
-        Camera.main.orthographicSize = scroll * zoomSpeed;
+        if (click == false)
+        {
+            scroll += -Input.GetAxis("Mouse ScrollWheel");
+            Camera.main.orthographicSize = scroll * zoomSpeed;
+        }
 
         if (Input.GetMouseButton(1))
         {

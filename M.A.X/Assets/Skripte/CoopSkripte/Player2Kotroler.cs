@@ -22,16 +22,13 @@ public class Player2Kotroler : MonoBehaviour {
     public Transform groundCheck;
 
     public bool grounded;
+    public bool disabled = false;
+    public bool powerup = false;
 
     private bool facingRight;
     private bool jump;
 
     public Vector3 currentScale;
-
-    public bool disabled = false;
-
-    Boss boss = null;
-    Igralec_borba borba = null;
 
 
     public bool desno
@@ -55,6 +52,7 @@ public class Player2Kotroler : MonoBehaviour {
     public int originalJumps = 2; //the original num of jumps
 
     private Rigidbody2D rbd;
+    Animator anim;
 
     // Use this for initialization
     void Start()
@@ -63,6 +61,7 @@ public class Player2Kotroler : MonoBehaviour {
         source = GetComponent<AudioSource>();
         player = GetComponent<Igralec2>();
         rbd = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
 
         originalMoveSpeed = player.movementSpeed;
         jumpHeight = player.jumpHeight;
@@ -76,11 +75,6 @@ public class Player2Kotroler : MonoBehaviour {
 
         currentScale = transform.localScale;
 
-        if (disabled)
-        {
-            boss = FindObjectOfType<Boss>();
-            borba = FindObjectOfType<Igralec_borba>();
-        }
     }
 
     void Update()
@@ -91,6 +85,7 @@ public class Player2Kotroler : MonoBehaviour {
             {
                 Debug.Log("RightControl");
                 jump = true;
+                transform.parent = null;
             }
         }
     }
@@ -101,6 +96,10 @@ public class Player2Kotroler : MonoBehaviour {
 
         if (!disabled)
         {
+            if (powerup)
+            {
+                StartCoroutine(PowerUpPlayer());
+            }
             if (Input.GetKey(KeyCode.RightShift) && Grounded())
             {
                 moveSpeed = sprintSpeed;
@@ -115,29 +114,34 @@ public class Player2Kotroler : MonoBehaviour {
                 Debug.Log("keyPad4");
                 moveDir = new Vector2(-moveSpeed, rbd.velocity.y);
                 facingRight = false;
+                anim.SetFloat("speed", 1f);
             }
             else if (Input.GetKey(KeyCode.Keypad6))
             {
                 Debug.Log("keyPad6");
                 moveDir = new Vector2(moveSpeed, rbd.velocity.y);
                 facingRight = true;
+                anim.SetFloat("speed", 1f);
             }
             else
             {
                 if (Grounded())
                 {
-                    moveDir = new Vector2(0, 0);
+                    moveDir = new Vector2(0, rbd.velocity.y);
+                    
                 }
                 else
                 {
                     moveDir = new Vector2(0, rbd.velocity.y);
                 }
+                anim.SetFloat("speed", 0f);
             }
 
 
 
             if (!Grounded())
             {
+                anim.SetFloat("speed", 0f);
                 Debug.Log(airControll);
                 moveDir.x = airControll * moveDir.x;
             }
@@ -180,19 +184,10 @@ public class Player2Kotroler : MonoBehaviour {
         }
     }
 
-    public void SlowMotionAttack()
+    IEnumerator PowerUpPlayer()
     {
-        if (disabled)
-        {
-            if (boss.gameObject.transform.position.x < transform.position.x && facingRight)
-            {
-                flip();
-            }
-            if (boss.gameObject.transform.position.x > transform.position.x && !facingRight)
-            {
-                flip();
-            }
-            borba.Streljaj();
-        }
+        powerup = true;
+        yield return new WaitForSeconds(3);
+        powerup = false;
     }
 }
