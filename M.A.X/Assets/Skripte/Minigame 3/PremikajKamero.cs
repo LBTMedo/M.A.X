@@ -11,19 +11,34 @@ public class PremikajKamero : MonoBehaviour {
 
     private float speed = 3.0f;
     private float scroll = 5f;
+    private float scrollcheck;
+    private float sensitivity;
     void Update()
     {
         if (click == false)
         {
             scroll += -Input.GetAxis("Mouse ScrollWheel");
-            Camera.main.orthographicSize = scroll * zoomSpeed;
+            if (scroll < 10 && (scroll > 1) )
+            {
+                scrollcheck = scroll;
+                Camera.main.orthographicSize = scroll * zoomSpeed;
+            }
+            else if(scroll > 12)
+            {
+                scroll = scrollcheck;
+            }          
+            else if (scroll <1)
+            {
+                scroll = scrollcheck;
+            }
+            sensitivity = scroll / 10;
         }
 
         if (Input.GetMouseButton(1))
         {
 
-            float rotationX = Input.GetAxis("Mouse X") * KameraXObc * Time.deltaTime;
-            float rotationY = Input.GetAxis("Mouse Y") * KameraYObc * Time.deltaTime;
+            float rotationX = Input.GetAxis("Mouse X") * KameraXObc*sensitivity * Time.deltaTime;
+            float rotationY = Input.GetAxis("Mouse Y") * KameraYObc * sensitivity * Time.deltaTime;
             transform.Translate(new Vector3(-rotationX, -rotationY, 0));
         }
         if (Input.GetKey(KeyCode.RightArrow))

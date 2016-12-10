@@ -23,7 +23,7 @@ GameObject:
   - 50: {fileID: 50000010720086278}
   - 58: {fileID: 58000011657617012}
   - 114: {fileID: 114000010799933628}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: boulder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -85,7 +85,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57ab4f4c0c703d349ac76e8102cf7980, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ObjetkZaDelanje: {fileID: 0}
   JeKlikjena: 0
 --- !u!212 &212000012739100648
 SpriteRenderer:

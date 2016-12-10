@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000010364245980}
   - 212: {fileID: 212000013851368756}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: platform3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38,7 +38,7 @@ GameObject:
   - 61: {fileID: 61000010461396504}
   - 68: {fileID: 68000012372671418}
   - 68: {fileID: 68000012730885912}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Large Gold platfrom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -54,7 +54,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000013054077434}
   - 212: {fileID: 212000011243955268}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: platform1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -70,7 +70,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000013190633016}
   - 212: {fileID: 212000014030234488}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: platform4 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -86,7 +86,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000010722827894}
   - 212: {fileID: 212000011577580116}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: platform2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -102,7 +102,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000013937692300}
   - 212: {fileID: 212000013097673888}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: platform4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -118,7 +118,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000012717188628}
   - 212: {fileID: 212000011975943600}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: platform3 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -134,7 +134,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000010808096742}
   - 212: {fileID: 212000010102714784}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: platform2 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -186,8 +186,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000010486488582}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -11.523957, y: -20.728664, z: 0.1640625}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -3.0943284, y: -10.1192875, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:

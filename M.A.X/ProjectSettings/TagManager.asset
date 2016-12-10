@@ -20,6 +20,7 @@ TagManager:
   - Platforma
   - ZaIzbris
   - MiniToClick
+  - NonSpawnableArea
   layers:
   - Default
   - TransparentFX

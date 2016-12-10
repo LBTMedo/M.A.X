@@ -22,7 +22,7 @@ GameObject:
   - 212: {fileID: 212000011711718340}
   - 114: {fileID: 114000012969957154}
   - 61: {fileID: 61000010269120062}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: gold block
   m_TagString: Untagged
   m_Icon: {fileID: 0}

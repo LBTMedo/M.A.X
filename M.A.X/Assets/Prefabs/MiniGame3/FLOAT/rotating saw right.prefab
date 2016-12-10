@@ -23,7 +23,8 @@ GameObject:
   - 114: {fileID: 114000014038782522}
   - 58: {fileID: 58000010881552450}
   - 50: {fileID: 50000013033278884}
-  m_Layer: 0
+  - 114: {fileID: 114000014142373670}
+  m_Layer: 9
   m_Name: rotating saw right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -88,6 +89,18 @@ MonoBehaviour:
   right: 0
   rotate: 1
   rotationSpeed: 15
+--- !u!114 &114000014142373670
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011809894934}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57ab4f4c0c703d349ac76e8102cf7980, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  JeKlikjena: 0
 --- !u!212 &212000011896028002
 SpriteRenderer:
   m_ObjectHideFlags: 1
