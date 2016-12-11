@@ -21,3 +21,5 @@ EditorBuildSettings:
     path: Assets/Scene/Kviz.unity
   - enabled: 1
     path: Assets/Scene/Endless.unity
+  - enabled: 1
+    path: Assets/Scene/Minigame 3.unity

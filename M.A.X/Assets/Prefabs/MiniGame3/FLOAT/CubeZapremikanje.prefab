@@ -26,7 +26,7 @@ GameObject:
   - 68: {fileID: 68000011099344484}
   - 68: {fileID: 68000013473193202}
   - 68: {fileID: 68000013215003286}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: CubeZapremikanje
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -133,7 +133,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57ab4f4c0c703d349ac76e8102cf7980, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ObjetkZaDelanje: {fileID: 0}
   JeKlikjena: 0
 --- !u!212 &212000012061527896
 SpriteRenderer:

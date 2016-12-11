@@ -4,7 +4,7 @@ using System.Collections;
 
 public class DragDrop : MonoBehaviour
 {
-
+    private Vector3 LastLegitPosition;
     private Vector3 dragPosition;
     Transform trans;
     
@@ -60,8 +60,17 @@ public class DragDrop : MonoBehaviour
             }
             if (JeKlikjena)
             {
-                this.transform.position = dragPosition;
-                PremikajKamero.click = true;
+                if (NedovoliPostavljat.IsValid == true)
+                {
+                     
+                    this.transform.position = dragPosition;
+                    LastLegitPosition = transform.position;
+                    PremikajKamero.click = true;
+                }
+                else
+                {
+                    transform.position = LastLegitPosition;
+                }
             }
         }
 

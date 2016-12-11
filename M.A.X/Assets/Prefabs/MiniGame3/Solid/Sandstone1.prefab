@@ -24,7 +24,7 @@ GameObject:
   - 68: {fileID: 68000010296369844}
   - 68: {fileID: 68000013572044012}
   - 114: {fileID: 114000012713055172}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Sandstone1
   m_TagString: Untagged
   m_Icon: {fileID: 0}

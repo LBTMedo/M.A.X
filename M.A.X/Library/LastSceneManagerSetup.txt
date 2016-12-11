@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scene/Minigame 3.unity
+- path: Assets/Scene/LVL 1 Co-op Egypt.unity
   isLoaded: 1
   isActive: 1

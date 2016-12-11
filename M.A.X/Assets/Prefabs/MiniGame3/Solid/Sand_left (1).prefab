@@ -23,7 +23,7 @@ GameObject:
   - 61: {fileID: 61000011308195934}
   - 68: {fileID: 68000011117922316}
   - 114: {fileID: 114000014230233628}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Sand_left (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
