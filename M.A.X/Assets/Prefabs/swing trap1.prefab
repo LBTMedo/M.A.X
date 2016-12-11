@@ -111,6 +111,7 @@ MonoBehaviour:
   angle: 75
   speed: 40
   End: {fileID: 4000011650036348}
+  deactivated: 0
 --- !u!114 &114000011373884752
 MonoBehaviour:
   m_ObjectHideFlags: 1
