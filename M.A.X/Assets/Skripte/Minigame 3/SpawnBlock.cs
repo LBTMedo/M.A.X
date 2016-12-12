@@ -18,24 +18,29 @@ public class SpawnBlock : MonoBehaviour
             {
                 if (Settings.Nacin == 2)
                 {
-                    if (Settings.ZamenjajTip == 1)
+                    if (Settings.DontSPawn == true)
                     {
-                        Vector2 clickPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-                        GameObject objekt = Instantiate(SolidFloor[ChangeBlocks.Block], new Vector3(clickPosition.x, clickPosition.y, 0), Quaternion.identity) as GameObject;
-                        objekt.name = "New" + stevec;
-                        stevec++;
-                    }
-                    else if (Settings.ZamenjajTip == 2)
-                    {
-                        Vector2 clickPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-                        GameObject objekt = Instantiate(FloatingFloor[ChangeBlocks.Block], new Vector3(clickPosition.x, clickPosition.y, 0), Quaternion.identity) as GameObject;
-                        objekt.name = "New" + stevec;
-                        stevec++;
+                        if (Settings.ZamenjajTip == 1)
+                        {
+                            Vector2 clickPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                            GameObject objekt = Instantiate(SolidFloor[ChangeBlocks.Block], new Vector3(clickPosition.x, clickPosition.y, 0), Quaternion.identity) as GameObject;
+                            objekt.name = "New" + stevec;
+                            stevec++;
+                        }
+                        else if (Settings.ZamenjajTip == 2)
+                        {
+                            Vector2 clickPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                            GameObject objekt = Instantiate(FloatingFloor[ChangeBlocks.Block], new Vector3(clickPosition.x, clickPosition.y, 0), Quaternion.identity) as GameObject;
+                            objekt.name = "New" + stevec;
+                            stevec++;
+                        }
+                        Settings.DontSPawn = false;
                     }
                 }
 
             }
         }
     }
+   
 
 }

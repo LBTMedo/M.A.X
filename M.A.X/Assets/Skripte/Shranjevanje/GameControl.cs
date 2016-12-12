@@ -27,8 +27,7 @@ public class GameControl : MonoBehaviour
         if (control == null)
         {
             DontDestroyOnLoad(gameObject);
-            GameControl.control.SingleGameProgress = 1;
-        GameControl.control.CooPGameProgress = 1;     
+           
             control = this;
         }
         else if (control != this)
