@@ -6,8 +6,8 @@ public class GenerateLevel : MonoBehaviour {
 
     public GameObject[] prefabs;
 
-    float maxXDelta = 38f;
-    float minXDelta = 33f;
+    float maxXDelta = 52f;
+    float minXDelta = 48f;
 
     float[] yScales = { 6f, 6f, 6f, 6f, 6f, 6f, 15f, 15f, 15f, 4.5f, 4.5f, 4.5f, 15f, 15f, 15f };
 
@@ -21,7 +21,7 @@ public class GenerateLevel : MonoBehaviour {
 
     EndlessPC kontroler;
 
-    public float maxYDelta = 2f;
+    public float maxYDelta = 1f;
 
     int multiplier;
 
@@ -41,6 +41,8 @@ public class GenerateLevel : MonoBehaviour {
     float multiplierStevec;
     float orgMultiplierStevec;
 
+    KameraEndless kamera;
+
     void Start()
     {
         multiplier = 1;
@@ -58,6 +60,8 @@ public class GenerateLevel : MonoBehaviour {
 
         orgMultiplierStevec = 30f;
         multiplierStevec = orgMultiplierStevec;
+
+        kamera = FindObjectOfType<KameraEndless>();
     }
 
     public void AddScore(float value)
@@ -67,17 +71,20 @@ public class GenerateLevel : MonoBehaviour {
 
     void Update()
     {
-        speed = kontroler.hitrostPremikanje;
-        score += Time.deltaTime * speed * currentMultiplier;
-        scoreText.text = Mathf.RoundToInt(score).ToString();
-
-        multiplierStevec -= Time.deltaTime;
-        if(multiplierStevec <= 0f)
+        if (kamera.zacetek)
         {
-            multiplier *= 2;
-            currentMultiplier = multiplier;
-            multiplierStevec = orgMultiplierStevec;
-            multiplierText.text = currentMultiplier.ToString() + "X";
+            speed = kontroler.hitrostPremikanje;
+            score += Time.deltaTime * speed * currentMultiplier;
+            scoreText.text = Mathf.RoundToInt(score).ToString();
+
+            multiplierStevec -= Time.deltaTime;
+            if (multiplierStevec <= 0f)
+            {
+                multiplier *= 2;
+                currentMultiplier = multiplier;
+                multiplierStevec = orgMultiplierStevec;
+                multiplierText.text = currentMultiplier.ToString() + "X";
+            }
         }
 
         //multiplierText.text = currentMultiplier.ToString() + "X";
@@ -88,7 +95,7 @@ public class GenerateLevel : MonoBehaviour {
         //float scale = Random.Range(0.5f, 1.5f);
 
         stevec++;
-        if (stevec == 2)
+        if (stevec == 20)
         {
             trenutniPrefab += 3;
             if (trenutniPrefab == prefabs.Length)

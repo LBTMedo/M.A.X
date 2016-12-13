@@ -16,7 +16,7 @@ public class KameraEndless : MonoBehaviour {
 
     Camera kamera;
 
-    bool zacetek = false;
+    public bool zacetek = false;
 
     private void Start()
     {

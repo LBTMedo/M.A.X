@@ -6,8 +6,8 @@ public class EndlessPC : MonoBehaviour {
     Igralec player;
 
     [SerializeField]
-    private float moveSpeed = 8f;
-    private float jumpHeight = 15f;
+    private float moveSpeed = 6f;
+    private float jumpHeight = 20f;
     private float sprintSpeed = 30f;
     private float originalMoveSpeed;
     public float airControll = 1; //air velocity multiplier
@@ -85,7 +85,7 @@ public class EndlessPC : MonoBehaviour {
             borba = FindObjectOfType<Igralec_borba>();
         }
 
-        stevec = 10f;
+        stevec = 15f;
 
     }
 
@@ -106,7 +106,7 @@ public class EndlessPC : MonoBehaviour {
             stevec -= Time.deltaTime;
             if (stevec <= 0f)
             {
-                stevec = 10f;
+                stevec = 30f;
                 moveSpeed += 1f;
             }
         }
