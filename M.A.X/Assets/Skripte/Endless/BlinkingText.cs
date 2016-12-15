@@ -4,8 +4,14 @@ using UnityEngine.UI;
 
 public class BlinkingText : MonoBehaviour {
 
+    Text tekst;
+    string zacetniTekst;
+
     private void Start()
     {
+        tekst = GetComponent<Text>();
+        zacetniTekst = tekst.text;
+
         StartCoroutine(Blink());
     }
 
@@ -13,9 +19,9 @@ public class BlinkingText : MonoBehaviour {
     {
         while (true)
         {
-            gameObject.SetActive(false);
+            tekst.text = zacetniTekst;
             yield return new WaitForSeconds(0.5f);
-            gameObject.SetActive(true);
+            tekst.text = "";
             yield return new WaitForSeconds(0.5f);
         }
     }
