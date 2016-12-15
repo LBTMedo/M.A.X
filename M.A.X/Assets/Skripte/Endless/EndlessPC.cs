@@ -34,6 +34,8 @@ public class EndlessPC : MonoBehaviour {
 
     public bool zacetek = false;
 
+    GenerateLevel generator;
+
 
     public bool desno
     {
@@ -87,6 +89,7 @@ public class EndlessPC : MonoBehaviour {
 
         stevec = 15f;
 
+        generator = FindObjectOfType<GenerateLevel>();
     }
 
     void Update()

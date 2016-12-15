@@ -19,7 +19,10 @@ public class GenerateLevel : MonoBehaviour {
     int stevec;
     int menjaj = 20;
 
+    int coins;
+
     EndlessPC kontroler;
+    IgralecEndless igralec;
 
     public float maxYDelta = 1f;
 
@@ -34,6 +37,14 @@ public class GenerateLevel : MonoBehaviour {
 
     public Text multiplierText;
 
+    public Text endScore;
+    public Text endDistance;
+    public Text endCoins;
+
+    public float distance;
+
+    public GameObject endScreen;
+
     public float speed;
 
     public GameObject coin;
@@ -42,6 +53,13 @@ public class GenerateLevel : MonoBehaviour {
     float orgMultiplierStevec;
 
     KameraEndless kamera;
+
+    public Text PowerupWarning;
+    public float powerupLimit = 500;
+    float powerupAvailability;
+    float powerupStevec;
+    bool canUsePowerup = false;
+    float powerupScore;
 
     void Start()
     {
@@ -55,6 +73,7 @@ public class GenerateLevel : MonoBehaviour {
         stevec = 0;
 
         kontroler = FindObjectOfType<EndlessPC>();
+        igralec = FindObjectOfType<IgralecEndless>();
 
         speed = kontroler.hitrostPremikanje;
 
@@ -62,11 +81,16 @@ public class GenerateLevel : MonoBehaviour {
         multiplierStevec = orgMultiplierStevec;
 
         kamera = FindObjectOfType<KameraEndless>();
+
+        coins = 0;
+
+        powerupAvailability = 5f;
     }
 
     public void AddScore(float value)
     {
         score += value * currentMultiplier;
+        powerupScore += value * currentMultiplier;
     }
 
     void Update()
@@ -75,7 +99,10 @@ public class GenerateLevel : MonoBehaviour {
         {
             speed = kontroler.hitrostPremikanje;
             score += Time.deltaTime * speed * currentMultiplier;
+            powerupScore += Time.deltaTime * speed * currentMultiplier;
             scoreText.text = Mathf.RoundToInt(score).ToString();
+
+            distance += (Time.deltaTime * speed) / 2;
 
             multiplierStevec -= Time.deltaTime;
             if (multiplierStevec <= 0f)
@@ -85,9 +112,39 @@ public class GenerateLevel : MonoBehaviour {
                 multiplierStevec = orgMultiplierStevec;
                 multiplierText.text = currentMultiplier.ToString() + "X";
             }
+
+            if(powerupScore >= powerupLimit)
+            {
+                PowerupWarning.gameObject.SetActive(true);
+                powerupScore = 0;
+                canUsePowerup = true;
+                powerupLimit *= 4;
+                StartCoroutine(DisableTekst());
+            }
+
+            if (Input.GetKeyDown(KeyCode.P) && canUsePowerup)
+            {
+                igralec.invincible = true;
+                StartCoroutine(ResetInvincibility());
+                canUsePowerup = false;
+                PowerupWarning.gameObject.SetActive(false);
+            }
         }
 
         //multiplierText.text = currentMultiplier.ToString() + "X";
+    }
+
+    IEnumerator ResetInvincibility()
+    {
+        yield return new WaitForSeconds(5f);
+        igralec.invincible = false;
+    }
+
+    IEnumerator DisableTekst()
+    {
+        yield return new WaitForSeconds(powerupAvailability);
+        PowerupWarning.gameObject.SetActive(false);
+        canUsePowerup = false;
     }
 
     public void SpawnNext(Vector3 pozicija)
@@ -116,12 +173,23 @@ public class GenerateLevel : MonoBehaviour {
     {
         currentMultiplier = currentMultiplier * times;
         multiplierText.text = currentMultiplier.ToString() + "X";
-        Invoke("ResetMultiplier", 10f);
+        StartCoroutine(ResetMultiplier(times));
     }
 
-    void ResetMultiplier()
+    IEnumerator ResetMultiplier(int times)
     {
-        currentMultiplier = multiplier;
+        yield return new WaitForSeconds(10);
+
+        currentMultiplier = currentMultiplier / times;
         multiplierText.text = currentMultiplier.ToString() + "X";
+    }
+
+    public void Konec()
+    {
+        endCoins.text = "Coins: " + coins.ToString();
+        endScore.text = "Score: " + Mathf.RoundToInt(score).ToString();
+        endDistance.text = "Distance: " + Mathf.RoundToInt(distance).ToString() + "m";
+
+        endScreen.SetActive(true);
     }
 }

@@ -47,7 +47,7 @@ public class Gorila : MonoBehaviour {
     {
         if(collision.gameObject.tag == "Player")
         {
-            igralec.gameObject.GetComponent<Igralec>().PrejmiSkodo(1000f);
+            igralec.gameObject.GetComponent<IgralecEndless>().PrejmiSkodo(1000f);
         }
     }
 
