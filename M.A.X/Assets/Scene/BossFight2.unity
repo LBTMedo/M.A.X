@@ -186,7 +186,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &372204473
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -199,8 +199,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 1000012655389428, guid: 6abdf68027d37ab4fa4aa209b1ded378, type: 2}
-  numOfRepetitions: 3
-  numOfDrops: 5
+  numOfRepetitions: 250
+  numOfDrops: 10
   heightOfGeneration: 5
   minX: -8.25
   maxX: 8.25
@@ -563,7 +563,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1470727774
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -608,7 +608,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1497442465
 MonoBehaviour:
   m_ObjectHideFlags: 0

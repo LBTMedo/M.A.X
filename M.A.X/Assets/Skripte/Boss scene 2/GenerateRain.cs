@@ -10,8 +10,8 @@ public class GenerateRain : MonoBehaviour {
     public float minX;
     public float maxX;
     public float coolDown;
-
     bool reloading = false;
+    bool firstTime = true;
 
     void Update()
     {
@@ -33,6 +33,12 @@ public class GenerateRain : MonoBehaviour {
 
     IEnumerator Reload()
     {
+        reloading = true;
+        if (firstTime)
+        {
+            yield return new WaitForSeconds(coolDown);
+            firstTime = false;
+        }
         int restoreNumOfDrops = numOfDrops;
         int changeNumOfDrops = numOfRepetitions / 2;
         for (int i = 0; i < numOfRepetitions; i++)
@@ -46,11 +52,10 @@ public class GenerateRain : MonoBehaviour {
             {
                 numOfDrops -= numOfDrops*2;
             }
-            yield return new WaitForSeconds(1);
+            yield return new WaitForSeconds(0.01f);
         }
-        numOfDrops = restoreNumOfDrops;
-        reloading = true;
         yield return new WaitForSeconds(coolDown);
+        numOfDrops = restoreNumOfDrops;
         reloading = false;
     }
 }
