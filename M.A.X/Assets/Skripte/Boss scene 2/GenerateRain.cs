@@ -9,6 +9,7 @@ public class GenerateRain : MonoBehaviour {
     public float heightOfGeneration;
     public float minX;
     public float maxX;
+    public float coolDown;
 
     bool reloading = false;
 
@@ -49,7 +50,7 @@ public class GenerateRain : MonoBehaviour {
         }
         numOfDrops = restoreNumOfDrops;
         reloading = true;
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(coolDown);
         reloading = false;
     }
 }
