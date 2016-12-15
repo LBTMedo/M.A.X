@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class KameraEndless : MonoBehaviour {
 
@@ -15,6 +16,10 @@ public class KameraEndless : MonoBehaviour {
     public float gorilaPogledSize;
 
     Camera kamera;
+
+    public Text StartText;
+    bool tekst;
+    float stevec;
 
     public bool zacetek = false;
 
@@ -34,6 +39,9 @@ public class KameraEndless : MonoBehaviour {
         gorilaPogledSize = 3.8f;
 
         Invoke("PoglejGorilo", 1f);
+
+        tekst = false;
+        stevec = 3f;
     }
 
     private void FixedUpdate()
@@ -42,6 +50,27 @@ public class KameraEndless : MonoBehaviour {
         {
             transform.position = Vector3.Lerp(transform.position, Igralec.position, 0.1f);
         }
+    }
+
+    private void Update()
+    {
+        if (tekst)
+        {
+            StartText.gameObject.SetActive(true);
+            stevec -= Time.deltaTime;
+            StartText.text = Mathf.CeilToInt(stevec).ToString();
+            if(stevec <= 0f)
+            {
+                StartText.text = "GO!";
+                Invoke("Disabletekst", 1f);
+            }
+        }
+    }
+
+    void Disabletekst()
+    {
+        StartText.gameObject.SetActive(false);
+        tekst = false;
     }
 
     void PoglejGorilo()
@@ -62,6 +91,7 @@ public class KameraEndless : MonoBehaviour {
         kamera.orthographicSize = orgSize;
 
         Invoke("Zacni", 3f);
+        tekst = true;
     }
 
     void Zacni()
