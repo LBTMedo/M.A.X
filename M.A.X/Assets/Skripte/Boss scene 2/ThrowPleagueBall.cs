@@ -4,15 +4,36 @@ using System.Collections;
 public class ThrowPleagueBall : MonoBehaviour {
 
     public GameObject prefab;
+    public Transform location;
     float randomTimeSpawn = 0;
-    bool cooldown;
+    bool cooldown = false;
     public float minTimeSpawn;
     public float maxTimeSpawn;
+    public int force;
+
+    void Update()
+    {
+        if(cooldown == false)
+        {
+            StartCoroutine(SpawnOnDelay());
+            //SpawnOnDelay();
+        }
+    }
 
     public void ThrowBall()
     {
-        randomTimeSpawn = Random.Range(minTimeSpawn, maxTimeSpawn);
-
-
+        Vector3 smer = location.position;
+        GameObject objekt = (GameObject)Instantiate(prefab, smer, Quaternion.identity);
+        objekt.GetComponent<Rigidbody2D>().AddForce(location.up * force);
     }
+
+    IEnumerator SpawnOnDelay()
+    {
+        randomTimeSpawn = Random.Range(minTimeSpawn, maxTimeSpawn);
+        cooldown = true;
+        yield return new WaitForSeconds(randomTimeSpawn);
+        ThrowBall();
+        cooldown = false;
+    }
+
 }
