@@ -22,24 +22,12 @@ public class GenerateRain : MonoBehaviour {
 
     public void GenerateRainDrops()
     {
-        //int changeNumOfDrops = numOfRepetitions / 2;
-        //for (int j = 0; j < numOfRepetitions; j++)
-        //{
             for (int i = 0; i < numOfDrops; i++)
             {
                 float posX = Random.Range(minX, maxX);
                 Vector3 pozicija = new Vector3(posX, heightOfGeneration, 0);
                 Instantiate(prefab, pozicija, Quaternion.identity);
             }
-           /* if(numOfRepetitions < changeNumOfDrops)
-            {
-                numOfDrops *= (int)1.5;
-            }
-            else
-            {
-                numOfDrops /= (int)1.5;
-            }*/
-       // }
     }
 
     IEnumerator Reload()
@@ -51,11 +39,11 @@ public class GenerateRain : MonoBehaviour {
             GenerateRainDrops();
             if (numOfRepetitions < changeNumOfDrops)
             {
-                numOfDrops *= (int)1.2;
+                numOfDrops += numOfDrops*2;
             }
             else
             {
-                numOfDrops = numOfDrops/(int)1.2;
+                numOfDrops -= numOfDrops*2;
             }
             yield return new WaitForSeconds(1);
         }
