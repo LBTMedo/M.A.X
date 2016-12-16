@@ -10,13 +10,21 @@ public class ThrowPleagueBall : MonoBehaviour {
     public float minTimeSpawn;
     public float maxTimeSpawn;
     public int force;
+    bool rainIsActive = false;
+
+    public void SetRainIsActive(bool val)
+    {
+        rainIsActive = val;
+    }
 
     void Update()
     {
         if(cooldown == false)
         {
-            StartCoroutine(SpawnOnDelay());
-            //SpawnOnDelay();
+            if (rainIsActive == false)
+            {
+                StartCoroutine(SpawnOnDelay());
+            }
         }
     }
 

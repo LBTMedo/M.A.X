@@ -12,6 +12,14 @@ public class GenerateRain : MonoBehaviour {
     public float coolDown;
     bool reloading = false;
     bool firstTime = true;
+    ThrowPleagueBall[] array;
+    WarningText warning;
+
+    void Start()
+    {
+        warning = FindObjectOfType<WarningText>();
+        array = FindObjectsOfType<ThrowPleagueBall>();
+    }
 
     void Update()
     {
@@ -36,8 +44,13 @@ public class GenerateRain : MonoBehaviour {
         reloading = true;
         if (firstTime)
         {
+            warning.SetWarning(true);
             yield return new WaitForSeconds(coolDown);
             firstTime = false;
+        }
+        for (int i = 0; i < array.Length; i++)
+        {
+            array[i].SetRainIsActive(true);
         }
         int restoreNumOfDrops = numOfDrops;
         int changeNumOfDrops = numOfRepetitions / 2;
@@ -54,6 +67,11 @@ public class GenerateRain : MonoBehaviour {
             }
             yield return new WaitForSeconds(0.01f);
         }
+        for (int i = 0; i < array.Length; i++)
+        {
+            array[i].SetRainIsActive(false);
+        }
+        warning.SetWarning(true);
         yield return new WaitForSeconds(coolDown);
         numOfDrops = restoreNumOfDrops;
         reloading = false;
