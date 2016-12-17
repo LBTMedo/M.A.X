@@ -25,7 +25,7 @@ GameObject:
   - 50: {fileID: 50000013776454824}
   - 58: {fileID: 58000010911661728}
   - 114: {fileID: 114000012505768582}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: PleagueBall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
