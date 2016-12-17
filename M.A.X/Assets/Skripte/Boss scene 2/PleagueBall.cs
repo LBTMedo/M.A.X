@@ -3,9 +3,19 @@ using System.Collections;
 
 public class PleagueBall : MonoBehaviour {
 
-	void OnTriggerEnter2D()
+    int collisions = 0;
+
+	void OnTriggerEnter2D(Collider2D coll)
     {
-        Destroy(this.gameObject);
+        collisions += 1;
+        if (collisions == 2 && coll.tag == "Player")
+        {
+            Destroy(this.gameObject);
+        }
+        else if(collisions == 3)
+        {
+            Destroy(this.gameObject);
+        }
     }
 
 }

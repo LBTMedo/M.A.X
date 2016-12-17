@@ -12,7 +12,7 @@ public class JellyBounce : MonoBehaviour {
         jellySprite = GetComponent<SpriteRenderer>();
     }
 
-    void OnTriggerEnter2D(Collider2D coll)
+    /*void OnTriggerEnter2D(Collider2D coll)
     {
         if(coll.tag == "Player")
         jellySprite.sprite = bounced;
@@ -21,6 +21,21 @@ public class JellyBounce : MonoBehaviour {
     void OnTriggerExit2D(Collider2D coll)
     {
         if(coll.tag == "Player")
+        jellySprite.sprite = unBounced;
+    }*/
+
+    void OnCollisionEnter2D(Collision2D coll)
+    {
+        if(coll.gameObject.tag == "Player")
+        {
+            StartCoroutine(Bounce());
+        }
+    }
+
+    IEnumerator Bounce()
+    {
+        jellySprite.sprite = bounced;
+        yield return new WaitForSeconds(0.2f);
         jellySprite.sprite = unBounced;
     }
 
