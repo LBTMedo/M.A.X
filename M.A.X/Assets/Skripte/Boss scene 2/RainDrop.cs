@@ -5,15 +5,18 @@ public class RainDrop : MonoBehaviour {
 
 	/*void OnCollisionEnter2D(Collision2D coll)
     {
-        if(coll.gameObject.tag != "Brick")
-        Destroy(this.gameObject);
+        if (coll.gameObject.layer == LayerMask.NameToLayer("Tla"))
+        {
+            Destroy(this.gameObject);
+        }
     }*/
+
 
     void OnTriggerEnter2D(Collider2D coll)
     {
-        if(coll.tag != "Brick")
+        if(coll.gameObject.layer == LayerMask.NameToLayer("Tla"))
         {
-            Destroy(this.gameObject);
+            Destroy(gameObject);
         }
     }
 }

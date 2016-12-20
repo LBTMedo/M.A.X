@@ -21,6 +21,7 @@ TagManager:
   - ZaIzbris
   - MiniToClick
   - NonSpawnableArea
+  - Odprtina
   layers:
   - Default
   - TransparentFX

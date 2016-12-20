@@ -7,15 +7,16 @@ public class PleagueBall : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D coll)
     {
-        collisions += 1;
-        if (collisions == 2 && coll.tag == "Player")
+        if(coll.gameObject.layer == LayerMask.NameToLayer("Tla") || coll.gameObject.layer == LayerMask.NameToLayer("Igralec"))
         {
-            Destroy(this.gameObject);
+            if(coll.gameObject.tag == "Odprtina")
+            {
+                return;
+            }
+            Destroy(gameObject);
         }
-        else if(collisions == 3)
-        {
-            Destroy(this.gameObject);
-        }
+
+
     }
 
 }

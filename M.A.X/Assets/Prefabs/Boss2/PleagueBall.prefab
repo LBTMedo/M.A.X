@@ -23,8 +23,8 @@ GameObject:
   - 198: {fileID: 198000011685481750}
   - 199: {fileID: 199000013521027320}
   - 50: {fileID: 50000013776454824}
-  - 58: {fileID: 58000010911661728}
   - 114: {fileID: 114000012505768582}
+  - 61: {fileID: 61000011132545758}
   m_Layer: 14
   m_Name: PleagueBall
   m_TagString: Untagged
@@ -62,8 +62,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!58 &58000010911661728
-CircleCollider2D:
+--- !u!61 &61000011132545758
+BoxCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -75,7 +75,7 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.8
+  m_Size: {x: 1.6, y: 1.6}
 --- !u!114 &114000012505768582
 MonoBehaviour:
   m_ObjectHideFlags: 1
