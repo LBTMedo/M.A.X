@@ -7,11 +7,17 @@ public class Node : MonoBehaviour , IHeapItem<Node> {
 
     public Vector2 actPos;
 
+    public bool walkable = true;
+
     public int index;
+    public int x;
+    public int y;
 
     public int hCost;
     public int gCost;
     public int fcost;
+
+    public Node parent;
 
     private void Start()
     {
@@ -47,5 +53,17 @@ public class Node : MonoBehaviour , IHeapItem<Node> {
             compare = hCost.CompareTo(nodeToCompare.hCost);
         }
         return -compare;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.gameObject.tag == "Sovraznik")
+        {
+            Grid.currentIndex = index;
+        }
+        if (collision.gameObject.tag == "Igralec")
+        {
+            Grid.currentPlayerIndex = index;
+        }
     }
 }

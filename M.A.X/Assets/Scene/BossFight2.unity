@@ -167,7 +167,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1365974513}
-  m_RootOrder: 76
+  m_RootOrder: 66
 --- !u!114 &16156609
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -181,10 +181,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   position: {x: 0, y: 0}
   actPos: {x: 0, y: 0}
+  walkable: 1
   index: 0
+  x: 0
+  y: 0
   hCost: 0
   gCost: 0
   fcost: 0
+  parent: {fileID: 0}
 --- !u!61 &16156610
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -414,7 +418,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1365974513}
-  m_RootOrder: 25
+  m_RootOrder: 13
 --- !u!114 &63681975
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -428,10 +432,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   position: {x: 0, y: 0}
   actPos: {x: 0, y: 0}
+  walkable: 1
   index: 0
+  x: 0
+  y: 0
   hCost: 0
   gCost: 0
   fcost: 0
+  parent: {fileID: 0}
 --- !u!61 &63681976
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -552,7 +560,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1365974513}
-  m_RootOrder: 77
+  m_RootOrder: 65
 --- !u!114 &76307773
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -566,10 +574,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   position: {x: 0, y: 0}
   actPos: {x: 0, y: 0}
+  walkable: 1
   index: 0
+  x: 0
+  y: 0
   hCost: 0
   gCost: 0
   fcost: 0
+  parent: {fileID: 0}
 --- !u!61 &76307774
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -613,7 +625,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1365974513}
-  m_RootOrder: 17
+  m_RootOrder: 21
 --- !u!114 &79178366
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -627,10 +639,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   position: {x: 0, y: 0}
   actPos: {x: 0, y: 0}
+  walkable: 1
   index: 0
+  x: 0
+  y: 0
   hCost: 0
   gCost: 0
   fcost: 0
+  parent: {fileID: 0}
 --- !u!61 &79178367
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -797,7 +813,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1365974513}
-  m_RootOrder: 44
+  m_RootOrder: 46
 --- !u!114 &90791667
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -811,10 +827,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   position: {x: 0, y: 0}
   actPos: {x: 0, y: 0}
+  walkable: 0
   index: 0
+  x: 0
+  y: 0
   hCost: 0
   gCost: 0
   fcost: 0
+  parent: {fileID: 0}
 --- !u!61 &90791668
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -920,10 +940,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   position: {x: 0, y: 0}
   actPos: {x: 0, y: 0}
+  walkable: 1
   index: 0
+  x: 0
+  y: 0
   hCost: 0
   gCost: 0
   fcost: 0
+  parent: {fileID: 0}
 --- !u!61 &94192968
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1213,10 +1237,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   position: {x: 0, y: 0}
   actPos: {x: 0, y: 0}
+  walkable: 1
   index: 0
+  x: 0
+  y: 0
   hCost: 0
   gCost: 0
   fcost: 0
+  parent: {fileID: 0}
 --- !u!61 &130282218
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1260,7 +1288,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1365974513}
-  m_RootOrder: 15
+  m_RootOrder: 23
 --- !u!114 &142755663
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1274,10 +1302,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   position: {x: 0, y: 0}
   actPos: {x: 0, y: 0}
+  walkable: 1
   index: 0
+  x: 0
+  y: 0
   hCost: 0
   gCost: 0
   fcost: 0
+  parent: {fileID: 0}
 --- !u!61 &142755664
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1383,7 +1415,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1365974513}
-  m_RootOrder: 51
+  m_RootOrder: 39
 --- !u!114 &160391342
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1397,10 +1429,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   position: {x: 0, y: 0}
   actPos: {x: 0, y: 0}
+  walkable: 1
   index: 0
+  x: 0
+  y: 0
   hCost: 0
   gCost: 0
   fcost: 0
+  parent: {fileID: 0}
 --- !u!61 &160391343
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2031,10 +2067,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   position: {x: 0, y: 0}
   actPos: {x: 0, y: 0}
+  walkable: 1
   index: 0
+  x: 0
+  y: 0
   hCost: 0
   gCost: 0
   fcost: 0
+  parent: {fileID: 0}
 --- !u!61 &213961575
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2340,10 +2380,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   position: {x: 0, y: 0}
   actPos: {x: 0, y: 0}
+  walkable: 1
   index: 0
+  x: 0
+  y: 0
   hCost: 0
   gCost: 0
   fcost: 0
+  parent: {fileID: 0}
 --- !u!61 &253248531
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2581,10 +2625,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   position: {x: 0, y: 0}
   actPos: {x: 0, y: 0}
+  walkable: 1
   index: 0
+  x: 0
+  y: 0
   hCost: 0
   gCost: 0
   fcost: 0
+  parent: {fileID: 0}
 --- !u!61 &277486744
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3084,7 +3132,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1365974513}
-  m_RootOrder: 72
+  m_RootOrder: 70
 --- !u!114 &307161430
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3098,10 +3146,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   position: {x: 0, y: 0}
   actPos: {x: 0, y: 0}
+  walkable: 0
   index: 0
+  x: 0
+  y: 0
   hCost: 0
   gCost: 0
   fcost: 0
+  parent: {fileID: 0}
 --- !u!61 &307161431
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3371,7 +3423,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1365974513}
-  m_RootOrder: 43
+  m_RootOrder: 47
 --- !u!114 &328713404
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3385,10 +3437,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   position: {x: 0, y: 0}
   actPos: {x: 0, y: 0}
+  walkable: 0
   index: 0
+  x: 0
+  y: 0
   hCost: 0
   gCost: 0
   fcost: 0
+  parent: {fileID: 0}
 --- !u!61 &328713405
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4007,10 +4063,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   position: {x: 0, y: 0}
   actPos: {x: 0, y: 0}
+  walkable: 1
   index: 0
+  x: 0
+  y: 0
   hCost: 0
   gCost: 0
   fcost: 0
+  parent: {fileID: 0}
 --- !u!61 &415871690
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4054,7 +4114,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1365974513}
-  m_RootOrder: 20
+  m_RootOrder: 18
 --- !u!114 &416948220
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4068,10 +4128,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   position: {x: 0, y: 0}
   actPos: {x: 0, y: 0}
+  walkable: 1
   index: 0
+  x: 0
+  y: 0
   hCost: 0
   gCost: 0
   fcost: 0
+  parent: {fileID: 0}
 --- !u!61 &416948221
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4280,7 +4344,7 @@ GameObject:
   m_PrefabInternal: {fileID: 0}
   serializedVersion: 4
   m_Component:
-  - 4: {fileID: 435924245}
+  - 224: {fileID: 435924245}
   - 61: {fileID: 435924247}
   - 114: {fileID: 435924246}
   m_Layer: 0
@@ -4290,19 +4354,24 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &435924245
-Transform:
+--- !u!224 &435924245
+RectTransform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 435924244}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 18, y: 3, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1365974513}
   m_RootOrder: 19
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 18, y: 3}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &435924246
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4316,10 +4385,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   position: {x: 0, y: 0}
   actPos: {x: 0, y: 0}
+  walkable: 1
   index: 0
+  x: 0
+  y: 0
   hCost: 0
   gCost: 0
   fcost: 0
+  parent: {fileID: 0}
 --- !u!61 &435924247
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4439,10 +4512,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   position: {x: 0, y: 0}
   actPos: {x: 0, y: 0}
+  walkable: 1
   index: 0
+  x: 0
+  y: 0
   hCost: 0
   gCost: 0
   fcost: 0
+  parent: {fileID: 0}
 --- !u!61 &440749124
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4642,7 +4719,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1365974513}
-  m_RootOrder: 69
+  m_RootOrder: 73
 --- !u!114 &486073637
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4656,10 +4733,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   position: {x: 0, y: 0}
   actPos: {x: 0, y: 0}
+  walkable: 0
   index: 0
+  x: 0
+  y: 0
   hCost: 0
   gCost: 0
   fcost: 0
+  parent: {fileID: 0}
 --- !u!61 &486073638
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4765,7 +4846,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1365974513}
-  m_RootOrder: 13
+  m_RootOrder: 25
 --- !u!114 &490566297
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4779,10 +4860,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   position: {x: 0, y: 0}
   actPos: {x: 0, y: 0}
+  walkable: 1
   index: 0
+  x: 0
+  y: 0
   hCost: 0
   gCost: 0
   fcost: 0
+  parent: {fileID: 0}
 --- !u!61 &490566298
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4998,7 +5083,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1365974513}
-  m_RootOrder: 67
+  m_RootOrder: 75
 --- !u!114 &537599615
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5012,10 +5097,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   position: {x: 0, y: 0}
   actPos: {x: 0, y: 0}
+  walkable: 1
   index: 0
+  x: 0
+  y: 0
   hCost: 0
   gCost: 0
   fcost: 0
+  parent: {fileID: 0}
 --- !u!61 &537599616
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5135,10 +5224,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   position: {x: 0, y: 0}
   actPos: {x: 0, y: 0}
+  walkable: 1
   index: 0
+  x: 0
+  y: 0
   hCost: 0
   gCost: 0
   fcost: 0
+  parent: {fileID: 0}
 --- !u!61 &559388651
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5196,10 +5289,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   position: {x: 0, y: 0}
   actPos: {x: 0, y: 0}
+  walkable: 1
   index: 0
+  x: 0
+  y: 0
   hCost: 0
   gCost: 0
   fcost: 0
+  parent: {fileID: 0}
 --- !u!61 &559738095
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5243,7 +5340,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1365974513}
-  m_RootOrder: 75
+  m_RootOrder: 67
 --- !u!114 &572173465
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5257,10 +5354,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   position: {x: 0, y: 0}
   actPos: {x: 0, y: 0}
+  walkable: 1
   index: 0
+  x: 0
+  y: 0
   hCost: 0
   gCost: 0
   fcost: 0
+  parent: {fileID: 0}
 --- !u!61 &572173466
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5380,10 +5481,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   position: {x: 0, y: 0}
   actPos: {x: 0, y: 0}
+  walkable: 1
   index: 0
+  x: 0
+  y: 0
   hCost: 0
   gCost: 0
   fcost: 0
+  parent: {fileID: 0}
 --- !u!61 &609135586
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5441,10 +5546,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   position: {x: 0, y: 0}
   actPos: {x: 0, y: 0}
+  walkable: 1
   index: 0
+  x: 0
+  y: 0
   hCost: 0
   gCost: 0
   fcost: 0
+  parent: {fileID: 0}
 --- !u!61 &623519155
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5564,10 +5673,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   position: {x: 0, y: 0}
   actPos: {x: 0, y: 0}
+  walkable: 1
   index: 0
+  x: 0
+  y: 0
   hCost: 0
   gCost: 0
   fcost: 0
+  parent: {fileID: 0}
 --- !u!61 &631303622
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5723,7 +5836,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1365974513}
-  m_RootOrder: 48
+  m_RootOrder: 42
 --- !u!114 &645975146
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5737,10 +5850,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   position: {x: 0, y: 0}
   actPos: {x: 0, y: 0}
+  walkable: 1
   index: 0
+  x: 0
+  y: 0
   hCost: 0
   gCost: 0
   fcost: 0
+  parent: {fileID: 0}
 --- !u!61 &645975147
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5784,7 +5901,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1365974513}
-  m_RootOrder: 73
+  m_RootOrder: 69
 --- !u!114 &649152836
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5798,10 +5915,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   position: {x: 0, y: 0}
   actPos: {x: 0, y: 0}
+  walkable: 0
   index: 0
+  x: 0
+  y: 0
   hCost: 0
   gCost: 0
   fcost: 0
+  parent: {fileID: 0}
 --- !u!61 &649152837
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5907,7 +6028,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1365974513}
-  m_RootOrder: 41
+  m_RootOrder: 49
 --- !u!114 &655710654
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5921,10 +6042,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   position: {x: 0, y: 0}
   actPos: {x: 0, y: 0}
+  walkable: 1
   index: 0
+  x: 0
+  y: 0
   hCost: 0
   gCost: 0
   fcost: 0
+  parent: {fileID: 0}
 --- !u!61 &655710655
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5982,10 +6107,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   position: {x: 0, y: 0}
   actPos: {x: 0, y: 0}
+  walkable: 1
   index: 0
+  x: 0
+  y: 0
   hCost: 0
   gCost: 0
   fcost: 0
+  parent: {fileID: 0}
 --- !u!61 &658412686
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6111,10 +6240,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   position: {x: 0, y: 0}
   actPos: {x: 0, y: 0}
+  walkable: 1
   index: 0
+  x: 0
+  y: 0
   hCost: 0
   gCost: 0
   fcost: 0
+  parent: {fileID: 0}
 --- !u!61 &672117351
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6527,10 +6660,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   position: {x: 0, y: 0}
   actPos: {x: 0, y: 0}
+  walkable: 1
   index: 0
+  x: 0
+  y: 0
   hCost: 0
   gCost: 0
   fcost: 0
+  parent: {fileID: 0}
 --- !u!61 &726505741
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6621,10 +6758,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   position: {x: 0, y: 0}
   actPos: {x: 0, y: 0}
+  walkable: 1
   index: 0
+  x: 0
+  y: 0
   hCost: 0
   gCost: 0
   fcost: 0
+  parent: {fileID: 0}
 --- !u!61 &746775242
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6932,10 +7073,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   position: {x: 0, y: 0}
   actPos: {x: 0, y: 0}
+  walkable: 1
   index: 0
+  x: 0
+  y: 0
   hCost: 0
   gCost: 0
   fcost: 0
+  parent: {fileID: 0}
 --- !u!61 &789006822
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7103,7 +7248,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1365974513}
-  m_RootOrder: 70
+  m_RootOrder: 72
 --- !u!114 &808407359
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7117,10 +7262,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   position: {x: 0, y: 0}
   actPos: {x: 0, y: 0}
+  walkable: 0
   index: 0
+  x: 0
+  y: 0
   hCost: 0
   gCost: 0
   fcost: 0
+  parent: {fileID: 0}
 --- !u!61 &808407360
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7226,7 +7375,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1365974513}
-  m_RootOrder: 65
+  m_RootOrder: 77
 --- !u!114 &837629036
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7240,10 +7389,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   position: {x: 0, y: 0}
   actPos: {x: 0, y: 0}
+  walkable: 1
   index: 0
+  x: 0
+  y: 0
   hCost: 0
   gCost: 0
   fcost: 0
+  parent: {fileID: 0}
 --- !u!61 &837629037
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7301,10 +7454,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   position: {x: 0, y: 0}
   actPos: {x: 0, y: 0}
+  walkable: 1
   index: 0
+  x: 0
+  y: 0
   hCost: 0
   gCost: 0
   fcost: 0
+  parent: {fileID: 0}
 --- !u!61 &839290397
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7486,10 +7643,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   position: {x: 0, y: 0}
   actPos: {x: 0, y: 0}
+  walkable: 1
   index: 0
+  x: 0
+  y: 0
   hCost: 0
   gCost: 0
   fcost: 0
+  parent: {fileID: 0}
 --- !u!61 &865249687
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7547,10 +7708,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   position: {x: 0, y: 0}
   actPos: {x: 0, y: 0}
+  walkable: 1
   index: 0
+  x: 0
+  y: 0
   hCost: 0
   gCost: 0
   fcost: 0
+  parent: {fileID: 0}
 --- !u!61 &867900422
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7608,10 +7773,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   position: {x: 0, y: 0}
   actPos: {x: 0, y: 0}
+  walkable: 1
   index: 0
+  x: 0
+  y: 0
   hCost: 0
   gCost: 0
   fcost: 0
+  parent: {fileID: 0}
 --- !u!61 &878615535
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7841,7 +8010,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1365974513}
-  m_RootOrder: 18
+  m_RootOrder: 20
 --- !u!114 &914151331
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7855,10 +8024,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   position: {x: 0, y: 0}
   actPos: {x: 0, y: 0}
+  walkable: 1
   index: 0
+  x: 0
+  y: 0
   hCost: 0
   gCost: 0
   fcost: 0
+  parent: {fileID: 0}
 --- !u!61 &914151332
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8307,10 +8480,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   position: {x: 0, y: 0}
   actPos: {x: 0, y: 0}
+  walkable: 1
   index: 0
+  x: 0
+  y: 0
   hCost: 0
   gCost: 0
   fcost: 0
+  parent: {fileID: 0}
 --- !u!61 &954279749
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8555,10 +8732,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   position: {x: 0, y: 0}
   actPos: {x: 0, y: 0}
+  walkable: 1
   index: 0
+  x: 0
+  y: 0
   hCost: 0
   gCost: 0
   fcost: 0
+  parent: {fileID: 0}
 --- !u!61 &962515216
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8929,7 +9110,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1365974513}
-  m_RootOrder: 22
+  m_RootOrder: 16
 --- !u!114 &996317517
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8943,10 +9124,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   position: {x: 0, y: 0}
   actPos: {x: 0, y: 0}
+  walkable: 1
   index: 0
+  x: 0
+  y: 0
   hCost: 0
   gCost: 0
   fcost: 0
+  parent: {fileID: 0}
 --- !u!61 &996317518
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9215,10 +9400,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   position: {x: 0, y: 0}
   actPos: {x: 0, y: 0}
+  walkable: 1
   index: 0
+  x: 0
+  y: 0
   hCost: 0
   gCost: 0
   fcost: 0
+  parent: {fileID: 0}
 --- !u!61 &1040993775
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9682,7 +9871,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1365974513}
-  m_RootOrder: 74
+  m_RootOrder: 68
 --- !u!114 &1085452780
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9696,10 +9885,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   position: {x: 0, y: 0}
   actPos: {x: 0, y: 0}
+  walkable: 1
   index: 0
+  x: 0
+  y: 0
   hCost: 0
   gCost: 0
   fcost: 0
+  parent: {fileID: 0}
 --- !u!61 &1085452781
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10056,10 +10249,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   position: {x: 0, y: 0}
   actPos: {x: 0, y: 0}
+  walkable: 1
   index: 0
+  x: 0
+  y: 0
   hCost: 0
   gCost: 0
   fcost: 0
+  parent: {fileID: 0}
 --- !u!61 &1158916763
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10151,7 +10348,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1365974513}
-  m_RootOrder: 39
+  m_RootOrder: 51
 --- !u!114 &1163640529
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10165,10 +10362,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   position: {x: 0, y: 0}
   actPos: {x: 0, y: 0}
+  walkable: 1
   index: 0
+  x: 0
+  y: 0
   hCost: 0
   gCost: 0
   fcost: 0
+  parent: {fileID: 0}
 --- !u!61 &1163640530
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10212,7 +10413,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1365974513}
-  m_RootOrder: 49
+  m_RootOrder: 41
 --- !u!114 &1165089459
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10226,10 +10427,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   position: {x: 0, y: 0}
   actPos: {x: 0, y: 0}
+  walkable: 1
   index: 0
+  x: 0
+  y: 0
   hCost: 0
   gCost: 0
   fcost: 0
+  parent: {fileID: 0}
 --- !u!61 &1165089460
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10397,7 +10602,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1365974513}
-  m_RootOrder: 50
+  m_RootOrder: 40
 --- !u!114 &1179621651
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10411,10 +10616,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   position: {x: 0, y: 0}
   actPos: {x: 0, y: 0}
+  walkable: 1
   index: 0
+  x: 0
+  y: 0
   hCost: 0
   gCost: 0
   fcost: 0
+  parent: {fileID: 0}
 --- !u!61 &1179621652
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10658,10 +10867,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   position: {x: 0, y: 0}
   actPos: {x: 0, y: 0}
+  walkable: 1
   index: 0
+  x: 0
+  y: 0
   hCost: 0
   gCost: 0
   fcost: 0
+  parent: {fileID: 0}
 --- !u!61 &1268067328
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10751,7 +10964,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1365974513}
-  m_RootOrder: 16
+  m_RootOrder: 22
 --- !u!114 &1280688352
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10765,10 +10978,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   position: {x: 0, y: 0}
   actPos: {x: 0, y: 0}
+  walkable: 1
   index: 0
+  x: 0
+  y: 0
   hCost: 0
   gCost: 0
   fcost: 0
+  parent: {fileID: 0}
 --- !u!61 &1280688353
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10998,10 +11215,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   position: {x: 0, y: 0}
   actPos: {x: 0, y: 0}
+  walkable: 1
   index: 0
+  x: 0
+  y: 0
   hCost: 0
   gCost: 0
   fcost: 0
+  parent: {fileID: 0}
 --- !u!61 &1303758062
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11167,10 +11388,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   position: {x: 0, y: 0}
   actPos: {x: 0, y: 0}
+  walkable: 1
   index: 0
+  x: 0
+  y: 0
   hCost: 0
   gCost: 0
   fcost: 0
+  parent: {fileID: 0}
 --- !u!61 &1315979246
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11274,10 +11499,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   position: {x: 0, y: 0}
   actPos: {x: 0, y: 0}
+  walkable: 1
   index: 0
+  x: 0
+  y: 0
   hCost: 0
   gCost: 0
   fcost: 0
+  parent: {fileID: 0}
 --- !u!61 &1323602212
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11583,10 +11812,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   position: {x: 0, y: 0}
   actPos: {x: 0, y: 0}
+  walkable: 1
   index: 0
+  x: 0
+  y: 0
   hCost: 0
   gCost: 0
   fcost: 0
+  parent: {fileID: 0}
 --- !u!61 &1365369652
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11672,6 +11905,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1365974513}
   - 114: {fileID: 1365974512}
+  - 114: {fileID: 1365974514}
   m_Layer: 0
   m_Name: Grid
   m_TagString: Untagged
@@ -11690,6 +11924,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c58d63d5efcca5418446e312c3713cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nodes: []
   positions: []
   end: {fileID: 867900420}
   start: {fileID: 1625531350}
@@ -11717,19 +11952,19 @@ Transform:
   - {fileID: 658412684}
   - {fileID: 1697548894}
   - {fileID: 2131497695}
-  - {fileID: 490566296}
-  - {fileID: 1477658660}
-  - {fileID: 142755662}
-  - {fileID: 1280688351}
-  - {fileID: 79178365}
-  - {fileID: 914151330}
-  - {fileID: 435924245}
-  - {fileID: 416948219}
-  - {fileID: 1700455824}
-  - {fileID: 996317516}
-  - {fileID: 2016358885}
-  - {fileID: 1625531350}
   - {fileID: 63681974}
+  - {fileID: 1625531350}
+  - {fileID: 2016358885}
+  - {fileID: 996317516}
+  - {fileID: 1700455824}
+  - {fileID: 416948219}
+  - {fileID: 435924245}
+  - {fileID: 914151330}
+  - {fileID: 79178365}
+  - {fileID: 1280688351}
+  - {fileID: 142755662}
+  - {fileID: 1477658660}
+  - {fileID: 490566296}
   - {fileID: 1451401620}
   - {fileID: 130282216}
   - {fileID: 1755413829}
@@ -11743,19 +11978,19 @@ Transform:
   - {fileID: 1688589796}
   - {fileID: 746775240}
   - {fileID: 559388649}
-  - {fileID: 1163640528}
-  - {fileID: 1757676922}
-  - {fileID: 655710653}
-  - {fileID: 1407644118}
-  - {fileID: 328713403}
-  - {fileID: 90791666}
-  - {fileID: 623519153}
-  - {fileID: 1858457228}
-  - {fileID: 1425560085}
-  - {fileID: 645975145}
-  - {fileID: 1165089458}
-  - {fileID: 1179621650}
   - {fileID: 160391341}
+  - {fileID: 1179621650}
+  - {fileID: 1165089458}
+  - {fileID: 645975145}
+  - {fileID: 1425560085}
+  - {fileID: 1858457228}
+  - {fileID: 623519153}
+  - {fileID: 90791666}
+  - {fileID: 328713403}
+  - {fileID: 1407644118}
+  - {fileID: 655710653}
+  - {fileID: 1757676922}
+  - {fileID: 1163640528}
   - {fileID: 1303758060}
   - {fileID: 1808604688}
   - {fileID: 1315979244}
@@ -11769,19 +12004,19 @@ Transform:
   - {fileID: 789006820}
   - {fileID: 2107464574}
   - {fileID: 94192966}
-  - {fileID: 837629035}
-  - {fileID: 1785140729}
-  - {fileID: 537599614}
-  - {fileID: 2031729570}
-  - {fileID: 486073636}
-  - {fileID: 808407358}
-  - {fileID: 1699189151}
-  - {fileID: 307161429}
-  - {fileID: 649152835}
-  - {fileID: 1085452779}
-  - {fileID: 572173464}
-  - {fileID: 16156608}
   - {fileID: 76307772}
+  - {fileID: 16156608}
+  - {fileID: 572173464}
+  - {fileID: 1085452779}
+  - {fileID: 649152835}
+  - {fileID: 307161429}
+  - {fileID: 1699189151}
+  - {fileID: 808407358}
+  - {fileID: 486073636}
+  - {fileID: 2031729570}
+  - {fileID: 537599614}
+  - {fileID: 1785140729}
+  - {fileID: 837629035}
   - {fileID: 1158916761}
   - {fileID: 1268067326}
   - {fileID: 631303620}
@@ -11798,6 +12033,19 @@ Transform:
   - {fileID: 1971490082}
   m_Father: {fileID: 0}
   m_RootOrder: 17
+--- !u!114 &1365974514
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1365974511}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b32566da4db079b4abc3cca64f4b2b5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  node1: {fileID: 0}
+  node2: {fileID: 0}
 --- !u!1 &1389855123
 GameObject:
   m_ObjectHideFlags: 0
@@ -11841,10 +12089,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   position: {x: 0, y: 0}
   actPos: {x: 0, y: 0}
+  walkable: 1
   index: 0
+  x: 0
+  y: 0
   hCost: 0
   gCost: 0
   fcost: 0
+  parent: {fileID: 0}
 --- !u!61 &1389855126
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11964,10 +12216,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   position: {x: 0, y: 0}
   actPos: {x: 0, y: 0}
+  walkable: 1
   index: 0
+  x: 0
+  y: 0
   hCost: 0
   gCost: 0
   fcost: 0
+  parent: {fileID: 0}
 --- !u!61 &1390856617
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12150,7 +12406,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1365974513}
-  m_RootOrder: 42
+  m_RootOrder: 48
 --- !u!114 &1407644119
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12164,10 +12420,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   position: {x: 0, y: 0}
   actPos: {x: 0, y: 0}
+  walkable: 1
   index: 0
+  x: 0
+  y: 0
   hCost: 0
   gCost: 0
   fcost: 0
+  parent: {fileID: 0}
 --- !u!61 &1407644120
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12273,7 +12533,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1365974513}
-  m_RootOrder: 47
+  m_RootOrder: 43
 --- !u!114 &1425560086
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12287,10 +12547,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   position: {x: 0, y: 0}
   actPos: {x: 0, y: 0}
+  walkable: 0
   index: 0
+  x: 0
+  y: 0
   hCost: 0
   gCost: 0
   fcost: 0
+  parent: {fileID: 0}
 --- !u!61 &1425560087
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12348,10 +12612,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   position: {x: 0, y: 0}
   actPos: {x: 0, y: 0}
+  walkable: 1
   index: 0
+  x: 0
+  y: 0
   hCost: 0
   gCost: 0
   fcost: 0
+  parent: {fileID: 0}
 --- !u!61 &1451401622
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12519,7 +12787,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1365974513}
-  m_RootOrder: 14
+  m_RootOrder: 24
 --- !u!114 &1477658661
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12533,10 +12801,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   position: {x: 0, y: 0}
   actPos: {x: 0, y: 0}
+  walkable: 1
   index: 0
+  x: 0
+  y: 0
   hCost: 0
   gCost: 0
   fcost: 0
+  parent: {fileID: 0}
 --- !u!61 &1477658662
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12702,10 +12974,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   position: {x: 0, y: 0}
   actPos: {x: 0, y: 0}
+  walkable: 1
   index: 0
+  x: 0
+  y: 0
   hCost: 0
   gCost: 0
   fcost: 0
+  parent: {fileID: 0}
 --- !u!61 &1523237093
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -13135,10 +13411,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   position: {x: 0, y: 0}
   actPos: {x: 0, y: 0}
+  walkable: 1
   index: 0
+  x: 0
+  y: 0
   hCost: 0
   gCost: 0
   fcost: 0
+  parent: {fileID: 0}
 --- !u!61 &1594459845
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -13274,7 +13554,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1365974513}
-  m_RootOrder: 24
+  m_RootOrder: 14
 --- !u!114 &1625531351
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13288,10 +13568,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   position: {x: 0, y: 0}
   actPos: {x: 0, y: 0}
+  walkable: 1
   index: 0
+  x: 0
+  y: 0
   hCost: 0
   gCost: 0
   fcost: 0
+  parent: {fileID: 0}
 --- !u!61 &1625531352
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -13349,10 +13633,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   position: {x: 0, y: 0}
   actPos: {x: 0, y: 0}
+  walkable: 1
   index: 0
+  x: 0
+  y: 0
   hCost: 0
   gCost: 0
   fcost: 0
+  parent: {fileID: 0}
 --- !u!61 &1629575295
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -13561,10 +13849,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   position: {x: 0, y: 0}
   actPos: {x: 0, y: 0}
+  walkable: 1
   index: 0
+  x: 0
+  y: 0
   hCost: 0
   gCost: 0
   fcost: 0
+  parent: {fileID: 0}
 --- !u!61 &1642431174
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -13977,10 +14269,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   position: {x: 0, y: 0}
   actPos: {x: 0, y: 0}
+  walkable: 1
   index: 0
+  x: 0
+  y: 0
   hCost: 0
   gCost: 0
   fcost: 0
+  parent: {fileID: 0}
 --- !u!61 &1688589798
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -14038,10 +14334,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   position: {x: 0, y: 0}
   actPos: {x: 0, y: 0}
+  walkable: 1
   index: 0
+  x: 0
+  y: 0
   hCost: 0
   gCost: 0
   fcost: 0
+  parent: {fileID: 0}
 --- !u!61 &1697548896
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -14099,10 +14399,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   position: {x: 0, y: 0}
   actPos: {x: 0, y: 0}
+  walkable: 1
   index: 0
+  x: 0
+  y: 0
   hCost: 0
   gCost: 0
   fcost: 0
+  parent: {fileID: 0}
 --- !u!61 &1699189153
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -14146,7 +14450,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1365974513}
-  m_RootOrder: 21
+  m_RootOrder: 17
 --- !u!114 &1700455825
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14160,10 +14464,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   position: {x: 0, y: 0}
   actPos: {x: 0, y: 0}
+  walkable: 1
   index: 0
+  x: 0
+  y: 0
   hCost: 0
   gCost: 0
   fcost: 0
+  parent: {fileID: 0}
 --- !u!61 &1700455826
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -14221,10 +14529,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   position: {x: 0, y: 0}
   actPos: {x: 0, y: 0}
+  walkable: 1
   index: 0
+  x: 0
+  y: 0
   hCost: 0
   gCost: 0
   fcost: 0
+  parent: {fileID: 0}
 --- !u!61 &1721266189
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -14420,10 +14732,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   position: {x: 0, y: 0}
   actPos: {x: 0, y: 0}
+  walkable: 1
   index: 0
+  x: 0
+  y: 0
   hCost: 0
   gCost: 0
   fcost: 0
+  parent: {fileID: 0}
 --- !u!61 &1741778117
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -14543,10 +14859,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   position: {x: 0, y: 0}
   actPos: {x: 0, y: 0}
+  walkable: 1
   index: 0
+  x: 0
+  y: 0
   hCost: 0
   gCost: 0
   fcost: 0
+  parent: {fileID: 0}
 --- !u!61 &1755413831
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -14590,7 +14910,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1365974513}
-  m_RootOrder: 40
+  m_RootOrder: 50
 --- !u!114 &1757676923
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14604,10 +14924,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   position: {x: 0, y: 0}
   actPos: {x: 0, y: 0}
+  walkable: 1
   index: 0
+  x: 0
+  y: 0
   hCost: 0
   gCost: 0
   fcost: 0
+  parent: {fileID: 0}
 --- !u!61 &1757676924
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -14839,10 +15163,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   position: {x: 0, y: 0}
   actPos: {x: 0, y: 0}
+  walkable: 1
   index: 0
+  x: 0
+  y: 0
   hCost: 0
   gCost: 0
   fcost: 0
+  parent: {fileID: 0}
 --- !u!61 &1777389499
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -14886,7 +15214,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1365974513}
-  m_RootOrder: 66
+  m_RootOrder: 76
 --- !u!114 &1785140730
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14900,10 +15228,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   position: {x: 0, y: 0}
   actPos: {x: 0, y: 0}
+  walkable: 1
   index: 0
+  x: 0
+  y: 0
   hCost: 0
   gCost: 0
   fcost: 0
+  parent: {fileID: 0}
 --- !u!61 &1785140731
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -15153,10 +15485,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   position: {x: 0, y: 0}
   actPos: {x: 0, y: 0}
+  walkable: 1
   index: 0
+  x: 0
+  y: 0
   hCost: 0
   gCost: 0
   fcost: 0
+  parent: {fileID: 0}
 --- !u!61 &1808604690
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -15432,7 +15768,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1365974513}
-  m_RootOrder: 46
+  m_RootOrder: 44
 --- !u!114 &1858457229
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15446,10 +15782,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   position: {x: 0, y: 0}
   actPos: {x: 0, y: 0}
+  walkable: 0
   index: 0
+  x: 0
+  y: 0
   hCost: 0
   gCost: 0
   fcost: 0
+  parent: {fileID: 0}
 --- !u!61 &1858457230
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -15507,10 +15847,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   position: {x: 0, y: 0}
   actPos: {x: 0, y: 0}
+  walkable: 1
   index: 0
+  x: 0
+  y: 0
   hCost: 0
   gCost: 0
   fcost: 0
+  parent: {fileID: 0}
 --- !u!61 &1859944598
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -16224,10 +16568,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   position: {x: 0, y: 0}
   actPos: {x: 0, y: 0}
+  walkable: 1
   index: 0
+  x: 0
+  y: 0
   hCost: 0
   gCost: 0
   fcost: 0
+  parent: {fileID: 0}
 --- !u!61 &1925508564
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -16548,10 +16896,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   position: {x: 0, y: 0}
   actPos: {x: 0, y: 0}
+  walkable: 1
   index: 0
+  x: 0
+  y: 0
   hCost: 0
   gCost: 0
   fcost: 0
+  parent: {fileID: 0}
 --- !u!61 &1954106962
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -17153,10 +17505,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   position: {x: 0, y: 0}
   actPos: {x: 0, y: 0}
+  walkable: 1
   index: 0
+  x: 0
+  y: 0
   hCost: 0
   gCost: 0
   fcost: 0
+  parent: {fileID: 0}
 --- !u!61 &1997628944
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -17312,7 +17668,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1365974513}
-  m_RootOrder: 23
+  m_RootOrder: 15
 --- !u!114 &2016358886
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17326,10 +17682,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   position: {x: 0, y: 0}
   actPos: {x: 0, y: 0}
+  walkable: 1
   index: 0
+  x: 0
+  y: 0
   hCost: 0
   gCost: 0
   fcost: 0
+  parent: {fileID: 0}
 --- !u!61 &2016358887
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -17602,7 +17962,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1365974513}
-  m_RootOrder: 68
+  m_RootOrder: 74
 --- !u!114 &2031729571
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17616,10 +17976,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   position: {x: 0, y: 0}
   actPos: {x: 0, y: 0}
+  walkable: 1
   index: 0
+  x: 0
+  y: 0
   hCost: 0
   gCost: 0
   fcost: 0
+  parent: {fileID: 0}
 --- !u!61 &2031729572
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -17677,10 +18041,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   position: {x: 0, y: 0}
   actPos: {x: 0, y: 0}
+  walkable: 1
   index: 0
+  x: 0
+  y: 0
   hCost: 0
   gCost: 0
   fcost: 0
+  parent: {fileID: 0}
 --- !u!61 &2040507444
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -18035,10 +18403,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   position: {x: 0, y: 0}
   actPos: {x: 0, y: 0}
+  walkable: 1
   index: 0
+  x: 0
+  y: 0
   hCost: 0
   gCost: 0
   fcost: 0
+  parent: {fileID: 0}
 --- !u!61 &2081469057
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -18510,10 +18882,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   position: {x: 0, y: 0}
   actPos: {x: 0, y: 0}
+  walkable: 1
   index: 0
+  x: 0
+  y: 0
   hCost: 0
   gCost: 0
   fcost: 0
+  parent: {fileID: 0}
 --- !u!61 &2107464576
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -18695,10 +19071,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   position: {x: 0, y: 0}
   actPos: {x: 0, y: 0}
+  walkable: 1
   index: 0
+  x: 0
+  y: 0
   hCost: 0
   gCost: 0
   fcost: 0
+  parent: {fileID: 0}
 --- !u!61 &2129089333
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -18756,10 +19136,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   position: {x: 0, y: 0}
   actPos: {x: 0, y: 0}
+  walkable: 1
   index: 0
+  x: 0
+  y: 0
   hCost: 0
   gCost: 0
   fcost: 0
+  parent: {fileID: 0}
 --- !u!61 &2131497697
 BoxCollider2D:
   m_ObjectHideFlags: 0
