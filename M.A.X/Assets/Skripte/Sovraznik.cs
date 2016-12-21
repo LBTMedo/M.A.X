@@ -66,9 +66,15 @@ public class Sovraznik : MonoBehaviour
     protected bool mrtev = false;
 
     public event System.Action ObSmrti;
+    private GameObject animator_object;
+    private Animator anim;
 
     void Start()
     {
+        animator_object = GameObject.Find("HojaSovraznik");
+        anim = animator_object.GetComponent<Animator>();
+
+
         source = GetComponent<AudioSource>();
         stKovancev = Random.Range(1, 4);
         trenutnaZivljenja = zacetnaZivljenja;
@@ -145,16 +151,16 @@ public class Sovraznik : MonoBehaviour
         Raycasting();
         if (sePremika)
         {
-            //grafika.GetComponent<Animator>().SetBool("isMoving", true);
+            anim.SetBool("isMoving", true);
         }
         else
         {
-           // grafika.GetComponent<Animator>().SetBool("isMoving", false);
+            anim.SetBool("isMoving", false);
         }
-        if (Input.GetKeyDown(KeyCode.K))
+        /*if (Input.GetKeyDown(KeyCode.K))
         {
             PrejmiSkodo(50);
-        }
+        }*/
     }
 
     void Raycasting()
