@@ -7146,63 +7146,6 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
---- !u!1001 &1161022083
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4000012573263268, guid: ef64b8eeea5cea049a327c9fdbe02ce2, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -13.73
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000012573263268, guid: ef64b8eeea5cea049a327c9fdbe02ce2, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: -1.31
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000012573263268, guid: ef64b8eeea5cea049a327c9fdbe02ce2, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: -7.029297
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000012573263268, guid: ef64b8eeea5cea049a327c9fdbe02ce2, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000012573263268, guid: ef64b8eeea5cea049a327c9fdbe02ce2, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000012573263268, guid: ef64b8eeea5cea049a327c9fdbe02ce2, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000012573263268, guid: ef64b8eeea5cea049a327c9fdbe02ce2, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000012573263268, guid: ef64b8eeea5cea049a327c9fdbe02ce2, type: 2}
-      propertyPath: m_RootOrder
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000010229323382, guid: ef64b8eeea5cea049a327c9fdbe02ce2,
-        type: 2}
-      propertyPath: MASTER
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000010229323382, guid: ef64b8eeea5cea049a327c9fdbe02ce2,
-        type: 2}
-      propertyPath: SFX
-      value: 0.39
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000010229323382, guid: ef64b8eeea5cea049a327c9fdbe02ce2,
-        type: 2}
-      propertyPath: MUSIC
-      value: 0.58
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: ef64b8eeea5cea049a327c9fdbe02ce2, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1 &1167078015
 GameObject:
   m_ObjectHideFlags: 0
@@ -11848,7 +11791,7 @@ Transform:
   - {fileID: 768700683}
   - {fileID: 1083993193}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
 --- !u!4 &1984741950 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4000011395090774, guid: 35a5a2fb83f5a2847845439c9ec09448,

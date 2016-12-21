@@ -81,6 +81,14 @@ public class IgralecKontroler : MonoBehaviour {
         {
             if (Input.GetKeyDown(KeyCode.Space) && Jumps != 0)
             {
+                if (Jumps == 1)
+                {
+                    anim.SetBool("frontflip", true);
+                }
+                else
+                {
+                    anim.SetBool("jump", true);
+                }
                 Debug.Log("Space");
                 jump = true;
                 transform.parent = null;
@@ -122,14 +130,8 @@ public class IgralecKontroler : MonoBehaviour {
             }
             else
             {
-                if (Grounded())
-                {
-                    moveDir = new Vector2(0, rbd.velocity.y);
-                }
-                else
-                {
-                    moveDir = new Vector2(0, rbd.velocity.y);
-                }
+                moveDir = new Vector2(0, rbd.velocity.y);
+
                 anim.SetFloat("speed", 0f);
             }
 
@@ -137,6 +139,7 @@ public class IgralecKontroler : MonoBehaviour {
 
             if (!Grounded())
             {
+                anim.SetBool("jump", true);
                 anim.SetFloat("speed", 0f);
                 Debug.Log(airControll);
                 moveDir.x = airControll * moveDir.x;
@@ -148,12 +151,14 @@ public class IgralecKontroler : MonoBehaviour {
 
             if (Grounded())
             {
+                anim.SetBool("jump", false);
+                anim.SetBool("frontflip", false);
                 Jumps = originalJumps;
             }
 
             if (jump)
             {
-                source.PlayOneShot(zvok, GameControl.control.MASTER * GameControl.control.SFX);
+                //source.PlayOneShot(zvok, GameControl.control.MASTER * GameControl.control.SFX);
                 rbd.velocity = new Vector2(rbd.velocity.x, jumpHeight);
                 jump = false;
                 Jumps--;

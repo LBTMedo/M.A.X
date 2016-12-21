@@ -35,6 +35,20 @@ public class Gorila : MonoBehaviour {
                 Sledi();
             }
         }
+
+        if(Vector2.Distance(transform.position, igralec.transform.position) <= 2f)
+        {
+            // Animacija skoka na igralca
+            Debug.Log("Skok na igralca!!!");
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.gameObject.tag == "Player")
+        {
+            igralec.gameObject.GetComponent<IgralecEndless>().PrejmiSkodo(1000f);
+        }
     }
 
     private void Update()

@@ -4,6 +4,13 @@ using System;
 
 public class Utility : MonoBehaviour {
 
+    Grid grid;
+
+    private void Start()
+    {
+        grid = FindObjectOfType<Grid>();
+    }
+
     static void Swap<T>(ref T prvi, ref T drugi)
     {
         T zacasni;
@@ -34,5 +41,15 @@ public class Utility : MonoBehaviour {
                 }
             }
         }
+    }
+
+    public static int NodeIndexFromPosition(Vector2 pos)
+    {
+        int indeks = 0;
+
+        indeks += (Mathf.RoundToInt(pos.x / 3));
+        indeks += (Mathf.RoundToInt(pos.y / 3)) * 13;
+
+        return Grid.instance.nodes[indeks].index;
     }
 }

@@ -83,6 +83,14 @@ public class Player1Kontroler : MonoBehaviour {
         {
             if (Input.GetKeyDown(KeyCode.Space) && Jumps != 0)
             {
+                if(Jumps == 1)
+                {
+                    anim.SetBool("frontflip", true);
+                }
+                else
+                {
+                    anim.SetBool("jump", true);
+                }
                 Debug.Log("Space");
                 jump = true;
                 transform.parent = null;
@@ -100,7 +108,7 @@ public class Player1Kontroler : MonoBehaviour {
             {
                 StartCoroutine(PowerUpPlayer());
             }
-            if (Input.GetKey(KeyCode.LeftShift) && Grounded())
+            if (powerup && Grounded())
             {
                 moveSpeed = sprintSpeed;
             }
@@ -125,14 +133,8 @@ public class Player1Kontroler : MonoBehaviour {
             }
             else
             {
-                if (Grounded())
-                {
-                    moveDir = new Vector2(0, rbd.velocity.y);
-                }
-                else
-                {
-                    moveDir = new Vector2(0, rbd.velocity.y);
-                }
+                moveDir = new Vector2(0, rbd.velocity.y);
+                
                 anim.SetFloat("speed", 0f);
             }
 
@@ -140,6 +142,7 @@ public class Player1Kontroler : MonoBehaviour {
 
             if (!Grounded())
             {
+                anim.SetBool("jump", true);
                 anim.SetFloat("speed", 0f);
                 Debug.Log(airControll);
                 moveDir.x = airControll * moveDir.x;
@@ -151,6 +154,8 @@ public class Player1Kontroler : MonoBehaviour {
 
             if (Grounded())
             {
+                anim.SetBool("jump", false);
+                anim.SetBool("frontflip", false);
                 Jumps = originalJumps;
             }
 
