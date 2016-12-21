@@ -5,7 +5,7 @@ AnimationClip:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Hoja
+  m_Name: Idle_mummy
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -20,12 +20,8 @@ AnimationClip:
   - curve:
     - time: 0
       value: {fileID: 21300004, guid: 74014ea9857d6f24cb006813a4741263, type: 3}
-    - time: 0.2
+    - time: 0.4
       value: {fileID: 21300002, guid: 74014ea9857d6f24cb006813a4741263, type: 3}
-    - time: 0.41666666
-      value: {fileID: 21300006, guid: 74014ea9857d6f24cb006813a4741263, type: 3}
-    - time: 0.6333333
-      value: {fileID: 21300000, guid: 74014ea9857d6f24cb006813a4741263, type: 3}
     - time: 0.81666666
       value: {fileID: 21300004, guid: 74014ea9857d6f24cb006813a4741263, type: 3}
     attribute: m_Sprite
@@ -48,8 +44,6 @@ AnimationClip:
     pptrCurveMapping:
     - {fileID: 21300004, guid: 74014ea9857d6f24cb006813a4741263, type: 3}
     - {fileID: 21300002, guid: 74014ea9857d6f24cb006813a4741263, type: 3}
-    - {fileID: 21300006, guid: 74014ea9857d6f24cb006813a4741263, type: 3}
-    - {fileID: 21300000, guid: 74014ea9857d6f24cb006813a4741263, type: 3}
     - {fileID: 21300004, guid: 74014ea9857d6f24cb006813a4741263, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
