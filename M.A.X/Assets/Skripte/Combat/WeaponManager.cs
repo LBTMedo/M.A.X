@@ -17,12 +17,20 @@ public class WeaponManager : MonoBehaviour {
         foreach(Transform child in transform)
         {
             vsaOrozja.Add(child.gameObject);
+            orozja.Add(child.gameObject);//TESTIRANJE
         }
 
-        foreach(GameObject orozje in vsaOrozja)
+        foreach (GameObject orozje in vsaOrozja)
         {
             orozje.SetActive(false);
         }
+
+        foreach (GameObject orozje in orozja)//TESTIRANJE
+        {
+            orozje.SetActive(false);
+        }
+
+        //vsaOrozja[trenutnoOrozje].SetActive(true); //TESTIRANJE
     }
 
     public static List<GameObject> vrniVsaOrozja()
@@ -58,7 +66,8 @@ public class WeaponManager : MonoBehaviour {
 
     public static int stOrozij()
     {
-        return orozja.Count;
+        //return orozja.Count;
+        return 1;
     }
 
     public static void kupiOrozje(int index)
