@@ -41,6 +41,8 @@ public class Igralec_borba : MonoBehaviour {
 
     Coroutine avtomatskoStreljanje;
 
+    private bool isStriking;
+
     int id = 0;
 
     void Start()
@@ -53,6 +55,7 @@ public class Igralec_borba : MonoBehaviour {
         avtomatsko = false;
         ammo = FindObjectOfType<Ammo>();
         hasBullets = true;
+        isStriking = false;
     }
 
     void Update()
@@ -114,7 +117,8 @@ public class Igralec_borba : MonoBehaviour {
 
             Raycasting();
             desno = kontroler.desno;
-            trenutnoOrozje = WeaponManager.VrniTrenutnoOrozje().parent;
+            //trenutnoOrozje = WeaponManager.VrniTrenutnoOrozje().parent;
+            trenutnoOrozje = WeaponManager.VrniTrenutnoOrozje();
         }
     }
 
@@ -161,16 +165,36 @@ public class Igralec_borba : MonoBehaviour {
     {
         if (WeaponManager.stOrozij() > 0)
         {
-            trenutnoOrozje.Rotate(new Vector3(0, 0, -60));
-            trenutnoOrozje.position = new Vector3(trenutnoOrozje.position.x, trenutnoOrozje.position.y - 1f);
-            Invoke("ZavrtiNazaj", 0.5f);
+            if (!isStriking)
+            {
+                float angle;
+                isStriking = true;
+                //trenutnoOrozje.Rotate(new Vector3(0, 0, -60));
+                if (desno)
+                    angle = 60f;
+                else
+                    angle = -60f;
+
+                trenutnoOrozje.RotateAround(trenutnoOrozje.GetComponent<RocnoOrozje>().handPoint.position, Vector3.back, angle);
+                //trenutnoOrozje.position = new Vector3(trenutnoOrozje.position.x, trenutnoOrozje.position.y - 1f);
+                Invoke("ZavrtiNazaj", 0.2f);
+            }           
         }
     }
 
     public void ZavrtiNazaj()
     {
-        trenutnoOrozje.Rotate(new Vector3(0, 0, 60));
-        trenutnoOrozje.position = new Vector3(trenutnoOrozje.position.x, trenutnoOrozje.position.y + 1f);
+        float angle;
+
+        if (desno)
+            angle = 60f;
+        else
+            angle = -60f;
+
+        trenutnoOrozje.RotateAround(trenutnoOrozje.GetComponent<RocnoOrozje>().handPoint.position, Vector3.forward, angle);
+        //trenutnoOrozje.Rotate(new Vector3(0, 0, 60));
+        //trenutnoOrozje.position = new Vector3(trenutnoOrozje.position.x, trenutnoOrozje.position.y + 1f);
+        isStriking = false;
     }
 
     void ZamenjajVrstoMetka()
