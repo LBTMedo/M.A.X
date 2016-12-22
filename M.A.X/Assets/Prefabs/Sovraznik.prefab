@@ -116,7 +116,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000011247449332}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.751, y: 0.87, z: 0}
+  m_LocalPosition: {x: 0.78, y: 0.87, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -341,7 +341,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitrostMetka: 5
   tockaZaStreljanje: {fileID: 4000010501329208}
-  metek: {fileID: 50000012884371470, guid: 7b0624c24ebb4f545ad8fe82b317cbbf, type: 2}
+  metek: {fileID: 50000011041129996, guid: 603d64c21af2ab640978b544fb8e2272, type: 2}
   desno: 0
 --- !u!114 &114000013346995778
 MonoBehaviour:
