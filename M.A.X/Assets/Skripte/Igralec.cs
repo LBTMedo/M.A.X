@@ -85,6 +85,7 @@ public class Igralec : MonoBehaviour {
     {
         trenutnaZivljenja -= skoda;
         health.CurrentVal -= skoda;
+        indikator.damaged = true;
         //source.PlayOneShot(zvok, GameControl.control.MASTER * GameControl.control.SFX);
     }
 
