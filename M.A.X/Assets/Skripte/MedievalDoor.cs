@@ -11,6 +11,9 @@ public class MedievalDoor : MonoBehaviour {
     SpriteRenderer spriteRend;
     bool odprto = false;
     bool firstTimeRotated = false;
+    public bool playSound = false;
+    public AudioClip doorSound;
+    AudioSource source;
 
     public void SetOdprto(bool value)
     {
@@ -29,6 +32,10 @@ public class MedievalDoor : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+        if (playSound)
+        {
+            source = GetComponent<AudioSource>();
+        }
         spriteRend = GetComponent<SpriteRenderer>();
         currPos = transform.position;
         openPos = new Vector3(currPos.x - 1.5f, currPos.y, currPos.z);
@@ -41,6 +48,10 @@ public class MedievalDoor : MonoBehaviour {
         spriteRend.sprite = odprtoS;
         transform.Rotate(0, 180, 0);
         coll.enabled = false;
+        if (playSound)
+        {
+            source.PlayOneShot(doorSound, GameControl.control.MASTER * GameControl.control.SFX);
+        }
     }
 
     void CloseDoor()
@@ -49,6 +60,10 @@ public class MedievalDoor : MonoBehaviour {
         transform.Rotate(0, 180, 0);
         spriteRend.sprite = zaprtoS;
         coll.enabled = true;
+        if (playSound)
+        {
+            source.PlayOneShot(doorSound, GameControl.control.MASTER * GameControl.control.SFX);
+        }
     }
 	
 	// Update is called once per frame
