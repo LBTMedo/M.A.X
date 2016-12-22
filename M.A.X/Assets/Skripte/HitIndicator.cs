@@ -11,7 +11,7 @@ public class HitIndicator : MonoBehaviour
     public Color defaultColor = new Color(1f, 0f, 0f, 0f);
 
     public bool sceneLoad = true;
-    public bool damaged;
+    public bool damaged = false;
 
     // Use this for initialization
     void Start()
@@ -34,6 +34,7 @@ public class HitIndicator : MonoBehaviour
             }
             damaged = false;
         }
+        sceneLoad = false;
     }
 
 }

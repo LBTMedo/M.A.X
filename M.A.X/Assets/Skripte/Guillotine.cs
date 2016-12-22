@@ -32,7 +32,7 @@ public class Guillotine : MonoBehaviour {
             }
             else
             {
-                Debug.Log("y blada: " + compareDistance + " y endpoint: " + distanceDown);
+               // Debug.Log("y blada: " + compareDistance + " y endpoint: " + distanceDown);
                 falling = false;
               
             }
@@ -47,7 +47,7 @@ public class Guillotine : MonoBehaviour {
             }
             else
             {
-                Debug.Log("y blada: " + compareDistance + " y startpoint: " + distanceUp);
+                //Debug.Log("y blada: " + compareDistance + " y startpoint: " + distanceUp);
                 falling = true;
              
             }

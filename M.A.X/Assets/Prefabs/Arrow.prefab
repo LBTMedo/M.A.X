@@ -22,6 +22,7 @@ GameObject:
   - 212: {fileID: 212000013509988084}
   - 60: {fileID: 60000010083193208}
   - 114: {fileID: 114000013989396838}
+  - 114: {fileID: 114000010051745940}
   m_Layer: 0
   m_Name: Arrow
   m_TagString: Untagged
@@ -68,6 +69,19 @@ PolygonCollider2D:
       - {x: 0.56181145, y: -0.061433315}
       - {x: 0.6546421, y: 0.0028676987}
       - {x: 0.5607147, y: 0.057509422}
+--- !u!114 &114000010051745940
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013975813658}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3732b34aba640cc4e8f575fc10553e1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 10
+  lifeTime: 3
 --- !u!114 &114000013989396838
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -81,7 +95,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0.2
   leftOrRight: 1
-  left: 1
+  left: 0
   upOrDown: 0
   up: 0
 --- !u!212 &212000013509988084

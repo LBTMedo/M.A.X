@@ -51,7 +51,7 @@ public class Kamera : MonoBehaviour
         if (pogled == false)
         {
             NaslednjaPozicija.y = pozicijaY + premikPoY;
-            Vector3 nextPozicija = player.position + NaslednjaPozicija + Vector3.forward * offsetZ;
+            Vector3 nextPozicija = player.position + NaslednjaPozicija + Vector3.forward * (offsetZ-2);
             Vector3 novaPozicija = Vector3.SmoothDamp(transform.position, nextPozicija, ref Hitrost, damping);
             transform.position = novaPozicija;
             ZadnjaPozicija = player.position;
@@ -61,7 +61,7 @@ public class Kamera : MonoBehaviour
             if (upNdownNewBalance == true)
             {
                 NaslednjaPozicija.y = pozicijaY - 10f;
-                Vector3 nextPozicija = player.position + NaslednjaPozicija + Vector3.forward * offsetZ;
+                Vector3 nextPozicija = player.position + NaslednjaPozicija + Vector3.forward * (offsetZ-2);
                 Vector3 novaPozicija = Vector3.SmoothDamp(transform.position, nextPozicija, ref Hitrost, damping);
                 transform.position = novaPozicija;
                 ZadnjaPozicija = player.position;
@@ -69,7 +69,7 @@ public class Kamera : MonoBehaviour
             else
             {
                 NaslednjaPozicija.y = pozicijaY + 3.5f;
-                Vector3 nextPozicija = player.position + NaslednjaPozicija + Vector3.forward * offsetZ;
+                Vector3 nextPozicija = player.position + NaslednjaPozicija + Vector3.forward * (offsetZ-2);
                 Vector3 novaPozicija = Vector3.SmoothDamp(transform.position, nextPozicija, ref Hitrost, damping);
                 transform.position = novaPozicija;
                 ZadnjaPozicija = player.position;
