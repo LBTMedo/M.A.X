@@ -5,10 +5,9 @@ using UnityEngine.UI;
 public class Lever : MonoBehaviour {
 
     [SerializeField]
-    private Text reminder;
-
-    [SerializeField]
     private LeverDoor slideDoor;
+    [SerializeField]
+    private MedievalDoor mDoor;
 
     [SerializeField]
     Sprite activated;
@@ -18,6 +17,7 @@ public class Lever : MonoBehaviour {
     SpriteRenderer slikaLever;
 
     bool entered = false;
+    public bool medievalDoor = false;
 
     void Start()
     {
@@ -26,12 +26,10 @@ public class Lever : MonoBehaviour {
 
 	void OnTriggerEnter2D()
     {
-        //reminder.text = "press 'F'";
         entered = true;
     }
     void OnTriggerExit2D()
     {
-        //reminder.text = "";
         entered = false;
     }
 
@@ -39,15 +37,33 @@ public class Lever : MonoBehaviour {
     {
         if(entered == true)
         {
-            if (Input.GetKeyDown(KeyCode.F) && slideDoor.GetOdprto() == false)
+            if (!medievalDoor)
             {
-                slideDoor.SetOdprto(true);
-                slikaLever.sprite = activated;
+                if (Input.GetKeyDown(KeyCode.F) && slideDoor.GetOdprto() == false)
+                {
+                    slideDoor.SetOdprto(true);
+                    slikaLever.sprite = activated;
+                }
+                else if (Input.GetKeyDown(KeyCode.F) && slideDoor.GetOdprto() == true)
+                {
+                    slideDoor.SetOdprto(false);
+                    slikaLever.sprite = deactivated;
+                }
             }
-            else if(Input.GetKeyDown(KeyCode.F) && slideDoor.GetOdprto() == true)
+            else if (medievalDoor)
             {
-                slideDoor.SetOdprto(false);
-                slikaLever.sprite = deactivated;
+                if (Input.GetKeyDown(KeyCode.F) && mDoor.GetOdprto() == false)
+                {
+                    mDoor.SetOdprto(true);
+                    mDoor.SetFirstTimeRotated(true);
+                    slikaLever.sprite = activated;
+                }
+                else if (Input.GetKeyDown(KeyCode.F) && mDoor.GetOdprto() == true)
+                {
+                    mDoor.SetOdprto(false);
+                    mDoor.SetFirstTimeRotated(true);
+                    slikaLever.sprite = deactivated;
+                }
             }
         }
     }
