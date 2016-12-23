@@ -22,6 +22,7 @@ GameObject:
   - 212: {fileID: 212000013537420084}
   - 95: {fileID: 95000011095766814}
   - 114: {fileID: 114000014238401594}
+  - 61: {fileID: 61000010651593000}
   m_Layer: 0
   m_Name: health pickup1
   m_TagString: Untagged
@@ -36,12 +37,26 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000010426096152}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 241.24843, y: 9.9098625, z: 0.7890625}
+  m_LocalPosition: {x: -309.36, y: -8.07, z: 0.7890625}
   m_LocalScale: {x: 3, y: 3, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!61 &61000010651593000
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010426096152}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 0.22, y: 0.24}
 --- !u!95 &95000011095766814
 Animator:
   serializedVersion: 3
