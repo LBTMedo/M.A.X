@@ -18,8 +18,7 @@ public class SpawnBlock : MonoBehaviour
             {
                 if (Settings.Nacin == 2)
                 {
-                    if (Settings.DontSPawn == true)
-                    {
+                  
                         if (Settings.ZamenjajTip == 1)
                         {
                             Vector2 clickPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -34,8 +33,7 @@ public class SpawnBlock : MonoBehaviour
                             objekt.name = "New" + stevec;
                             stevec++;
                         }
-                        Settings.DontSPawn = false;
-                    }
+                      
                 }
 
             }

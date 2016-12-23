@@ -7,7 +7,7 @@ public class Settings : MonoBehaviour {
     Text tekst;
     public static int Nacin = 1;
     public static int ZamenjajTip = 1;
-    public static bool DontSPawn = false;
+
     public void ClickChange()
     {
         tekst = GameObject.Find("Text123").GetComponent<Text>();
@@ -33,7 +33,7 @@ public class Settings : MonoBehaviour {
             Nacin = 1;
             tekst.text = "MOVE";
         }
-        DontSPawn = true;
+       
     }
     public void ChangeBlockType()
     {
@@ -53,7 +53,7 @@ public class Settings : MonoBehaviour {
             ZamenjajTip = 1;
             tekst.text = "SOLID BLOCKS";
         }
-        DontSPawn = true;
+       
     }
   
     
