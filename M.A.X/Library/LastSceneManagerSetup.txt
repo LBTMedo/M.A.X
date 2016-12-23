@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scene/Medieval.unity
+- path: Assets/Scene/LVL 2 Co-op Medieval.unity
   isLoaded: 1
   isActive: 1
