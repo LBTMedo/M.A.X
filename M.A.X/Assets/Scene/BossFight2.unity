@@ -3958,6 +3958,65 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!1 &407555694
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 407555696}
+  - 114: {fileID: 407555695}
+  - 114: {fileID: 407555697}
+  m_Layer: 0
+  m_Name: A*
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &407555695
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 407555694}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd7a1706c2bec924bba709389e0e36bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  unwalkableMask:
+    serializedVersion: 2
+    m_Bits: 32768
+  gridWorldSize: {x: 38.71, y: -21.81}
+  nodeRadius: 0.5
+--- !u!4 &407555696
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 407555694}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 18
+--- !u!114 &407555697
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 407555694}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f41581ce4e304604983cdb2ecd6b963e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  seeker: {fileID: 1802871957}
+  target: {fileID: 1739228069}
 --- !u!1 &414635998
 GameObject:
   m_ObjectHideFlags: 0
@@ -8199,9 +8258,9 @@ GameObject:
   - 61: {fileID: 920326598}
   - 68: {fileID: 920326597}
   - 68: {fileID: 920326596}
-  m_Layer: 9
+  m_Layer: 15
   m_Name: Wood Platform
-  m_TagString: Untagged
+  m_TagString: Unwalkable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8889,9 +8948,9 @@ GameObject:
   - 61: {fileID: 982671212}
   - 68: {fileID: 982671211}
   - 68: {fileID: 982671210}
-  m_Layer: 9
+  m_Layer: 15
   m_Name: Wood Platform (1)
-  m_TagString: Untagged
+  m_TagString: Unwalkable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15374,6 +15433,11 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!4 &1802871957 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4000012970571168, guid: c6adf627ceeb46747819791fe3e18a87,
+    type: 2}
+  m_PrefabInternal: {fileID: 260704775}
 --- !u!1 &1807807510
 GameObject:
   m_ObjectHideFlags: 0
@@ -16252,9 +16316,9 @@ GameObject:
   - 61: {fileID: 1911879064}
   - 68: {fileID: 1911879063}
   - 68: {fileID: 1911879062}
-  m_Layer: 9
+  m_Layer: 15
   m_Name: Wood Platform (1)
-  m_TagString: Untagged
+  m_TagString: Unwalkable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16333,9 +16397,9 @@ GameObject:
   - 61: {fileID: 1918472492}
   - 68: {fileID: 1918472491}
   - 68: {fileID: 1918472490}
-  m_Layer: 9
+  m_Layer: 15
   m_Name: Wood Platform
-  m_TagString: Untagged
+  m_TagString: Unwalkable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17273,7 +17337,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 744e8aab014b9f148a34b051f81bc31b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
+  speed: 4
   index: 0
 --- !u!61 &1971490079
 BoxCollider2D:
