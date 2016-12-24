@@ -13,9 +13,18 @@ public class PathFinding1 : MonoBehaviour {
         grid = GetComponent<Grid1>();
     }
 
-    private void Update()
+    private void Start()
     {
-        FindPath(seeker.position, target.position);
+        StartCoroutine(IsciPot());
+    }
+
+    IEnumerator IsciPot()
+    {
+        while (true)
+        {
+            FindPath(seeker.position, target.position);
+            yield return new WaitForSeconds(2);
+        }
     }
 
     void FindPath(Vector3 startPos, Vector3 targetPos)
