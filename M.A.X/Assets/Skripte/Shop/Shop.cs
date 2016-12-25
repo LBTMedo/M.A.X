@@ -57,7 +57,7 @@ public class Shop : MonoBehaviour {
         for(int i=0; i<orozjaNaVoljo.Count;i++)
         {
             RocnoOrozje r = orozjaNaVoljo[i].GetComponent<RocnoOrozje>();
-        
+            Debug.Log(orozjaNaVoljo.Count + "st. orozij na voljo.");
             
                 if (array[i].tag == "Shop Item Background")
                 {
@@ -93,6 +93,7 @@ public class Shop : MonoBehaviour {
                         foreach(GameObject g in kupljenaOrozja)
                         {
                             RocnoOrozje r1 = g.GetComponent<RocnoOrozje>();
+                            Debug.Log(r1.ime + " ime.");
                             if(r.ime == r1.ime)
                             {
                                 i1.enabled = true;
