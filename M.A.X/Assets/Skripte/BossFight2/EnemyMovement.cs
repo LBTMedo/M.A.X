@@ -9,9 +9,12 @@ public class EnemyMovement : MonoBehaviour {
 
     public Vector2[] path;
 
+    public bool dead;
+
     private void Start()
     {
         index = 0;
+        dead = false;
     }
 
     public void UpdatePath(Vector2[] _path)
@@ -22,11 +25,14 @@ public class EnemyMovement : MonoBehaviour {
 
     private void FixedUpdate()
     {
-        Vector2 dir = path[index + 1] - (Vector2)transform.position;
-        transform.Translate(dir.normalized * speed * Time.fixedDeltaTime, Space.World);
-        if(Vector2.Distance(transform.position, path[index+1]) < 0.1f)
+        if (index < path.Length - 1 && !dead)
         {
-            index++;
+            Vector2 dir = path[index + 1] - (Vector2)transform.position;
+            transform.Translate(dir.normalized * speed * Time.fixedDeltaTime, Space.World);
+            if (Vector2.Distance(transform.position, path[index + 1]) < 0.1f)
+            {
+                index++;
+            }
         }
     }
 }
