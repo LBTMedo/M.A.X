@@ -14,7 +14,7 @@ public class RainDrop : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D coll)
     {
-        if(coll.gameObject.layer == LayerMask.NameToLayer("Tla"))
+        if(coll.gameObject.layer == LayerMask.NameToLayer("Tla") || coll.gameObject.layer == LayerMask.NameToLayer("Unwalkable") || coll.gameObject.tag == "Player")
         {
             Destroy(gameObject);
         }

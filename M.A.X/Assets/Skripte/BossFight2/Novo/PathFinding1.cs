@@ -7,10 +7,12 @@ public class PathFinding1 : MonoBehaviour {
     Grid1 grid;
 
     public Transform seeker, target;
+    EnemyMovement movement;
 
     private void Awake()
     {
         grid = GetComponent<Grid1>();
+        movement = FindObjectOfType<EnemyMovement>();
     }
 
     private void Start()
@@ -23,7 +25,7 @@ public class PathFinding1 : MonoBehaviour {
         while (true)
         {
             FindPath(seeker.position, target.position);
-            yield return new WaitForSeconds(2);
+            yield return new WaitForSeconds(0.6f);
         }
     }
 
@@ -53,7 +55,7 @@ public class PathFinding1 : MonoBehaviour {
 
             if(currentNode == targetNode)
             {
-                RetracePath(startNode, targetNode);
+                movement.UpdatePath(RetracePath(startNode, targetNode));
                 return;
             }
 
@@ -80,7 +82,7 @@ public class PathFinding1 : MonoBehaviour {
         }
     }
 
-    void RetracePath(Node1 startNode, Node1 endNode)
+    Vector2[] RetracePath(Node1 startNode, Node1 endNode)
     {
         List<Node1> path = new List<Node1>();
         Node1 currentNode = endNode;
@@ -99,6 +101,14 @@ public class PathFinding1 : MonoBehaviour {
         }
 
         grid.path = path;
+        Vector2[] _path = new Vector2[path.Count];
+
+        for (int i = 0; i < path.Count; i++)
+        {
+            _path[i] = path[i].worldPosition;
+        }
+
+        return _path;
     }
 
     int GetDistance(Node1 nodeA, Node1 nodeB)

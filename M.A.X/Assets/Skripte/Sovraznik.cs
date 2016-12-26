@@ -142,7 +142,7 @@ public class Sovraznik : MonoBehaviour
 
     void Streljaj()
     {
-        source.PlayOneShot(zvokStreljaj, GameControl.control.MASTER * GameControl.control.SFX);
+        //source.PlayOneShot(zvokStreljaj, GameControl.control.MASTER * GameControl.control.SFX);
         sistemZaBorbo.Streljanje();
     }
 

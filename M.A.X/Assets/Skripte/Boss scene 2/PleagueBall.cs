@@ -7,7 +7,7 @@ public class PleagueBall : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D coll)
     {
-        if(coll.gameObject.layer == LayerMask.NameToLayer("Tla") || coll.gameObject.layer == LayerMask.NameToLayer("Igralec"))
+        if(coll.gameObject.layer == LayerMask.NameToLayer("Tla") || coll.gameObject.layer == LayerMask.NameToLayer("Igralec") || coll.gameObject.layer == LayerMask.NameToLayer("Unwalkable"))
         {
             if(coll.gameObject.tag == "Odprtina")
             {

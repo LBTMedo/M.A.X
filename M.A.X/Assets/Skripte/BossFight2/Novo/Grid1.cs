@@ -20,6 +20,14 @@ public class Grid1 : MonoBehaviour {
         CreateGrid();
     }
 
+    public int MaxSize
+    {
+        get
+        {
+            return gridSizeX * gridSizeY;
+        }
+    }
+
     void CreateGrid()
     {
         grid = new Node1[gridSizeX, gridSizeY];
@@ -78,7 +86,17 @@ public class Grid1 : MonoBehaviour {
     void OnDrawGizmos()
     {
         Gizmos.DrawWireCube(transform.position, new Vector2(gridWorldSize.x, gridWorldSize.y));
-        if (grid != null)
+
+        if(path != null)
+        {
+            foreach(Node1 n in path)
+            {
+                Gizmos.color = Color.black;
+                Gizmos.DrawCube(n.worldPosition, Vector3.one * (nodeDiameter - .1f));
+            }
+        }
+
+        /*if (grid != null)
         {
             foreach (Node1 n in grid)
             {
@@ -94,6 +112,6 @@ public class Grid1 : MonoBehaviour {
                 }
                 Gizmos.DrawCube(n.worldPosition, Vector3.one * (nodeDiameter - .1f));
             }
-        }
+        }*/
     }
 }
