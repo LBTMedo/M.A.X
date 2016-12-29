@@ -55,7 +55,7 @@ public class GameManager : MonoBehaviour {
     {
        
         denar += value;
-        GameControl.control.denar += denar;
+        GameControl.control.denar += value;
         Debug.Log("Denar " + denar);
     }
 

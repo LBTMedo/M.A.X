@@ -44,6 +44,10 @@ public class Igralec : MonoBehaviour {
     {
         if (!disabled)
         {
+            if (Input.GetKeyDown(KeyCode.Tab))
+            {
+                GameManager.DodajDenar(10);
+            }
             if (Input.GetKeyDown(KeyCode.P))
             {
                 trenutnaZivljenja -= 20;

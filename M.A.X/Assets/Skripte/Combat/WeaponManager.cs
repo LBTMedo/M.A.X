@@ -17,7 +17,7 @@ public class WeaponManager : MonoBehaviour {
         foreach(Transform child in transform)
         {
             vsaOrozja.Add(child.gameObject);
-            orozja.Add(child.gameObject);//TESTIRANJE
+           // orozja.Add(child.gameObject);//TESTIRANJE
         }
 
         foreach (GameObject orozje in vsaOrozja)
@@ -25,10 +25,10 @@ public class WeaponManager : MonoBehaviour {
             orozje.SetActive(false);
         }
 
-        foreach (GameObject orozje in orozja)//TESTIRANJE
+        /*foreach (GameObject orozje in orozja)//TESTIRANJE
         {
             orozje.SetActive(false);
-        }
+        }*/
 
         //vsaOrozja[trenutnoOrozje].SetActive(true); //TESTIRANJE
     }
