@@ -14,15 +14,21 @@ public class CoopButton : MonoBehaviour {
         pushedPos = new Vector3(defaultPos.x, defaultPos.y - 0.20f, defaultPos.z);
     }
 
-    void OnTriggerEnter2D()
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        transform.position = pushedPos;
-        obstacle.SetState(false);
+        if (collision.tag == "Player")
+        {
+            transform.position = pushedPos;
+            obstacle.SetState(false);
+        }
     }
 
-    void OnTriggerExit2D()
+    private void OnTriggerExit2D(Collider2D collision)
     {
-        transform.position = defaultPos;
-        obstacle.SetState(true);
+        if (collision.tag == "Player")
+        {
+            transform.position = defaultPos;
+            obstacle.SetState(true);
+        }
     }
 }
