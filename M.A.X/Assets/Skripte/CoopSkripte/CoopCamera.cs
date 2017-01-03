@@ -8,10 +8,17 @@ public class CoopCamera : MonoBehaviour {
     Igralec1 p1;
     Igralec2 p2;
 
+    private AudioSource source;
+    public AudioClip[] backGroundMusic;
+
     void Start()
     {
         p1 = FindObjectOfType<Igralec1>();
         p2 = FindObjectOfType<Igralec2>();
+        source = GetComponent<AudioSource>();
+        source.clip = backGroundMusic[0];
+        source.volume = GameControl.control.MASTER * GameControl.control.MUSIC;
+        source.Play();
     }
 
     void SetCameraPos()
