@@ -176,7 +176,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 2417208}
   - 212: {fileID: 2417207}
-  m_Layer: 0
+  - 68: {fileID: 2417209}
+  m_Layer: 9
   m_Name: drek_0 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -223,12 +224,27 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2417206}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -181.36163, y: 4.006743, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -181.36163, y: 4.07, z: 0}
+  m_LocalScale: {x: 1, y: 1.1190758, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1380686539}
   m_RootOrder: 188
+--- !u!68 &2417209
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2417206}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  m_Points:
+  - {x: -0.47543335, y: -3.3255603}
+  - {x: -0.50154114, y: 0.57298225}
 --- !u!1 &2676498
 GameObject:
   m_ObjectHideFlags: 0
@@ -393,7 +409,7 @@ GameObject:
   - 4: {fileID: 6935070}
   - 212: {fileID: 6935072}
   - 61: {fileID: 6935071}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Medieval_art_8 (25)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -620,6 +636,83 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1380686539}
   m_RootOrder: 180
+--- !u!1 &28325977
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 28325978}
+  - 212: {fileID: 28325980}
+  - 61: {fileID: 28325979}
+  m_Layer: 9
+  m_Name: Medieval_art_2 (10)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &28325978
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 28325977}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -159.52, y: 2.8637433, z: 0}
+  m_LocalScale: {x: 1.6042211, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 1380686539}
+  m_RootOrder: 215
+--- !u!61 &28325979
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 28325977}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0.015792847, y: -0.09244108}
+  serializedVersion: 2
+  m_Size: {x: 1.1583949, y: 0.29560715}
+--- !u!212 &28325980
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 28325977}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_SelectedWireframeHidden: 1
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300004, guid: c780c3f0e360a3e489c420c02c6f8d40, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
 --- !u!1 &33085394
 GameObject:
   m_ObjectHideFlags: 0
@@ -697,83 +790,6 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
---- !u!1 &33850521
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 33850522}
-  - 212: {fileID: 33850524}
-  - 61: {fileID: 33850523}
-  m_Layer: 9
-  m_Name: Medieval_art_3 (4)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &33850522
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 33850521}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -215.58, y: 3.1799998, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_Children: []
-  m_Father: {fileID: 428796907}
-  m_RootOrder: 0
---- !u!61 &33850523
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 33850521}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_Offset: {x: -0.010192871, y: -0.086604595}
-  serializedVersion: 2
-  m_Size: {x: 1.1395962, y: 0.28364754}
---- !u!212 &33850524
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 33850521}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 0
-  m_ReflectionProbeUsage: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_SubsetIndices: 
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_SelectedWireframeHidden: 1
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300006, guid: c780c3f0e360a3e489c420c02c6f8d40, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
 --- !u!1 &35717709
 GameObject:
   m_ObjectHideFlags: 0
@@ -813,7 +829,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 46255306}
   - 212: {fileID: 46255305}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: drek_0 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -860,12 +876,89 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 46255304}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -203.68164, y: -1.2445631, z: 0}
+  m_LocalPosition: {x: -203.58, y: -1.2445631, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1380686539}
-  m_RootOrder: 205
+  m_RootOrder: 206
+--- !u!1 &51302812
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 51302813}
+  - 212: {fileID: 51302815}
+  - 61: {fileID: 51302814}
+  m_Layer: 0
+  m_Name: Medieval_art_9
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &51302813
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 51302812}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -3.5883133, y: -3.0202653, z: 0}
+  m_LocalScale: {x: 0.9848207, y: 0.65187216, z: 0.48539788}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 653299704}
+  m_RootOrder: 0
+--- !u!61 &51302814
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 51302812}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: -0.061103873}
+  serializedVersion: 2
+  m_Size: {x: 0.77, y: 0.20779169}
+--- !u!212 &51302815
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 51302812}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_SelectedWireframeHidden: 1
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300018, guid: c780c3f0e360a3e489c420c02c6f8d40, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
 --- !u!1 &57333131
 GameObject:
   m_ObjectHideFlags: 0
@@ -892,12 +985,14 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
+  - {fileID: 1582211338}
   - {fileID: 1437079837}
   - {fileID: 66030504}
   - {fileID: 327509224}
   - {fileID: 1143111064}
   - {fileID: 2077290191}
   - {fileID: 1503308333}
+  - {fileID: 1688619669}
   m_Father: {fileID: 0}
   m_RootOrder: 8
 --- !u!1 &60755595
@@ -909,7 +1004,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 60755597}
   - 212: {fileID: 60755596}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: drek_0 (24)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -972,7 +1067,8 @@ GameObject:
   - 4: {fileID: 66030504}
   - 212: {fileID: 66030503}
   - 61: {fileID: 66030502}
-  m_Layer: 0
+  - 114: {fileID: 66030505}
+  m_Layer: 9
   m_Name: Medieval_art_15
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1038,7 +1134,21 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 57333132}
-  m_RootOrder: 1
+  m_RootOrder: 2
+--- !u!114 &66030505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 66030501}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a6d510705e4e664fabd2f1f18e07600, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  end: {fileID: 1605654728}
+  timeToMove: 5
+  move: 1
 --- !u!1 &74538690
 GameObject:
   m_ObjectHideFlags: 0
@@ -1387,7 +1497,7 @@ GameObject:
   - 4: {fileID: 151296815}
   - 212: {fileID: 151296817}
   - 61: {fileID: 151296816}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Medieval_art_8 (30)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1541,7 +1651,7 @@ GameObject:
   - 4: {fileID: 153971020}
   - 212: {fileID: 153971022}
   - 61: {fileID: 153971021}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Medieval_art_9 (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1695,7 +1805,7 @@ GameObject:
   - 4: {fileID: 201409938}
   - 212: {fileID: 201409940}
   - 61: {fileID: 201409939}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: drek_0 (34)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1848,7 +1958,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 216858269}
   - 212: {fileID: 216858268}
-  m_Layer: 0
+  - 68: {fileID: 216858270}
+  m_Layer: 9
   m_Name: drek_0 (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1900,7 +2011,22 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1380686539}
-  m_RootOrder: 193
+  m_RootOrder: 194
+--- !u!68 &216858270
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 216858267}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  m_Points:
+  - {x: 0.48685604, y: -0.7952973}
+  - {x: 0.48790148, y: 0.5121661}
 --- !u!1 &236005466
 GameObject:
   m_ObjectHideFlags: 0
@@ -2154,7 +2280,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 281664041}
   - 212: {fileID: 281664040}
-  m_Layer: 0
+  - 61: {fileID: 281664042}
+  m_Layer: 9
   m_Name: drek_0 (32)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2207,6 +2334,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1380686539}
   m_RootOrder: 161
+--- !u!61 &281664042
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 281664039}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
 --- !u!1 &288938245
 GameObject:
   m_ObjectHideFlags: 0
@@ -2236,7 +2377,84 @@ Transform:
   - {fileID: 1672484485}
   - {fileID: 1902448406}
   m_Father: {fileID: 1380686539}
-  m_RootOrder: 198
+  m_RootOrder: 199
+--- !u!1 &295494084
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 295494085}
+  - 212: {fileID: 295494087}
+  - 61: {fileID: 295494086}
+  m_Layer: 0
+  m_Name: Medieval_art_9 (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &295494085
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 295494084}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -2.8519654, y: -3.0202653, z: 0}
+  m_LocalScale: {x: 0.9848207, y: 0.65187216, z: 0.48539788}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 653299704}
+  m_RootOrder: 1
+--- !u!61 &295494086
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 295494084}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: -0.061103873}
+  serializedVersion: 2
+  m_Size: {x: 0.77, y: 0.20779169}
+--- !u!212 &295494087
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 295494084}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_SelectedWireframeHidden: 1
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300018, guid: c780c3f0e360a3e489c420c02c6f8d40, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
 --- !u!1 &296386003
 GameObject:
   m_ObjectHideFlags: 0
@@ -2314,6 +2532,83 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1380686539}
   m_RootOrder: 173
+--- !u!1 &316985276
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 316985277}
+  - 212: {fileID: 316985279}
+  - 61: {fileID: 316985278}
+  m_Layer: 0
+  m_Name: Medieval_art_9 (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &316985277
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 316985276}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -2.1384296, y: -3.0202653, z: 0}
+  m_LocalScale: {x: 0.9848207, y: 0.65187216, z: 0.48539788}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 653299704}
+  m_RootOrder: 2
+--- !u!61 &316985278
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 316985276}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: -0.061103873}
+  serializedVersion: 2
+  m_Size: {x: 0.77, y: 0.20779169}
+--- !u!212 &316985279
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 316985276}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_SelectedWireframeHidden: 1
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300018, guid: c780c3f0e360a3e489c420c02c6f8d40, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
 --- !u!1 &327509222
 GameObject:
   m_ObjectHideFlags: 0
@@ -2323,7 +2618,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 327509224}
   - 212: {fileID: 327509223}
-  m_Layer: 0
+  - 114: {fileID: 327509225}
+  - 61: {fileID: 327509226}
+  m_Layer: 9
   m_Name: Medieval_art_15 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2375,7 +2672,35 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 57333132}
-  m_RootOrder: 2
+  m_RootOrder: 3
+--- !u!114 &327509225
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 327509222}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a6d510705e4e664fabd2f1f18e07600, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  end: {fileID: 871664517}
+  timeToMove: 5
+  move: 1
+--- !u!61 &327509226
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 327509222}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1.59, y: 0.37}
 --- !u!1 &335798028
 GameObject:
   m_ObjectHideFlags: 0
@@ -2463,7 +2788,7 @@ GameObject:
   - 4: {fileID: 344827995}
   - 212: {fileID: 344827997}
   - 61: {fileID: 344827996}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Medieval_art_8 (35)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2771,7 +3096,7 @@ GameObject:
   - 4: {fileID: 368897713}
   - 212: {fileID: 368897715}
   - 61: {fileID: 368897714}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Medieval_art_8 (19)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2877,7 +3202,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 385919231}
   - 212: {fileID: 385919230}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: drek_0 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2924,8 +3249,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 385919229}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -181.36163, y: 3.0367427, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -181.36163, y: 3.07, z: 0}
+  m_LocalScale: {x: 1, y: 1.064951, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1380686539}
@@ -3100,7 +3425,7 @@ GameObject:
   - 4: {fileID: 414464713}
   - 212: {fileID: 414464715}
   - 61: {fileID: 414464714}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Medieval_art_8 (20)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3273,7 +3598,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 428796907}
-  m_RootOrder: 1
+  m_RootOrder: 0
 --- !u!61 &424236072
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3383,6 +3708,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1380686539}
   m_RootOrder: 18
+--- !u!1 &426398615 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1000013340763416, guid: 85d091847f6b7214c92bd91f832b16ed,
+    type: 2}
+  m_PrefabInternal: {fileID: 1405501330}
+--- !u!114 &426398619
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 426398615}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d6318891a1fdd74196240ffa78f4d7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &428796906
 GameObject:
   m_ObjectHideFlags: 0
@@ -3409,7 +3750,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
-  - {fileID: 33850522}
   - {fileID: 424236071}
   m_Father: {fileID: 1380686539}
   m_RootOrder: 65
@@ -3423,7 +3763,7 @@ GameObject:
   - 4: {fileID: 441639661}
   - 212: {fileID: 441639663}
   - 61: {fileID: 441639662}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Medieval_art_8 (23)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3490,6 +3830,34 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!1 &449957512
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 449957513}
+  m_Layer: 0
+  m_Name: GO3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &449957513
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 449957512}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 36.109207, y: 1.52, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 1582211338}
+  m_RootOrder: 1
 --- !u!1 &450953585
 GameObject:
   m_ObjectHideFlags: 0
@@ -3900,7 +4268,7 @@ GameObject:
   - 4: {fileID: 468691110}
   - 212: {fileID: 468691109}
   - 61: {fileID: 468691111}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Medieval_art_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4006,7 +4374,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 474465099}
   - 212: {fileID: 474465098}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: drek_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4053,12 +4421,12 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 474465097}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -204.93556, y: -1.2445631, z: 0}
+  m_LocalPosition: {x: -204.97, y: -1.2445631, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1380686539}
-  m_RootOrder: 204
+  m_RootOrder: 205
 --- !u!1 &478273800
 GameObject:
   m_ObjectHideFlags: 0
@@ -4330,7 +4698,7 @@ GameObject:
   - 4: {fileID: 498323756}
   - 212: {fileID: 498323758}
   - 61: {fileID: 498323757}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Medieval_art_9 (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4407,7 +4775,7 @@ GameObject:
   - 4: {fileID: 503011004}
   - 212: {fileID: 503011006}
   - 61: {fileID: 503011005}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Medieval_art_8 (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4696,7 +5064,7 @@ GameObject:
   - 4: {fileID: 537351613}
   - 212: {fileID: 537351615}
   - 61: {fileID: 537351614}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Medieval_art_8 (31)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4850,7 +5218,7 @@ GameObject:
   - 4: {fileID: 541423850}
   - 212: {fileID: 541423852}
   - 61: {fileID: 541423851}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Medieval_art_8 (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4917,6 +5285,83 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!1 &555009543
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 555009544}
+  - 212: {fileID: 555009546}
+  - 61: {fileID: 555009545}
+  m_Layer: 9
+  m_Name: Medieval_art_2 (8)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &555009544
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 555009543}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -165.16, y: 2.8637433, z: 0}
+  m_LocalScale: {x: 1.6042211, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 1380686539}
+  m_RootOrder: 211
+--- !u!61 &555009545
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 555009543}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0.015792847, y: -0.09244108}
+  serializedVersion: 2
+  m_Size: {x: 1.1583949, y: 0.29560715}
+--- !u!212 &555009546
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 555009543}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_SelectedWireframeHidden: 1
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300004, guid: c780c3f0e360a3e489c420c02c6f8d40, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
 --- !u!1 &557820777
 GameObject:
   m_ObjectHideFlags: 0
@@ -4926,7 +5371,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 557820778}
   - 212: {fileID: 557820779}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Medieval_art_8 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4979,6 +5424,160 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!1 &560353410
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 560353411}
+  - 212: {fileID: 560353413}
+  - 61: {fileID: 560353412}
+  m_Layer: 9
+  m_Name: Medieval_art_3 (8)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &560353411
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 560353410}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -163.67, y: 2.8637433, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 1380686539}
+  m_RootOrder: 212
+--- !u!61 &560353412
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 560353410}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: -0.010192871, y: -0.086604595}
+  serializedVersion: 2
+  m_Size: {x: 1.1395962, y: 0.28364754}
+--- !u!212 &560353413
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 560353410}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_SelectedWireframeHidden: 1
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300006, guid: c780c3f0e360a3e489c420c02c6f8d40, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+--- !u!1 &562319347
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 562319348}
+  - 212: {fileID: 562319350}
+  - 61: {fileID: 562319349}
+  m_Layer: 0
+  m_Name: Medieval_art_9 (5)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &562319348
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 562319347}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.10461063, y: -3.0202653, z: 0}
+  m_LocalScale: {x: 0.9848207, y: 0.65187216, z: 0.48539788}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 653299704}
+  m_RootOrder: 5
+--- !u!61 &562319349
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 562319347}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: -0.061103873}
+  serializedVersion: 2
+  m_Size: {x: 0.77, y: 0.20779169}
+--- !u!212 &562319350
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 562319347}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_SelectedWireframeHidden: 1
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300018, guid: c780c3f0e360a3e489c420c02c6f8d40, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
 --- !u!114 &567074847 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114000012096401692, guid: 4c0f0529eafeb244cbda871b549f4ed3,
@@ -4994,7 +5593,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 593383562}
   - 212: {fileID: 593383563}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: drek_0 (36)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5008,8 +5607,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 593383561}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -169.79164, y: 3.046743, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -169.82, y: 3.09, z: 0}
+  m_LocalScale: {x: 1.1433119, y: 1.095541, z: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1380686539}
@@ -5164,7 +5763,7 @@ GameObject:
   - 4: {fileID: 598930077}
   - 212: {fileID: 598930079}
   - 61: {fileID: 598930078}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Medieval_art_9 (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5231,6 +5830,68 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!1 &611860887
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 611860888}
+  - 212: {fileID: 611860889}
+  m_Layer: 9
+  m_Name: Medieval_art_14
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &611860888
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 611860887}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -159.85611, y: 3.1339908, z: 0}
+  m_LocalScale: {x: 0.5188664, y: 0.51886624, z: 0.51886624}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 1380686539}
+  m_RootOrder: 193
+--- !u!212 &611860889
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 611860887}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_SelectedWireframeHidden: 1
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300028, guid: c780c3f0e360a3e489c420c02c6f8d40, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
 --- !u!1 &613986199
 GameObject:
   m_ObjectHideFlags: 0
@@ -5240,7 +5901,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 613986201}
   - 212: {fileID: 613986200}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: drek_0 (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5287,8 +5948,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 613986199}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -176.05164, y: 3.9767432, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -176.05164, y: 4.02, z: 0}
+  m_LocalScale: {x: 1, y: 1.0865993, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1380686539}
@@ -5380,7 +6041,7 @@ GameObject:
   - 4: {fileID: 621390300}
   - 212: {fileID: 621390302}
   - 61: {fileID: 621390301}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Medieval_art_9 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5509,6 +6170,83 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!1 &634841801
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 634841802}
+  - 212: {fileID: 634841804}
+  - 61: {fileID: 634841803}
+  m_Layer: 0
+  m_Name: Medieval_art_9 (4)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &634841802
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 634841801}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.6822355, y: -3.0202653, z: 0}
+  m_LocalScale: {x: 0.9848207, y: 0.65187216, z: 0.48539788}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 653299704}
+  m_RootOrder: 4
+--- !u!61 &634841803
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 634841801}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: -0.061103873}
+  serializedVersion: 2
+  m_Size: {x: 0.77, y: 0.20779169}
+--- !u!212 &634841804
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 634841801}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_SelectedWireframeHidden: 1
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300018, guid: c780c3f0e360a3e489c420c02c6f8d40, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
 --- !u!1 &640683711
 GameObject:
   m_ObjectHideFlags: 0
@@ -5519,7 +6257,7 @@ GameObject:
   - 4: {fileID: 640683712}
   - 212: {fileID: 640683714}
   - 61: {fileID: 640683713}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Medieval_art_9 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5663,6 +6401,55 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1380686539}
   m_RootOrder: 179
+--- !u!1 &653299702
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 653299704}
+  - 114: {fileID: 653299703}
+  m_Layer: 0
+  m_Name: GatesOfHell
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &653299703
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 653299702}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e21bd79f266759d409a2eb7c46094992, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dvaGumba: 0
+  premikHorizontalno: 200
+  premikVertikalno: 0
+--- !u!4 &653299704
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 653299702}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -147.43448, y: 10.977247, z: 0}
+  m_LocalScale: {x: 2.060165, y: 2.0601656, z: 2.0601656}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children:
+  - {fileID: 51302813}
+  - {fileID: 295494085}
+  - {fileID: 316985277}
+  - {fileID: 810121597}
+  - {fileID: 634841802}
+  - {fileID: 562319348}
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
 --- !u!1 &654107364
 GameObject:
   m_ObjectHideFlags: 0
@@ -5749,11 +6536,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4000013675394036, guid: ae69f03896c889b4c96acab6ee632b7e, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -203.7
+      value: -149.34
       objectReference: {fileID: 0}
     - target: {fileID: 4000013675394036, guid: ae69f03896c889b4c96acab6ee632b7e, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 12.6
+      value: 12.08
       objectReference: {fileID: 0}
     - target: {fileID: 4000013675394036, guid: ae69f03896c889b4c96acab6ee632b7e, type: 2}
       propertyPath: m_LocalPosition.z
@@ -5926,7 +6713,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1380686539}
-  m_RootOrder: 199
+  m_RootOrder: 200
 --- !u!1 &691464590
 GameObject:
   m_ObjectHideFlags: 0
@@ -5937,7 +6724,7 @@ GameObject:
   - 4: {fileID: 691464591}
   - 212: {fileID: 691464593}
   - 61: {fileID: 691464592}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Medieval_art_8 (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6080,7 +6867,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1380686539}
-  m_RootOrder: 208
+  m_RootOrder: 209
 --- !u!1 &699719252
 GameObject:
   m_ObjectHideFlags: 0
@@ -6090,7 +6877,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 699719254}
   - 212: {fileID: 699719253}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: drek_0 (29)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6152,7 +6939,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 716573927}
   - 212: {fileID: 716573928}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Medieval_art_8 (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6214,7 +7001,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 719407784}
   - 212: {fileID: 719407783}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: drek_0 (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6266,7 +7053,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1380686539}
-  m_RootOrder: 195
+  m_RootOrder: 196
 --- !u!1 &719964493
 GameObject:
   m_ObjectHideFlags: 0
@@ -6306,7 +7093,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 736969089}
   - 212: {fileID: 736969088}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: drek_0 (18)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6353,12 +7140,28 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 736969087}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -176.94164, y: 2.9967427, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -176.94164, y: 3.05, z: 0}
+  m_LocalScale: {x: 1, y: 1.0974255, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1380686539}
   m_RootOrder: 130
+--- !u!1 &737445000 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1000010808484242, guid: 85d091847f6b7214c92bd91f832b16ed,
+    type: 2}
+  m_PrefabInternal: {fileID: 1405501330}
+--- !u!114 &737445004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 737445000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d6318891a1fdd74196240ffa78f4d7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &753070887
 GameObject:
   m_ObjectHideFlags: 0
@@ -6661,7 +7464,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 778072124}
   - 212: {fileID: 778072123}
-  m_Layer: 0
+  - 61: {fileID: 778072125}
+  m_Layer: 9
   m_Name: drek_0 (31)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6714,6 +7518,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1380686539}
   m_RootOrder: 160
+--- !u!61 &778072125
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 778072122}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
 --- !u!1 &787747591
 GameObject:
   m_ObjectHideFlags: 0
@@ -6724,7 +7542,7 @@ GameObject:
   - 4: {fileID: 787747592}
   - 212: {fileID: 787747594}
   - 61: {fileID: 787747593}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Medieval_art_8 (15)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6937,7 +7755,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 804909012}
   - 212: {fileID: 804909011}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: drek_0 (20)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6990,6 +7808,83 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1380686539}
   m_RootOrder: 132
+--- !u!1 &810121596
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 810121597}
+  - 212: {fileID: 810121599}
+  - 61: {fileID: 810121598}
+  m_Layer: 0
+  m_Name: Medieval_art_9 (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &810121597
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 810121596}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1.4200426, y: -3.0202653, z: 0}
+  m_LocalScale: {x: 0.9848207, y: 0.65187216, z: 0.48539788}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 653299704}
+  m_RootOrder: 3
+--- !u!61 &810121598
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 810121596}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: -0.061103873}
+  serializedVersion: 2
+  m_Size: {x: 0.77, y: 0.20779169}
+--- !u!212 &810121599
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 810121596}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_SelectedWireframeHidden: 1
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300018, guid: c780c3f0e360a3e489c420c02c6f8d40, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
 --- !u!1 &829487059
 GameObject:
   m_ObjectHideFlags: 0
@@ -7000,7 +7895,7 @@ GameObject:
   - 4: {fileID: 829487060}
   - 212: {fileID: 829487062}
   - 61: {fileID: 829487061}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Medieval_art_8 (33)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7158,7 +8053,7 @@ Transform:
   - {fileID: 1115423197}
   - {fileID: 1663536940}
   m_Father: {fileID: 1380686539}
-  m_RootOrder: 202
+  m_RootOrder: 203
 --- !u!1 &843090490
 GameObject:
   m_ObjectHideFlags: 0
@@ -7168,7 +8063,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 843090492}
   - 212: {fileID: 843090491}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: drek_0 (33)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7328,6 +8223,34 @@ Transform:
   - {fileID: 1772812204}
   m_Father: {fileID: 1380686539}
   m_RootOrder: 163
+--- !u!1 &871664516
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 871664517}
+  m_Layer: 0
+  m_Name: GO2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &871664517
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 871664516}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 34.158157, y: -5.65, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 1582211338}
+  m_RootOrder: 2
 --- !u!1 &871996897
 GameObject:
   m_ObjectHideFlags: 0
@@ -7445,7 +8368,7 @@ GameObject:
   - 4: {fileID: 898299884}
   - 212: {fileID: 898299886}
   - 61: {fileID: 898299885}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Medieval_art_8 (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7521,7 +8444,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 903782746}
   - 212: {fileID: 903782745}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: drek_0 (17)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7568,8 +8491,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 903782744}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -176.05164, y: 2.9967427, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -176.05164, y: 3.05, z: 0}
+  m_LocalScale: {x: 1, y: 1.0974255, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1380686539}
@@ -7651,6 +8574,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1380686539}
   m_RootOrder: 181
+--- !u!1 &927356077 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1000013339270360, guid: 85d091847f6b7214c92bd91f832b16ed,
+    type: 2}
+  m_PrefabInternal: {fileID: 1405501330}
+--- !u!114 &927356081
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 927356077}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d6318891a1fdd74196240ffa78f4d7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &929287165
 GameObject:
   m_ObjectHideFlags: 0
@@ -7738,7 +8677,7 @@ GameObject:
   - 4: {fileID: 939612019}
   - 212: {fileID: 939612021}
   - 61: {fileID: 939612020}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Medieval_art_8 (21)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7805,6 +8744,22 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!1 &941180425 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1000014192011604, guid: 85d091847f6b7214c92bd91f832b16ed,
+    type: 2}
+  m_PrefabInternal: {fileID: 1405501330}
+--- !u!114 &941180429
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 941180425}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d6318891a1fdd74196240ffa78f4d7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &970774277
 GameObject:
   m_ObjectHideFlags: 0
@@ -7814,7 +8769,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 970774278}
   - 212: {fileID: 970774279}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Medieval_art_8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7938,7 +8893,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 991787273}
   - 212: {fileID: 991787272}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: drek_0 (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7990,7 +8945,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1380686539}
-  m_RootOrder: 196
+  m_RootOrder: 197
 --- !u!1 &1004336653
 GameObject:
   m_ObjectHideFlags: 0
@@ -8216,7 +9171,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1380686539}
-  m_RootOrder: 201
+  m_RootOrder: 202
 --- !u!61 &1030066445
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8350,7 +9305,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1035885278}
   - 212: {fileID: 1035885277}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: drek_0 (22)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8412,7 +9367,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1039004350}
   - 212: {fileID: 1039004351}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: drek_0 (41)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8426,8 +9381,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1039004349}
   m_LocalRotation: {x: -0, y: -0, z: 0.17364816, w: 0.9848078}
-  m_LocalPosition: {x: -169.04164, y: 2.4067426, z: 0.05}
-  m_LocalScale: {x: 1.066452, y: 0.9858486, z: 1}
+  m_LocalPosition: {x: -169.07, y: 2.4, z: 0.05}
+  m_LocalScale: {x: 1.221563, y: 0.9858486, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 20}
   m_Children: []
   m_Father: {fileID: 1380686539}
@@ -8474,7 +9429,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1045256137}
   - 212: {fileID: 1045256138}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: drek_0 (37)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8937,7 +9892,7 @@ GameObject:
   - 4: {fileID: 1073494963}
   - 212: {fileID: 1073494965}
   - 61: {fileID: 1073494964}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Medieval_art_8 (29)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9013,7 +9968,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1077182508}
   - 212: {fileID: 1077182507}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: drek_0 (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9065,7 +10020,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1380686539}
-  m_RootOrder: 197
+  m_RootOrder: 198
 --- !u!1 &1091692622
 GameObject:
   m_ObjectHideFlags: 0
@@ -9398,7 +10353,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1125195058}
   - 212: {fileID: 1125195057}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: drek_0 (23)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9542,7 +10497,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 1143111064}
   - 212: {fileID: 1143111063}
-  m_Layer: 0
+  - 114: {fileID: 1143111065}
+  - 61: {fileID: 1143111066}
+  m_Layer: 9
   m_Name: Medieval_art_15 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9594,7 +10551,35 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 57333132}
-  m_RootOrder: 3
+  m_RootOrder: 4
+--- !u!114 &1143111065
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1143111062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a6d510705e4e664fabd2f1f18e07600, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  end: {fileID: 449957513}
+  timeToMove: 5
+  move: 1
+--- !u!61 &1143111066
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1143111062}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1.59, y: 0.37}
 --- !u!1 &1162545944
 GameObject:
   m_ObjectHideFlags: 0
@@ -9835,7 +10820,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1185224918}
   - 212: {fileID: 1185224917}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: drek_0 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9887,7 +10872,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1380686539}
-  m_RootOrder: 206
+  m_RootOrder: 207
 --- !u!1 &1208108565
 GameObject:
   m_ObjectHideFlags: 0
@@ -9927,7 +10912,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1214528340}
   - 212: {fileID: 1214528339}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: drek_0 (25)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10399,7 +11384,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1380686539}
-  m_RootOrder: 209
+  m_RootOrder: 210
 --- !u!1 &1247814405
 GameObject:
   m_ObjectHideFlags: 0
@@ -10641,7 +11626,7 @@ GameObject:
   - 4: {fileID: 1273068215}
   - 212: {fileID: 1273068217}
   - 61: {fileID: 1273068216}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Medieval_art_8 (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10708,6 +11693,22 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!1 &1275552641 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1000011062089898, guid: 85d091847f6b7214c92bd91f832b16ed,
+    type: 2}
+  m_PrefabInternal: {fileID: 1405501330}
+--- !u!114 &1275552645
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1275552641}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d6318891a1fdd74196240ffa78f4d7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1276430027
 GameObject:
   m_ObjectHideFlags: 0
@@ -11220,6 +12221,7 @@ Transform:
   - {fileID: 2087946704}
   - {fileID: 2088611347}
   - {fileID: 1550412610}
+  - {fileID: 611860888}
   - {fileID: 216858269}
   - {fileID: 1748829800}
   - {fileID: 719407784}
@@ -11237,6 +12239,12 @@ Transform:
   - {fileID: 2126504372}
   - {fileID: 698808289}
   - {fileID: 1245826087}
+  - {fileID: 555009544}
+  - {fileID: 560353411}
+  - {fileID: 1473419952}
+  - {fileID: 2084518601}
+  - {fileID: 28325978}
+  - {fileID: 1460943558}
   m_Father: {fileID: 0}
   m_RootOrder: 7
 --- !u!1 &1386585744
@@ -11248,7 +12256,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1386585746}
   - 212: {fileID: 1386585745}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: drek_0 (26)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11459,7 +12467,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1424578708}
   - 212: {fileID: 1424578707}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: drek_0 (21)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11521,7 +12529,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1429823312}
   - 212: {fileID: 1429823311}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: drek_0 (16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11568,8 +12576,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1429823310}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -175.10164, y: 2.9967427, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -175.10164, y: 3.05, z: 0}
+  m_LocalScale: {x: 1, y: 1.0974255, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1380686539}
@@ -11584,7 +12592,7 @@ GameObject:
   - 4: {fileID: 1437079837}
   - 212: {fileID: 1437079836}
   - 61: {fileID: 1437079835}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Medieval_art_6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11650,7 +12658,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 57333132}
-  m_RootOrder: 0
+  m_RootOrder: 1
 --- !u!1 &1445542606
 GameObject:
   m_ObjectHideFlags: 0
@@ -11752,7 +12760,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1452997866}
   - 212: {fileID: 1452997867}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: drek_0 (43)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11882,6 +12890,83 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!1 &1460943557
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1460943558}
+  - 212: {fileID: 1460943560}
+  - 61: {fileID: 1460943559}
+  m_Layer: 9
+  m_Name: Medieval_art_3 (10)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1460943558
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1460943557}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -158.03, y: 2.8637433, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 1380686539}
+  m_RootOrder: 216
+--- !u!61 &1460943559
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1460943557}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: -0.010192871, y: -0.086604595}
+  serializedVersion: 2
+  m_Size: {x: 1.1395962, y: 0.28364754}
+--- !u!212 &1460943560
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1460943557}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_SelectedWireframeHidden: 1
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300006, guid: c780c3f0e360a3e489c420c02c6f8d40, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
 --- !u!1 &1465555773
 GameObject:
   m_ObjectHideFlags: 0
@@ -11892,7 +12977,7 @@ GameObject:
   - 4: {fileID: 1465555774}
   - 212: {fileID: 1465555776}
   - 61: {fileID: 1465555775}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Medieval_art_8 (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11969,7 +13054,7 @@ GameObject:
   - 4: {fileID: 1465682975}
   - 212: {fileID: 1465682977}
   - 61: {fileID: 1465682976}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Medieval_art_8 (18)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12036,6 +13121,83 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!1 &1473419951
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1473419952}
+  - 212: {fileID: 1473419954}
+  - 61: {fileID: 1473419953}
+  m_Layer: 9
+  m_Name: Medieval_art_3 (9)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1473419952
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1473419951}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -160.88, y: 2.8637433, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 1380686539}
+  m_RootOrder: 213
+--- !u!61 &1473419953
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1473419951}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: -0.010192871, y: -0.086604595}
+  serializedVersion: 2
+  m_Size: {x: 1.1395962, y: 0.28364754}
+--- !u!212 &1473419954
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1473419951}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_SelectedWireframeHidden: 1
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300006, guid: c780c3f0e360a3e489c420c02c6f8d40, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
 --- !u!1 &1482547466
 GameObject:
   m_ObjectHideFlags: 0
@@ -12076,7 +13238,7 @@ GameObject:
   - 4: {fileID: 1487315151}
   - 212: {fileID: 1487315153}
   - 61: {fileID: 1487315152}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Medieval_art_9 (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12353,12 +13515,12 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1503308331}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -26.435516, y: -4.0772476, z: 0}
+  m_LocalPosition: {x: -21.02, y: -0.22, z: 0}
   m_LocalScale: {x: 2.060165, y: 2.0601656, z: 2.0601656}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 57333132}
-  m_RootOrder: 5
+  m_RootOrder: 6
 --- !u!1 &1504831912
 GameObject:
   m_ObjectHideFlags: 0
@@ -12369,7 +13531,7 @@ GameObject:
   - 4: {fileID: 1504831913}
   - 212: {fileID: 1504831915}
   - 61: {fileID: 1504831914}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Medieval_art_8 (32)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12445,7 +13607,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1509215853}
   - 212: {fileID: 1509215854}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: drek_0 (35)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12459,8 +13621,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1509215852}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -170.79164, y: 3.046743, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -170.86, y: 3.046743, z: 0}
+  m_LocalScale: {x: 1.1313782, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1380686539}
@@ -12585,7 +13747,7 @@ GameObject:
   - 4: {fileID: 1514219894}
   - 212: {fileID: 1514219896}
   - 61: {fileID: 1514219895}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Medieval_art_9 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12739,7 +13901,7 @@ GameObject:
   - 4: {fileID: 1521436502}
   - 212: {fileID: 1521436504}
   - 61: {fileID: 1521436503}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Medieval_art_8 (24)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13151,7 +14313,7 @@ GameObject:
   - 4: {fileID: 1544552281}
   - 212: {fileID: 1544552283}
   - 61: {fileID: 1544552282}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Medieval_art_8 (16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13319,7 +14481,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1550412610}
   - 212: {fileID: 1550412609}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: drek_0 (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13366,8 +14528,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1550412608}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -179.15164, y: 2.7867427, z: 0}
-  m_LocalScale: {x: 3.4300427, y: 3.4300454, z: 3.4300454}
+  m_LocalPosition: {x: -179.12, y: 2.85, z: 0}
+  m_LocalScale: {x: 3.5023997, y: 3.5603068, z: 3.4300454}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1380686539}
@@ -13535,7 +14697,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1564900443}
   - 212: {fileID: 1564900442}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Medieval_art_14
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13582,7 +14744,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1564900441}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -214.71164, y: -0.395257, z: 0}
+  m_LocalPosition: {x: -209.29, y: 3.46, z: 0}
   m_LocalScale: {x: 0.5188664, y: 0.51886624, z: 0.51886624}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -13819,6 +14981,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1380686539}
   m_RootOrder: 182
+--- !u!1 &1582211337
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1582211338}
+  m_Layer: 0
+  m_Name: Elevators EmptyGO
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1582211338
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1582211337}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -30.415527, y: -0.5772476, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children:
+  - {fileID: 1605654728}
+  - {fileID: 449957513}
+  - {fileID: 871664517}
+  m_Father: {fileID: 57333132}
+  m_RootOrder: 0
 --- !u!1 &1586302331
 GameObject:
   m_ObjectHideFlags: 0
@@ -13906,7 +15099,7 @@ GameObject:
   - 4: {fileID: 1586906071}
   - 212: {fileID: 1586906073}
   - 61: {fileID: 1586906072}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Medieval_art_8 (26)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14060,7 +15253,7 @@ GameObject:
   - 4: {fileID: 1597485232}
   - 212: {fileID: 1597485234}
   - 61: {fileID: 1597485233}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Medieval_art_8 (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14127,6 +15320,34 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!1 &1605654727
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1605654728}
+  m_Layer: 0
+  m_Name: GO1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1605654728
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1605654727}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.23, y: 0.82, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 1582211338}
+  m_RootOrder: 0
 --- !u!1 &1610731335
 GameObject:
   m_ObjectHideFlags: 0
@@ -14358,6 +15579,22 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!1 &1615436938 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1000012291607404, guid: 85d091847f6b7214c92bd91f832b16ed,
+    type: 2}
+  m_PrefabInternal: {fileID: 1405501330}
+--- !u!114 &1615436942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1615436938}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d6318891a1fdd74196240ffa78f4d7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1632321842
 GameObject:
   m_ObjectHideFlags: 0
@@ -14367,7 +15604,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1632321843}
   - 212: {fileID: 1632321844}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Medieval_art_8 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14526,7 +15763,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1380686539}
-  m_RootOrder: 200
+  m_RootOrder: 201
 --- !u!61 &1650728797
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -14584,7 +15821,7 @@ GameObject:
   - 4: {fileID: 1655271539}
   - 212: {fileID: 1655271541}
   - 61: {fileID: 1655271540}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Medieval_art_8 (34)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14842,7 +16079,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1686904383}
   - 212: {fileID: 1686904382}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: drek_0 (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14889,12 +16126,106 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1686904381}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -176.94164, y: 3.9767432, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -176.94164, y: 4.02, z: 0}
+  m_LocalScale: {x: 1, y: 1.0865993, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1380686539}
   m_RootOrder: 125
+--- !u!1 &1688619668
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1688619669}
+  - 212: {fileID: 1688619670}
+  - 114: {fileID: 1688619671}
+  - 61: {fileID: 1688619672}
+  m_Layer: 0
+  m_Name: levers_1 (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1688619669
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1688619668}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 28.42, y: -0.268, z: 0}
+  m_LocalScale: {x: 4.5367317, y: 4.5367327, z: 4.5367327}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 57333132}
+  m_RootOrder: 7
+--- !u!212 &1688619670
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1688619668}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_SelectedWireframeHidden: 1
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300002, guid: 43d51589aeff24e4fba24b7959e7b1df, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+--- !u!114 &1688619671
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1688619668}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 510e72012f0681949a3550760eda7be2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slideDoor: {fileID: 653299703}
+  mDoor: {fileID: 0}
+  activated: {fileID: 21300068, guid: 78529c2bdb95e914fa56d5a80a12d25e, type: 3}
+  deactivated: {fileID: 21300066, guid: 78529c2bdb95e914fa56d5a80a12d25e, type: 3}
+  medievalDoor: 0
+--- !u!61 &1688619672
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1688619668}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 0.5, y: 0.5}
 --- !u!1 &1691000704
 GameObject:
   m_ObjectHideFlags: 0
@@ -14904,7 +16235,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1691000706}
   - 212: {fileID: 1691000705}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: drek_0 (19)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14966,7 +16297,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1698692344}
   - 212: {fileID: 1698692343}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: drek_0 (15)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15013,8 +16344,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1698692342}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -175.10164, y: 3.9767432, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -175.10164, y: 4.02, z: 0}
+  m_LocalScale: {x: 1, y: 1.0865993, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1380686539}
@@ -15029,7 +16360,7 @@ GameObject:
   - 4: {fileID: 1700064065}
   - 212: {fileID: 1700064067}
   - 61: {fileID: 1700064066}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Medieval_art_8 (17)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15105,7 +16436,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1709460532}
   - 212: {fileID: 1709460533}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Medieval_art_8 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15274,7 +16605,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 1748829800}
   - 212: {fileID: 1748829799}
-  m_Layer: 0
+  - 68: {fileID: 1748829801}
+  m_Layer: 9
   m_Name: drek_0 (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15326,7 +16658,22 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1380686539}
-  m_RootOrder: 194
+  m_RootOrder: 195
+--- !u!68 &1748829801
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1748829798}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  m_Points:
+  - {x: -0.49999997, y: 0}
+  - {x: 0.49999997, y: 0}
 --- !u!1 &1753136646
 GameObject:
   m_ObjectHideFlags: 0
@@ -15336,7 +16683,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1753136647}
   - 212: {fileID: 1753136648}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: drek_0 (40)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15418,7 +16765,7 @@ Transform:
   - {fileID: 11357758}
   - {fileID: 1224548588}
   m_Father: {fileID: 1380686539}
-  m_RootOrder: 203
+  m_RootOrder: 204
 --- !u!1 &1770158676
 GameObject:
   m_ObjectHideFlags: 0
@@ -15428,7 +16775,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1770158677}
   - 212: {fileID: 1770158678}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: drek_0 (39)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15442,8 +16789,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1770158676}
   m_LocalRotation: {x: -0, y: -0, z: 0.17364816, w: 0.9848078}
-  m_LocalPosition: {x: -170.97163, y: 1.6867433, z: 0}
-  m_LocalScale: {x: 1.066452, y: 1, z: 1}
+  m_LocalPosition: {x: -170.99, y: 1.74, z: 0}
+  m_LocalScale: {x: 1.066452, y: 1.1050822, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 20}
   m_Children: []
   m_Father: {fileID: 1380686539}
@@ -15568,7 +16915,7 @@ GameObject:
   - 4: {fileID: 1775659341}
   - 212: {fileID: 1775659343}
   - 61: {fileID: 1775659342}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Medieval_art_8 (28)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15644,7 +16991,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1788739513}
   - 212: {fileID: 1788739514}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: drek_0 (42)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15658,8 +17005,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1788739512}
   m_LocalRotation: {x: -0, y: -0, z: 0.17364816, w: 0.9848078}
-  m_LocalPosition: {x: -168.00464, y: 2.563743, z: 0.05}
-  m_LocalScale: {x: 1.066452, y: 0.57249916, z: 1}
+  m_LocalPosition: {x: -168.01, y: 2.57, z: 0.05}
+  m_LocalScale: {x: 1.066452, y: 0.59597385, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 20}
   m_Children: []
   m_Father: {fileID: 1380686539}
@@ -16385,7 +17732,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1818704100}
   - 212: {fileID: 1818704101}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: drek_0 (38)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16399,8 +17746,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1818704099}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -170.74164, y: 2.096743, z: 0}
-  m_LocalScale: {x: 1.066452, y: 1, z: 1}
+  m_LocalPosition: {x: -170.81, y: 2.096743, z: 0}
+  m_LocalScale: {x: 1.2097605, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1380686539}
@@ -16592,6 +17939,22 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!1 &1840637625 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1000011259340576, guid: 85d091847f6b7214c92bd91f832b16ed,
+    type: 2}
+  m_PrefabInternal: {fileID: 1405501330}
+--- !u!114 &1840637629
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1840637625}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d6318891a1fdd74196240ffa78f4d7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1850933297
 GameObject:
   m_ObjectHideFlags: 0
@@ -16602,7 +17965,7 @@ GameObject:
   - 4: {fileID: 1850933298}
   - 212: {fileID: 1850933300}
   - 61: {fileID: 1850933299}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Medieval_art_9 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16669,6 +18032,22 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!1 &1854283856 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1000010926363180, guid: 85d091847f6b7214c92bd91f832b16ed,
+    type: 2}
+  m_PrefabInternal: {fileID: 1405501330}
+--- !u!114 &1854283860
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1854283856}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d6318891a1fdd74196240ffa78f4d7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1859778414
 GameObject:
   m_ObjectHideFlags: 0
@@ -16987,7 +18366,7 @@ GameObject:
   - 4: {fileID: 1887354683}
   - 212: {fileID: 1887354685}
   - 61: {fileID: 1887354684}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Medieval_art_9 (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17295,7 +18674,7 @@ GameObject:
   - 4: {fileID: 1912813983}
   - 212: {fileID: 1912813985}
   - 61: {fileID: 1912813984}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Medieval_art_8 (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17610,7 +18989,7 @@ GameObject:
   - 4: {fileID: 1936092032}
   - 212: {fileID: 1936092034}
   - 61: {fileID: 1936092033}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Medieval_art_8 (27)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17686,7 +19065,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1936094487}
   - 212: {fileID: 1936094486}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: drek_0 (27)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17893,6 +19272,77 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1380686539}
   m_RootOrder: 186
+--- !u!1 &1953255131
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1953255132}
+  - 65: {fileID: 1953255134}
+  - 23: {fileID: 1953255133}
+  m_Layer: 9
+  m_Name: Cube
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1953255132
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1953255131}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.226, y: 1.224, z: 0}
+  m_LocalScale: {x: 0.26740587, y: 0.28435796, z: 0.59514743}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 2077290191}
+  m_RootOrder: 0
+--- !u!23 &1953255133
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1953255131}
+  m_Enabled: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 1
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_SelectedWireframeHidden: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+--- !u!65 &1953255134
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1953255131}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1971230982
 GameObject:
   m_ObjectHideFlags: 0
@@ -18134,7 +19584,7 @@ GameObject:
   - 4: {fileID: 1985298861}
   - 212: {fileID: 1985298863}
   - 61: {fileID: 1985298862}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Medieval_art_9 (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18211,7 +19661,7 @@ GameObject:
   - 4: {fileID: 1991674500}
   - 212: {fileID: 1991674502}
   - 61: {fileID: 1991674501}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Medieval_art_8 (22)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18426,7 +19876,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 2039895243}
   - 212: {fileID: 2039895242}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: drek_0 (30)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18565,11 +20015,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4000010413377464, guid: feb36aa9e637366488cbdca4bd1aa2af, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -201.5
+      value: -159.4
       objectReference: {fileID: 0}
     - target: {fileID: 4000010413377464, guid: feb36aa9e637366488cbdca4bd1aa2af, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 12.6
+      value: 6.59
       objectReference: {fileID: 0}
     - target: {fileID: 4000010413377464, guid: feb36aa9e637366488cbdca4bd1aa2af, type: 2}
       propertyPath: m_LocalPosition.z
@@ -18617,7 +20067,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 2077290191}
   - 212: {fileID: 2077290190}
-  m_Layer: 0
+  - 60: {fileID: 2077290193}
+  - 114: {fileID: 2077290192}
+  m_Layer: 9
   m_Name: Medieval_art_22
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18667,9 +20119,70 @@ Transform:
   m_LocalPosition: {x: 12.214478, y: -4.5872474, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_Children: []
+  m_Children:
+  - {fileID: 1953255132}
   m_Father: {fileID: 57333132}
-  m_RootOrder: 4
+  m_RootOrder: 5
+--- !u!114 &2077290192
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2077290189}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59510473440b5ea4d9ee98482e86a924, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  angle: 60
+  speed: 40
+  End: {fileID: 1953255132}
+  deactivated: 0
+--- !u!60 &2077290193
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2077290189}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  m_Points:
+    m_Paths:
+    - - {x: 0.185, y: -1.04}
+      - {x: 0.175, y: -1.24}
+      - {x: 0.21499999, y: -1.29}
+      - {x: 0.305, y: -1.24}
+      - {x: 0.275, y: -1.0699999}
+      - {x: 0.315, y: -1.01}
+      - {x: 0.315, y: -0.96}
+      - {x: 0.355, y: -1}
+      - {x: 0.42499998, y: -1.02}
+      - {x: 0.48499998, y: -0.93}
+      - {x: 0.48499998, y: -0.74}
+      - {x: 0.475, y: -0.71999997}
+      - {x: 0.42499998, y: -0.63}
+      - {x: 0.375, y: -0.64}
+      - {x: 0.305, y: -0.77}
+      - {x: 0.28308105, y: 1.3809571}
+      - {x: 0.16499999, y: 1.37}
+      - {x: 0.005, y: -0.72999996}
+      - {x: -0.13061523, y: -0.5816021}
+      - {x: -0.20951843, y: -0.29088783}
+      - {x: -0.2386322, y: -0.27451658}
+      - {x: -0.3387146, y: -0.43629265}
+      - {x: -0.46684265, y: -0.62177515}
+      - {x: -0.45233154, y: -1.0218539}
+      - {x: -0.3850708, y: -1.1564493}
+      - {x: -0.25411987, y: -1.337337}
+      - {x: -0.195, y: -1.37}
+      - {x: -0.18418884, y: -1.1605034}
+      - {x: -0.084121704, y: -0.99370813}
+      - {x: 0.145, y: -0.90999997}
+      - {x: 0.155, y: -1.01}
 --- !u!1 &2082636148
 GameObject:
   m_ObjectHideFlags: 0
@@ -18680,7 +20193,7 @@ GameObject:
   - 4: {fileID: 2082636149}
   - 212: {fileID: 2082636151}
   - 61: {fileID: 2082636150}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Medieval_art_9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18747,6 +20260,83 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!1 &2084518600
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 2084518601}
+  - 212: {fileID: 2084518603}
+  - 61: {fileID: 2084518602}
+  m_Layer: 9
+  m_Name: Medieval_art_2 (9)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2084518601
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2084518600}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -162.37, y: 2.8637433, z: 0}
+  m_LocalScale: {x: 1.6042211, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 1380686539}
+  m_RootOrder: 214
+--- !u!61 &2084518602
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2084518600}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0.015792847, y: -0.09244108}
+  serializedVersion: 2
+  m_Size: {x: 1.1583949, y: 0.29560715}
+--- !u!212 &2084518603
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2084518600}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_SelectedWireframeHidden: 1
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300004, guid: c780c3f0e360a3e489c420c02c6f8d40, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
 --- !u!1 &2087946702
 GameObject:
   m_ObjectHideFlags: 0
@@ -18756,7 +20346,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 2087946704}
   - 212: {fileID: 2087946703}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: drek_0 (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18818,7 +20408,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 2088611347}
   - 212: {fileID: 2088611346}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: drek_0 (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18881,7 +20471,7 @@ GameObject:
   - 4: {fileID: 2095145263}
   - 212: {fileID: 2095145265}
   - 61: {fileID: 2095145264}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Medieval_art_8 (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19017,7 +20607,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 2105341172}
   - 212: {fileID: 2105341171}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: drek_0 (28)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19176,7 +20766,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1380686539}
-  m_RootOrder: 207
+  m_RootOrder: 208
 --- !u!1 &2133835276
 GameObject:
   m_ObjectHideFlags: 0
@@ -19186,7 +20776,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 2133835277}
   - 212: {fileID: 2133835278}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Medieval_art_8 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19249,7 +20839,7 @@ GameObject:
   - 4: {fileID: 2142672104}
   - 212: {fileID: 2142672106}
   - 61: {fileID: 2142672105}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Medieval_art_9 (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
