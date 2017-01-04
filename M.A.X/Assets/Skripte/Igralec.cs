@@ -65,12 +65,13 @@ public class Igralec : MonoBehaviour {
 
             if (Input.GetKeyDown(KeyCode.Q))
             {
-                health.CurrentVal -= 10;
+                /*health.CurrentVal -= 10;
                 indikator.damaged = true;
                 if (indikator.sceneLoad == true)
                 {
                     indikator.sceneLoad = false;
-                }
+                }*/
+                PrejmiSkodo(10);
             }
 
             if (Input.GetKeyDown(KeyCode.W))
@@ -90,13 +91,13 @@ public class Igralec : MonoBehaviour {
         trenutnaZivljenja -= skoda;
         health.CurrentVal -= skoda;
         indikator.damaged = true;
-        //source.PlayOneShot(zvok, GameControl.control.MASTER * GameControl.control.SFX);
+        source.PlayOneShot(zvok, GameControl.control.MASTER * GameControl.control.SFX);
     }
 
     public void Smrt()
     {
        
-        //source.PlayOneShot(zvokUmri, GameControl.control.MASTER * GameControl.control.SFX);
+        source.PlayOneShot(zvokUmri, GameControl.control.MASTER * GameControl.control.SFX);
         mrtev = true;
         //Debug.Log("Smrt");
         /*if (ObSmrti != null)
